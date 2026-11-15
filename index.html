@@ -3069,8 +3069,8 @@ function vSettingsSheet(){
     ${vAccountRows()}
     <div class="srow"><span>Tagesziel</span><span class="spills">${[100, 150, 250].map(g => `<button class="pill ${SETTINGS.goal === g ? "on" : ""}" data-act="goal" data-g="${g}">${g} XP</button>`).join("")}</span></div>
     <div class="srow"><span>Hör-Übungen</span><button class="toggle bare" data-act="toggleAudio" aria-label="Hör-Übungen"><span class="switch ${SETTINGS.audio ? "on" : ""}"></span></button></div>
-    <div class="srow"><span>Fortschritt</span><span class="sbtns"><button class="pill" data-act="backup">💾 Sichern</button><button class="pill" data-act="restore">📂 Laden</button></span></div>
-    <div class="srow"><span></span>${VIEW.params.confirmReset ? `<span class="sbtns"><span class="small">Wirklich alles löschen?</span><button class="linkbtn danger" data-act="reset">Ja</button><button class="linkbtn" data-act="noReset">Nein</button></span>` : `<button class="linkbtn" data-act="askReset">Zurücksetzen</button>`}</div>
+    ${ONLINE ? "" : `<div class="srow"><span>Fortschritt</span><span class="sbtns"><button class="pill" data-act="backup">💾 Sichern</button><button class="pill" data-act="restore">📂 Laden</button></span></div>`}
+    <div class="srow"><span>${ONLINE ? "Fortschritt" : ""}</span>${VIEW.params.confirmReset ? `<span class="sbtns"><span class="small">Wirklich alles löschen?</span><button class="linkbtn danger" data-act="reset">Ja</button><button class="linkbtn" data-act="noReset">Nein</button></span>` : `<button class="linkbtn" data-act="askReset">Zurücksetzen</button>`}</div>
     <div class="srow muted small"><span>Stand</span><span>${esc(STAND)}</span></div>
   </div>`;
 }
