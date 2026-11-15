@@ -600,8 +600,8 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   .today .btn-hero .cnt{display:none}
   .today .toggle.audio{padding:0 12px;gap:8px;font-size:18px}
   .today .toggle.audio .tg-l{display:none}
-  .grp{margin:18px 4px 8px}
-  .mgrid{gap:10px}
+  .grp{margin:30px 4px 10px}
+  .mgrid{gap:12px}
   .mgrid.c2,.mgrid.c3,.mgrid.c4,.mgrid.c5{grid-template-columns:repeat(2,minmax(0,1fr))}
   .mgrid.ph-extras .hardtile{grid-column:1/-1}
   .mt{min-height:58px;padding:11px 12px;gap:10px}
@@ -609,21 +609,27 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   .mt.lg .mt-em{font-size:24px;width:28px}
   .mt.lg .mt-tt,.mt .mt-tt{white-space:normal;line-height:1.2}
   .mt.lg .mt-tt{font-size:16px}
-  details.lgd{margin-top:14px}
-  details.lgd>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.55);font-size:13px;color:var(--ink-3)}
+  .ph-foot{display:flex;flex-direction:column;gap:10px;margin-top:32px}
+  details.lgd>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:46px;padding:0 14px;border-radius:14px;background:rgba(255,255,255,.55);font-size:13px;color:var(--ink-3)}
   details.lgd>summary::-webkit-details-marker{display:none}
-  details.lgd .lgd-l{font-weight:600;color:var(--ink-2)}
+  .lgd-l{font-weight:600;color:var(--ink-2)}
   details.lgd .lgd-r{display:flex;align-items:center;gap:8px;font-size:12px}
   details.lgd .lgd-r i{font-style:normal;font-size:17px;line-height:1;color:var(--ink-3);transition:transform .2s}
   details.lgd[open] .lgd-r i{transform:rotate(90deg)}
   details.lgd[open]>summary{border-radius:14px 14px 0 0;background:var(--surface)}
   details.lgd .legend{grid-template-columns:1fr;padding:4px 14px 14px;gap:9px;border-radius:0 0 14px 14px;box-shadow:none;font-size:12.5px}
   .page.home .stand{display:none}
-  .a2hs{display:flex;align-items:center;gap:10px;padding:12px 12px 12px 14px;margin-top:16px;font-size:14px;line-height:1.35}
-  .a2hs .a2-i{font-size:22px}
-  .a2hs .a2-t{flex:1}
-  .a2hs .a2-sh{display:inline-block;padding:0 4px;border-radius:6px;background:var(--surface-2)}
-  .a2hs .a2-x{width:36px;height:36px;border-radius:50%;color:var(--ink-3);font-size:15px;flex:none}
+  .flipc{height:46px;perspective:900px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .flipc .fc-in{position:relative;height:100%;transition:transform .5s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d}
+  .flipc.on .fc-in{transform:rotateX(180deg)}
+  .flipc .fc-f,.flipc .fc-b{position:absolute;inset:0;display:flex;align-items:center;gap:10px;border-radius:14px;font-size:13px;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+  .flipc .fc-f{justify-content:space-between;padding:0 14px;background:rgba(255,255,255,.55);color:var(--ink-3)}
+  .flipc .fc-f i{font-style:normal;font-size:17px;line-height:1}
+  .flipc .fc-b{transform:rotateX(180deg);padding:0 4px 0 14px;background:var(--surface);color:var(--ink-2);box-shadow:var(--shadow-sm,0 1px 3px rgba(60,40,20,.08))}
+  .flipc .a2-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .flipc .a2-sh{display:inline-block;padding:0 4px;border-radius:6px;background:var(--surface-2)}
+  .flipc .pill{padding:6px 12px;font-size:13px}
+  .flipc .a2-x{width:38px;height:38px;border-radius:50%;color:var(--ink-3);font-size:14px;flex:none}
   /* Leiste unten */
   .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:space-around;padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:rgba(250,246,240,.92);-webkit-backdrop-filter:saturate(1.6) blur(18px);backdrop-filter:saturate(1.6) blur(18px);border-top:1px solid rgba(70,45,20,.08)}
   .tabbar .tb{flex:1;max-width:140px;min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;font-weight:600;color:var(--ink-3);border-radius:12px}
@@ -2835,6 +2841,7 @@ const LIVE_IMPF = {"ser":[["era","E-ra"],
   ["salíais","sa-LI-ais"],
   ["salían","sa-LI-an"]]};
 const STAND = "15.11.2026";
+const BUILD = "d5d00b18f4";
 
 const CLOUD = {"cfg":{"apiKey":"AIzaSyBBFF2squOw3gLcvqjTE9seE1L4D4Emy_g","authDomain":"svenolingo.firebaseapp.com","projectId":"svenolingo","storageBucket":"svenolingo.firebasestorage.app","messagingSenderId":"252077969505","appId":"1:252077969505:web:e2bf221a4d7864bc29da20"},"admin":"YJhmNYq7J6ek6W3SN8zxKqDO6bo2","names":{"h4TxYatjg2S1rMa0p5HM5qgzIBn2":"Klara","Sr3uCID4jgO0V03km1EVr0yP5jV2":"Noah","Jv0Zx0XgE8YVlPECUtTwixgHEC53":"Tabitha"}};
 
@@ -3206,8 +3213,7 @@ function vHome(){
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="big" data-id="big"`, em: "🎯", tt: "Vokabeltest", tip: "20 Fragen aus allen Wörtern und Verbformen" })}
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="hard" data-id="hard"`, em: "🔁", tt: "Schwierige Wörter", right: hard ? `<span class="badge">${hard}</span>` : undefined, tip: hard ? `${hard} ${hard === 1 ? "Eintrag" : "Einträge"} mit Fehlern üben` : "Noch keine Fehler", disabled: !hard })}
   </div>
-  ${a2hsHint()}
-  ${isPhone() ? `<details class="lgd"><summary><span class="lgd-l">ℹ️ Legende</span><span class="lgd-r">Stand ${esc(STAND)}<i>›</i></span></summary>` : `<div class="grp">Legende</div>`}
+  ${isPhone() ? `<div class="ph-foot">${a2hsHint()}<details class="lgd"><summary><span class="lgd-l">ℹ️ Legende</span><span class="lgd-r"><i>›</i></span></summary>` : `<div class="grp">Legende</div>`}
   <div class="legend card">
     ${[
       ["🔥", "Serie", "Tage in Folge mit erreichtem Tagesziel"],
@@ -3219,7 +3225,7 @@ function vHome(){
       [`<span class="mt-bar"><i style="width:60%"></i></span>`, "Prozent", "wie sicher du ein Thema kannst"],
       ["🎧", "Hör-Übungen", "Schalter aus = nichts wird vorgelesen"]
     ].concat(ONLINE ? [["🏆", "Rangliste", "XP der Woche, montags geht es neu los"]] : []).filter(Boolean).map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
-  </div>${isPhone() ? `</details>` : ""}
+  </div>${isPhone() ? `</details></div>` : ""}
   <div class="stand">Stand ${esc(STAND)}</div>
   <input type="file" id="restorefile" accept=".json,application/json" hidden>
   ${VIEW.params.sheet ? vSettingsSheet() : ""}
@@ -4098,17 +4104,47 @@ function a2hsHint(){
   if (standalone) return "";
   const ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
   if (!ios && !A2HS_EVT) return "";
-  return `<div class="a2hs card"><span class="a2-i">📲</span><span class="a2-t">${ios ? `Als App nutzen: <b>Teilen</b> <span class="a2-sh">⬆︎</span> › <b>Zum Home-Bildschirm</b>` : `Svenolingo als App aufs Handy`}</span>
-    ${ios ? "" : `<button class="pill dark" data-act="a2hsInstall">Installieren</button>`}<button class="a2-x" data-act="a2hsClose" aria-label="Schließen">✕</button></div>`;
+  return `<div class="flipc" data-act="a2hsFlip"><div class="fc-in">
+    <div class="fc-f"><span class="lgd-l">📲 Als App nutzen</span><i>›</i></div>
+    <div class="fc-b">${ios ? `<span class="a2-t"><b>Teilen</b> <span class="a2-sh">⬆︎</span> › <b>Zum Home-Bildschirm</b></span>` : `<span class="a2-t">Svenolingo aufs Handy</span><button class="pill dark" data-act="a2hsInstall">Installieren</button>`}<button class="a2-x" data-act="a2hsClose" aria-label="Ausblenden">✕</button></div>
+  </div></div>`;
 }
 const PHONE_ACTIONS = {
   tabHome: () => { VIEW = { name: "home", params: {} }; render(); window.scrollTo(0, 0); },
   tabRank: () => { VIEW = { name: "rank", params: {} }; render(); window.scrollTo(0, 0); },
   tabSet: () => { if (VIEW.params.sheet){ ACTIONS.sheetClose(); return; } VIEW = { name: "home", params: { sheet: true } }; render(); },
+  a2hsFlip: el => el.classList.toggle("on"),
   a2hsClose: () => { try { localStorage.setItem("esv_a2hs", "1"); } catch (e) {} render(); },
   a2hsInstall: async () => { if (!A2HS_EVT) return; A2HS_EVT.prompt(); try { await A2HS_EVT.userChoice; } catch (e) {} A2HS_EVT = null; try { localStorage.setItem("esv_a2hs", "1"); } catch (e) {} render(); }
 };
 if (PHONE_MQ.addEventListener) PHONE_MQ.addEventListener("change", () => render());
+/* Neue Version automatisch laden: beim Öffnen, beim Zurückkommen in die App und alle 15 Minuten.
+   Neu geladen wird nur außerhalb von Übungen, der Fortschritt wird vorher gespeichert. */
+const UPD_SAFE = ["home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram"];
+const UPD_RE = new RegExp("const BU" + "ILD = \"([0-9a-f]{10})\"");
+let UPD = null, UPD_BUSY = false;
+async function updCheck(){
+  if (!ONLINE || UPD || UPD_BUSY || typeof fetch !== "function" || location.protocol === "file:") return;
+  UPD_BUSY = true;
+  try {
+    const r = await fetch(location.pathname + "?u=" + Date.now(), { cache: "no-store" });
+    const m = r.ok ? (await r.text()).match(UPD_RE) : null;
+    let tried = null; try { tried = sessionStorage.getItem("esv_upd"); } catch (e) {}
+    if (m && m[1] !== BUILD && m[1] !== tried){ UPD = m[1]; updApply(); }
+  } catch (e) {} finally { UPD_BUSY = false; }
+}
+async function updApply(){
+  if (!UPD || !UPD_SAFE.includes(VIEW.name) || VIEW.params.sheet) return;
+  const a = document.activeElement; if (a && /INPUT|TEXTAREA/.test(a.tagName)) return;
+  try { sessionStorage.setItem("esv_upd", UPD); } catch (e) {}
+  if (CL.t) { try { await cloudFlush(); } catch (e) {} }
+  location.replace(location.pathname + "?v=" + UPD);
+}
+if (ONLINE){
+  setTimeout(updCheck, 4000);
+  setInterval(updCheck, 15 * 60 * 1000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) updCheck(); });
+}
 document.addEventListener("focusin", e => { if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) document.body.classList.add("kb"); });
 document.addEventListener("focusout", () => setTimeout(() => { const a = document.activeElement; if (!a || !/INPUT|TEXTAREA/.test(a.tagName)) document.body.classList.remove("kb"); }, 60));
 
@@ -4116,7 +4152,7 @@ const VIEWS = { rank: vRank, live: vLive, liverun: vLiveRun, livesum: vLiveSum, 
 function render(){ const app = document.getElementById("app"); if (!app) return;
   if (ONLINE && !CL.user){ app.innerHTML = vLogin(); document.querySelector(".home-btn").style.display = "none"; renderTabbar(); return; }
   if (isPhone() && VIEW.name === "live") VIEW = { name: "home", params: {} };
-  app.innerHTML = (VIEWS[VIEW.name] || vHome)(); renderTabbar(); document.querySelector(".home-btn").style.display = VIEW.name === "home" ? "none" : ""; if (VIEW.name === "home" || VIEW.name === "summary") maybeCelebrate(); liveAfterRender(); }
+  app.innerHTML = (VIEWS[VIEW.name] || vHome)(); renderTabbar(); document.querySelector(".home-btn").style.display = VIEW.name === "home" ? "none" : ""; if (VIEW.name === "home" || VIEW.name === "summary") maybeCelebrate(); liveAfterRender(); if (UPD) setTimeout(updApply, 300); }
 
 const ACTIONS = {
   home: goHome, back,
