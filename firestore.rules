@@ -1,0 +1,49 @@
+rules_version = '2';
+// Svenolingo – wer darf was lesen und schreiben
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isAdmin() { return signedIn() && request.auth.uid == 'YJhmNYq7J6ek6W3SN8zxKqDO6bo2'; }
+    function isMe(uid) { return signedIn() && request.auth.uid == uid; }
+    function isLearner() { return signedIn() && request.auth.uid in ['h4TxYatjg2S1rMa0p5HM5qgzIBn2', 'Sr3uCID4jgO0V03km1EVr0yP5jV2', 'Jv0Zx0XgE8YVlPECUtTwixgHEC53']; }
+
+    // Eigener Lernstand: nur die Person selbst, Sven darf lesen (Überblick)
+    match /users/{uid} {
+      allow read: if isMe(uid) || isAdmin();
+      allow create, update: if isMe(uid)
+        && request.resource.data.keys().hasOnly(['name', 'prog', 'stats', 'settings', 'updated'])
+        && request.resource.data.prog is string && request.resource.data.prog.size() < 900000;
+      allow delete: if false;
+    }
+
+    // Rangliste: alle Angemeldeten lesen, jede Person schreibt nur ihren eigenen Eintrag, Sven ist nicht dabei
+    match /board/{uid} {
+      allow read: if signedIn();
+      allow create, update: if isMe(uid) && isLearner()
+        && request.resource.data.keys().hasOnly(['name', 'wk', 'wkXp', 'totalXp', 'streak', 'updated'])
+        && request.resource.data.wkXp is int && request.resource.data.totalXp is int;
+      allow delete: if isAdmin();
+    }
+
+    // Feedback: alle dürfen melden, nur Sven liest, hakt ab und löscht
+    match /feedback/{id} {
+      allow create: if signedIn() && request.resource.data.uid == request.auth.uid
+        && request.resource.data.keys().hasOnly(['uid', 'name', 'text', 'where', 'created', 'done'])
+        && request.resource.data.text is string && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 2000
+        && request.resource.data.done == false;
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Hausaufgaben: einmal abgeben, danach nicht mehr änderbar; Sven sieht alle Antworten
+    match /homework/{hw}/answers/{uid} {
+      allow read: if isMe(uid) || isAdmin();
+      allow create: if isMe(uid) && request.resource.data.keys().hasOnly(['name', 'answers', 'submitted']);
+      allow update, delete: if false;
+    }
+
+    // alles andere: gesperrt
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
