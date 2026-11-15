@@ -488,6 +488,13 @@ button.fw:hover{background:var(--surface-3)}
 .pwform{display:flex;flex-direction:column;gap:8px;margin-top:-4px}
 .pill.on{background:var(--ink);color:#fff}
 .pill.dark{background:var(--accent);color:#fff}
+.lv-simple{display:flex;flex-direction:column;align-items:center;gap:18px;padding:26px 24px}
+.lv-themes{justify-content:center}
+.lv-simple .lv-go{width:min(360px,100%);padding:13px 20px;font-size:17px}
+.lv-roomlink{font-size:13px}
+.lv-room1{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.lv-room1 input{font:inherit;font-size:15px;width:120px;padding:9px 12px;border-radius:12px;border:1px solid var(--surface-3);background:var(--surface-2);text-transform:uppercase}
+.lv-simple .lv-lobby{display:flex;flex-direction:column;align-items:center;gap:10px}
 .page.home .stand{margin-top:26px;font-size:12px}
 .sheet-bg{position:fixed;inset:0;background:rgba(30,22,18,.35);z-index:50;animation:luFade .2s}
 .sheet{position:fixed;top:84px;right:max(24px,calc(50% - 380px));width:380px;z-index:51;padding:18px 20px;display:flex;flex-direction:column;gap:14px;animation:luPop .25s cubic-bezier(.2,1.2,.4,1)}
@@ -3320,9 +3327,9 @@ let liveTimer = null, liveSpin = null;
 function liveConf(){
   if (!SETTINGS.live) SETTINGS.live = {};
   const c = SETTINGS.live;
-  if (!["solo", "screen", "room"].includes(c.mode)) c.mode = "screen";
+  c.mode = "screen";                               // Session = Gruppe; Einzeln üben = allein
   if (!LIVE_THEMES.some(t => t[0] === c.theme)) c.theme = "mix";
-  if (![1, 2, 3].includes(c.level)) c.level = 1;
+  c.level = 1;                                     // Startstufe fest 1, passt sich danach an
   if (typeof c.round !== "number") c.round = 0;
   const rot = [MAIN_ORDER[c.round % 4], MAIN_ORDER[(c.round + 1) % 4]];
   if (!MAIN_ORDER.includes(c.a) || c.autoRound !== c.round) { c.a = rot[0]; c.b = rot[1]; c.autoRound = c.round; }
@@ -3357,11 +3364,12 @@ function liveNorm(s, keepAcc){
 /* ---------- Ablauf ---------- */
 function liveSegments(kind, conf, single){
   if (single) return [{ task: single, n: 6, start: conf.level }];
-  return [{ task: "roulette", n: 3, start: conf.level, warm: true }, { task: "puzzle", n: 3, start: conf.level, warm: true },
+  return [{ task: "puzzle", n: 4, start: conf.level, warm: true },
           { task: conf.a, n: 4, start: conf.level, label: "Hauptaufgabe 1 · leichter" }, { task: conf.b, n: 4, start: Math.min(3, conf.level + 1), label: "Hauptaufgabe 2 · schwerer" }];
 }
 function liveStart(o){
   // o: { mode, theme, level, a, b, single, code, joined }
+  if (!o.single && (!o.a || !o.b)){ const c = liveConf(); o.a = o.a || c.a; o.b = o.b || c.b; }
   const segs = liveSegments(null, o, o.single).map(s => Object.assign(s, { level: s.start, streak: 0, k: 0, ok: 0, done: 0 }));
   const seedNum = o.code ? liveDecode(o.code).num : Math.floor(Math.random() * 1e9);
   LR = { mode: o.mode, theme: o.theme, level: o.level, segs, seg: 0, rng: mulberry32(seedNum * 2654435761 >>> 0), used: new Set(),
@@ -3457,35 +3465,27 @@ function liveFinish(){
 
 /* ---------- Ansichten ---------- */
 function vLive(){
-  const c = liveConf(); const lobby = VIEW.params.lobby;
-  const pills = (k, list, cur) => list.map(([v, l, tip]) => `<button class="pill ${String(cur) === String(v) ? "on" : ""}" data-act="liveSet" data-k="${k}" data-v="${v}" ${tip ? `data-tip="${esc(tip)}"` : ""}>${l}</button>`).join("");
+  const c = liveConf(); const lobby = VIEW.params.lobby, room = VIEW.params.room;
   const short = { mix: "🎲 Gemischt", viaje: "✈️ Reisen", resto: "🍷 Restaurant", piso: "🏠 Wohnung", salud: "🩺 Arzt" };
-  const sel = (k, cur, other) => `<select data-liveset="${k}">${MAIN_ORDER.map(t => `<option value="${t}" ${t === cur ? "selected" : ""} ${t === other ? "disabled" : ""}>${LIVE_TASKS[t].em} ${LIVE_TASKS[t].name}</option>`).join("")}</select>`;
-  let start;
+  const themes = LIVE_THEMES.map(([v, l]) => `<button class="pill ${c.theme === v ? "on" : ""}" data-act="liveSet" data-k="theme" data-v="${v}" data-tip="${esc(l)}">${short[v]}</button>`).join("");
+  let body;
   if (lobby){
-    const d = liveDecode(lobby.code); const pr = LIVE_PAIRS[d.pair];
-    start = `<div class="lv-lobby"><div class="small muted">${lobby.joined ? "Du bist im Raum" : "Euer Raum-Code"}</div><div class="lv-code">${esc(lobby.code)}</div>
-      ${lobby.joined ? "" : `<div class="small">Sag den Code den anderen. Sie öffnen Svenolingo, gehen auf 🎙️ Live Session → 🔑 Raum-Code → „Raum beitreten“.</div>`}
-      <div class="lv-plan">${esc(LIVE_THEMES.find(t => t[0] === d.theme)[1])} · Startstufe ${d.level} · ${LIVE_TASKS[pr[0]].em} ${esc(LIVE_TASKS[pr[0]].name)} + ${LIVE_TASKS[pr[1]].em} ${esc(LIVE_TASKS[pr[1]].name)}</div>
-      <div class="small muted">Alle sehen dieselben Karten. Weitergeblättert wird gemeinsam, wenn die Leitung „Weiter“ sagt. Alle brauchen denselben Stand der App (unten auf der Startseite).</div>
-      <div class="btns"><button class="btn" data-act="liveGo">▶ Los geht’s</button><button class="btn-ghost" data-act="liveLobbyClose">Zurück</button></div></div>`;
-  } else if (c.mode === "room"){
-    start = `<div class="lv-room"><div class="lv-roombox"><div class="tt">Raum erstellen</div><button class="btn" data-act="liveCreate" data-tip="Du leitest, deine Einstellungen gelten für alle">🔑 Code erzeugen</button></div>
-      <div class="lv-roombox"><div class="tt">Raum beitreten</div><div class="lv-join"><input id="livecode" type="text" placeholder="SOL-0000" autocomplete="off" spellcheck="false"><button class="btn" data-act="liveJoin">Beitreten</button></div></div></div>`;
+    body = `<div class="lv-lobby"><div class="lv-code">${esc(lobby.code)}</div>
+      ${lobby.joined ? "" : `<div class="small muted">Code den anderen sagen</div>`}
+      <div class="btns"><button class="btn" data-act="liveGo">▶ Los</button><button class="btn-ghost" data-act="liveLobbyClose">Zurück</button></div></div>`;
+  } else if (room){
+    body = `<div class="lv-room1"><button class="btn" data-act="liveCreate" data-tip="Alle mit eigenem Gerät bekommen dieselben Karten">Code erzeugen</button>
+      <span class="small muted">oder</span><input id="livecode" type="text" placeholder="SOL-0000" autocomplete="off" spellcheck="false"><button class="btn" data-act="liveJoin">Beitreten</button>
+      <button class="linkbtn" data-act="liveRoom" data-v="0">Zurück</button></div>`;
   } else {
-    start = `<div class="btns"><button class="btn-hero lv-go" data-act="liveGo">▶ Session starten</button></div>`;
+    body = `<div class="lv-pills lv-themes">${themes}</div>
+      <button class="btn-hero lv-go" data-act="liveGo" data-tip="Etwa 30 Minuten, die Stufe passt sich an. Keine XP.">▶ Starten</button>
+      <button class="linkbtn lv-roomlink" data-act="liveRoom" data-v="1" data-tip="Wenn alle die App auf dem eigenen Gerät offen haben">🔑 Mit Raum-Code</button>`;
   }
   return `<div class="page">${head("🎙️ Live Session")}
-  <div class="card lv-setup">
-    <div class="lv-row"><div class="lv-lab">Modus</div><div class="seg">${LIVE_MODES.map(([v, l]) => `<button class="${c.mode === v ? "on" : ""}" data-act="liveSet" data-k="mode" data-v="${v}" data-tip="${{ solo: "Du antwortest selbst, die App prüft", screen: "Eine Person teilt den Bildschirm und klickt", room: "Alle haben die App offen und bekommen per Code dieselben Karten" }[v]}">${l}</button>`).join("")}</div></div>
-    <div class="lv-row"><div class="lv-lab">Fokus</div><div class="lv-pills">${pills("theme", LIVE_THEMES.map(([v, l]) => [v, short[v], l]), c.theme)}</div></div>
-    <div class="lv-row"><div class="lv-lab">Startstufe</div><div class="lv-pills">${pills("level", [[1, "1", "leicht"], [2, "2", "mittel"], [3, "3", "schwer"]], c.level)}</div></div>
-    <div class="lv-row"><div class="lv-lab">Hauptaufgaben</div><div class="lv-sel" data-tip="Wechseln nach jeder Session automatisch">${sel("a", c.a, c.b)}<span>+</span>${sel("b", c.b, c.a)}</div></div>
-    <div class="lv-flow" data-tip="Aufwärmen, dann eine leichtere und eine schwerere Hauptaufgabe. Die ersten ${HELP_CARDS} Karten jeder Aufgabe mit Hilfe. Keine XP."><span>🎡 ×3</span><span>🧩 ×3</span><span>→ ${LIVE_TASKS[c.a].em} ×4</span><span>→ ${LIVE_TASKS[c.b].em} ×4</span><span class="muted">≈ 30 Min.</span></div>
-    ${start}
-  </div>
+  <div class="card lv-setup lv-simple">${body}</div>
   <div class="grp">Einzeln üben</div>
-  <div class="mgrid c3">${Object.keys(LIVE_TASKS).map(t => mt({ cls: "lvsub", attrs: `data-act="liveSingle" data-task="${t}"`, em: LIVE_TASKS[t].em, tt: esc(LIVE_TASKS[t].name), tip: LIVE_TASKS[t].sub + " · 6 Karten" })).join("")}</div></div>`;
+  <div class="mgrid c3">${Object.keys(LIVE_TASKS).filter(t => t !== "roulette").map(t => mt({ cls: "lvsub", attrs: `data-act="liveSingle" data-task="${t}"`, em: LIVE_TASKS[t].em, tt: esc(LIVE_TASKS[t].name), tip: LIVE_TASKS[t].sub })).join("")}</div></div>`;
 }
 function liveRate(){
   return `<div class="lv-rate"><button class="btn ok" data-act="liveRate" data-v="1">✓ geschafft</button><button class="btn-ghost" data-act="liveRate" data-v="0">↻ noch schwer</button></div>`;
@@ -3707,7 +3707,8 @@ const LIVE_ACTIONS = {
     if (!d){ toast("Den Code kenne ich nicht. Er sieht so aus: SOL-4821"); return; }
     VIEW.params.lobby = { code: "SOL-" + d.num, joined: true }; render(); },
   liveLobbyClose: () => { VIEW.params.lobby = null; render(); },
-  liveSingle: el => { const c = liveConf(); liveStart({ mode: c.mode === "room" ? "solo" : c.mode, theme: c.theme, level: c.level, single: el.dataset.task }); },
+  liveRoom: el => { VIEW.params.room = el.dataset.v === "1"; render(); if (VIEW.params.room){ const f = document.getElementById("livecode"); if (f) f.focus(); } },
+  liveSingle: el => { const c = liveConf(); liveStart({ mode: "solo", theme: c.theme, level: 1, single: el.dataset.task }); },
   liveQuit: () => { clearInterval(liveTimer); clearInterval(liveSpin); LR = null; if (HAS_TTS) speechSynthesis.cancel(); back(); },
   liveBackHome: () => { LR = null; VIEW = STACK.pop() || { name: "home", params: {} }; if (VIEW.name !== "live") VIEW = { name: "live", params: {} }; render(); },
   liveNext: () => { if (!LR || !LR.card || !LR.card.done) return; liveNextCard(false); if (LR.finished) return; render(); window.scrollTo(0, 0); },
