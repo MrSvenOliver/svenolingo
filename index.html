@@ -3480,25 +3480,12 @@ function liveFinish(){
 
 /* ---------- Ansichten ---------- */
 function vLive(){
-  const c = liveConf(); const lobby = VIEW.params.lobby, room = VIEW.params.room;
+  const c = liveConf();
   const short = { mix: "🎲 Gemischt", viaje: "✈️ Reisen", resto: "🍷 Restaurant", piso: "🏠 Wohnung", salud: "🩺 Arzt" };
   const themes = LIVE_THEMES.map(([v, l]) => `<button class="pill ${c.theme === v ? "on" : ""}" data-act="liveSet" data-k="theme" data-v="${v}" data-tip="${esc(l)}">${short[v]}</button>`).join("");
-  let body;
-  if (lobby){
-    body = `<div class="lv-lobby"><div class="lv-code">${esc(lobby.code)}</div>
-      ${lobby.joined ? "" : `<div class="small muted">Code den anderen sagen</div>`}
-      <div class="btns"><button class="btn" data-act="liveGo">▶ Los</button><button class="btn-ghost" data-act="liveLobbyClose">Zurück</button></div></div>`;
-  } else if (room){
-    body = `<div class="lv-room1"><button class="btn" data-act="liveCreate" data-tip="Alle mit eigenem Gerät bekommen dieselben Karten">Code erzeugen</button>
-      <span class="small muted">oder</span><input id="livecode" type="text" placeholder="SOL-0000" autocomplete="off" spellcheck="false"><button class="btn" data-act="liveJoin">Beitreten</button>
-      <button class="linkbtn" data-act="liveRoom" data-v="0">Zurück</button></div>`;
-  } else {
-    body = `<div class="lv-pills lv-themes">${themes}</div>
-      <button class="btn-hero lv-go" data-act="liveGo" data-tip="Etwa 30 Minuten, die Stufe passt sich an. Keine XP.">▶ Starten</button>
-      <button class="linkbtn lv-roomlink" data-act="liveRoom" data-v="1" data-tip="Wenn alle die App auf dem eigenen Gerät offen haben">🔑 Mit Raum-Code</button>`;
-  }
   return `<div class="page">${head("🎙️ Live Session")}
-  <div class="card lv-setup lv-simple">${body}</div>
+  <div class="card lv-setup lv-simple"><div class="lv-pills lv-themes">${themes}</div>
+    <button class="btn-hero lv-go" data-act="liveGo" data-tip="Etwa 30 Minuten, die Stufe passt sich an. Keine XP.">▶ Starten</button></div>
   <div class="grp">Einzeln üben</div>
   <div class="mgrid c3">${Object.keys(LIVE_TASKS).filter(t => t !== "roulette").map(t => mt({ cls: "lvsub", attrs: `data-act="liveSingle" data-task="${t}"`, em: LIVE_TASKS[t].em, tt: esc(LIVE_TASKS[t].name), tip: LIVE_TASKS[t].sub })).join("")}</div></div>`;
 }
