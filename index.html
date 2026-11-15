@@ -495,6 +495,18 @@ button.fw:hover{background:var(--surface-3)}
 .lv-room1{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
 .lv-room1 input{font:inherit;font-size:15px;width:120px;padding:9px 12px;border-radius:12px;border:1px solid var(--surface-3);background:var(--surface-2);text-transform:uppercase}
 .lv-simple .lv-lobby{display:flex;flex-direction:column;align-items:center;gap:10px}
+.rankchip{cursor:pointer}
+.rk-list{max-width:560px;margin:0 auto;padding:10px 12px;display:flex;flex-direction:column}
+.rk-row{display:flex;align-items:center;gap:14px;padding:13px 12px;border-radius:12px}
+.rk-row + .rk-row{border-top:1px solid var(--surface-3)}
+.rk-row.me{background:var(--surface-2)}
+.rk-m{width:30px;text-align:center;font-size:22px}
+.rk-n{font-size:15px;color:var(--ink-3);font-weight:600}
+.rk-name{flex:1;font-size:16px;font-weight:600}
+.rk-bar{width:120px;height:6px;border-radius:99px;background:var(--surface-3);overflow:hidden}
+.rk-bar i{display:block;height:100%;background:var(--gold, #E2A93B);border-radius:99px}
+.rk-xp{width:76px;text-align:right;font-size:13.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.rk-xp b{color:var(--ink);font-size:16px}
 .page.home .stand{margin-top:26px;font-size:12px}
 .sheet-bg{position:fixed;inset:0;background:rgba(30,22,18,.35);z-index:50;animation:luFade .2s}
 .sheet{position:fixed;top:84px;right:max(24px,calc(50% - 380px));width:380px;z-index:51;padding:18px 20px;display:flex;flex-direction:column;gap:14px;animation:luPop .25s cubic-bezier(.2,1.2,.4,1)}
@@ -3005,7 +3017,7 @@ function vHome(){
     <div class="tb-r">
       <span class="stat-chip" data-tip="${STATS.streak === 1 ? "1 Tag" : STATS.streak + " Tage"} in Folge${STATS.best > STATS.streak ? ` · Rekord ${STATS.best}` : ""}">🔥 <b>${STATS.streak}</b></span>
       <span class="stat-chip" data-tip="${reached ? "Tagesziel erreicht" : `Heute ${xp} von ${goal} XP`}">⭐ <b>${xp}</b><span class="of">/${goal}</span></span>
-      <button class="iconbtn" data-act="sheetOpen" data-tip="Einstellungen" aria-label="Einstellungen">⚙️</button>
+      ${rankChip()}<button class="iconbtn" data-act="sheetOpen" data-tip="Einstellungen" aria-label="Einstellungen">⚙️</button>
     </div>
   </div>
   <div class="today card">
@@ -3041,7 +3053,7 @@ function vHome(){
       ["🔁", "Schwierige Wörter", "alles, was du schon falsch hattest"],
       [`<span class="mt-bar"><i style="width:60%"></i></span>`, "Prozent", "wie sicher du ein Thema kannst"],
       ["🎧", "Hör-Übungen", "Schalter aus = nichts wird vorgelesen"]
-    ].map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
+    ].concat(ONLINE ? [["🏆", "Rangliste", "XP der Woche, montags geht es neu los"]] : []).map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
   </div>
   <div class="stand">Stand ${esc(STAND)}</div>
   <input type="file" id="restorefile" accept=".json,application/json" hidden>
@@ -3788,7 +3800,8 @@ function cloudInit(){
     } else {
       CL.user = null; CL.uid = ""; CL.admin = false; CL.name = ""; PROG = {}; STATS = defaultStats(); SETTINGS = { audio: true, goal: 150, goalV2: true };
     }
-    CL.ready = true; CL.busy = false; VIEW = { name: "home", params: {} }; render();
+    CL.ready = true; CL.busy = false; CL.board = null; CL.boardAt = 0; VIEW = { name: "home", params: {} }; render();
+    if (u) boardLoad(true);
   });
 }
 async function cloudLoad(){
@@ -3869,7 +3882,47 @@ if (ONLINE){
   window.addEventListener("pagehide", () => { if (CL.t) cloudFlush(); });
 }
 
-const VIEWS = { live: vLive, liverun: vLiveRun, livesum: vLiveSum, home: vHome, words: vWords, sentences: vSentences, grammar: vGrammar, hardmode: vHardmode, gram: vGram, verbs: vVerbs, cat: vCat, list: vList, verb: vVerb, flash: vFlash, session: vSession, summary: vSummary };
+/* ================= 🏆 RANGLISTE (online) ================= */
+async function boardLoad(force){
+  if (!ONLINE || !CL.user || CL.blocked) return;
+  if (!force && CL.boardAt && Date.now() - CL.boardAt < 60000) return;
+  CL.boardAt = Date.now();
+  try {
+    const snap = await FBX.getDocs(FBX.collection(fbDb, "board")); const m = {};
+    snap.docs.forEach(d => { m[d.id] = d.data(); }); CL.board = m;
+    if (VIEW.name === "home" || VIEW.name === "rank") render();
+  } catch (e) { CL.boardAt = 0; }
+}
+function boardRows(){
+  const wk = weekKey(clock());
+  const rows = Object.entries(CLOUD.names).map(([uid, name]) => {
+    const d = (CL.board || {})[uid] || {};
+    const r = { uid, name, xp: d.wk === wk ? (d.wkXp || 0) : 0, total: d.totalXp || 0, streak: d.streak || 0 };
+    if (uid === CL.uid){ r.xp = weekXp(); r.total = STATS.totalXp || 0; r.streak = STATS.streak || 0; }
+    return r;
+  }).sort((a, b) => b.xp - a.xp || a.name.localeCompare(b.name));
+  rows.forEach((r, i) => { r.rank = i && rows[i - 1].xp === r.xp ? rows[i - 1].rank : i + 1; });
+  return rows;
+}
+function rankChip(){
+  if (!ONLINE || !CL.user) return "";
+  boardLoad(false);
+  const me = CL.admin ? null : boardRows().find(r => r.uid === CL.uid);
+  return `<button class="stat-chip rankchip" data-act="nav" data-to="rank" data-tip="Rangliste · XP dieser Woche">🏆${me && me.xp > 0 ? ` <b>${me.rank}.</b>` : ""}</button>`;
+}
+function vRank(){
+  boardLoad(false);
+  const rows = boardRows(), top = Math.max(1, ...rows.map(r => r.xp));
+  const medal = r => r.xp > 0 && r.rank <= 3 ? ["🥇", "🥈", "🥉"][r.rank - 1] : `<span class="rk-n">${r.rank}</span>`;
+  return `<div class="page">${head("🏆 Rangliste")}
+  <div class="card rk-list" data-tip="XP dieser Woche · montags geht es neu los">
+    ${rows.map(r => `<div class="rk-row ${r.uid === CL.uid ? "me" : ""}" data-tip="Gesamt ${r.total} XP · 🔥 ${r.streak} ${r.streak === 1 ? "Tag" : "Tage"}">
+      <span class="rk-m">${medal(r)}</span><span class="rk-name">${esc(r.name)}</span>
+      <span class="rk-bar"><i style="width:${Math.round(r.xp / top * 100)}%"></i></span><span class="rk-xp"><b>${r.xp}</b> XP</span></div>`).join("")}
+  </div></div>`;
+}
+
+const VIEWS = { rank: vRank, live: vLive, liverun: vLiveRun, livesum: vLiveSum, home: vHome, words: vWords, sentences: vSentences, grammar: vGrammar, hardmode: vHardmode, gram: vGram, verbs: vVerbs, cat: vCat, list: vList, verb: vVerb, flash: vFlash, session: vSession, summary: vSummary };
 function render(){ const app = document.getElementById("app"); if (!app) return;
   if (ONLINE && !CL.user){ app.innerHTML = vLogin(); document.querySelector(".home-btn").style.display = "none"; return; }
   app.innerHTML = (VIEWS[VIEW.name] || vHome)(); document.querySelector(".home-btn").style.display = VIEW.name === "home" ? "none" : ""; if (VIEW.name === "home" || VIEW.name === "summary") maybeCelebrate(); liveAfterRender(); }
