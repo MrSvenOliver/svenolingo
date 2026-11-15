@@ -609,12 +609,16 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   .mt.lg .mt-em{font-size:24px;width:28px}
   .mt.lg .mt-tt,.mt .mt-tt{white-space:normal;line-height:1.2}
   .mt.lg .mt-tt{font-size:16px}
-  details.lgd{margin-top:18px}
-  details.lgd>summary{list-style:none;cursor:pointer;font-size:14px;color:var(--ink-2);padding:12px 4px;text-align:center}
+  details.lgd{margin-top:14px}
+  details.lgd>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.55);font-size:13px;color:var(--ink-3)}
   details.lgd>summary::-webkit-details-marker{display:none}
-  details.lgd[open]>summary{color:var(--ink)}
-  .legend{grid-template-columns:1fr;padding:14px 16px;gap:10px}
-  .stand{margin-top:14px}
+  details.lgd .lgd-l{font-weight:600;color:var(--ink-2)}
+  details.lgd .lgd-r{display:flex;align-items:center;gap:8px;font-size:12px}
+  details.lgd .lgd-r i{font-style:normal;font-size:17px;line-height:1;color:var(--ink-3);transition:transform .2s}
+  details.lgd[open] .lgd-r i{transform:rotate(90deg)}
+  details.lgd[open]>summary{border-radius:14px 14px 0 0;background:var(--surface)}
+  details.lgd .legend{grid-template-columns:1fr;padding:4px 14px 14px;gap:9px;border-radius:0 0 14px 14px;box-shadow:none;font-size:12.5px}
+  .page.home .stand{display:none}
   .a2hs{display:flex;align-items:center;gap:10px;padding:12px 12px 12px 14px;margin-top:16px;font-size:14px;line-height:1.35}
   .a2hs .a2-i{font-size:22px}
   .a2hs .a2-t{flex:1}
@@ -3203,7 +3207,7 @@ function vHome(){
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="hard" data-id="hard"`, em: "🔁", tt: "Schwierige Wörter", right: hard ? `<span class="badge">${hard}</span>` : undefined, tip: hard ? `${hard} ${hard === 1 ? "Eintrag" : "Einträge"} mit Fehlern üben` : "Noch keine Fehler", disabled: !hard })}
   </div>
   ${a2hsHint()}
-  ${isPhone() ? `<details class="lgd"><summary>ℹ️ Legende</summary>` : `<div class="grp">Legende</div>`}
+  ${isPhone() ? `<details class="lgd"><summary><span class="lgd-l">ℹ️ Legende</span><span class="lgd-r">Stand ${esc(STAND)}<i>›</i></span></summary>` : `<div class="grp">Legende</div>`}
   <div class="legend card">
     ${[
       ["🔥", "Serie", "Tage in Folge mit erreichtem Tagesziel"],
