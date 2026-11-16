@@ -41,6 +41,19 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
+    // Live-Quiz: Sven steuert das Spiel, jede Person schreibt nur ihren eigenen Punktestand
+    match /live/{d} {
+      allow read: if signedIn();
+      allow write: if isAdmin();
+    }
+    match /liveplayers/{uid} {
+      allow read: if signedIn();
+      allow create, update: if isMe(uid) && isLearner()
+        && request.resource.data.keys().hasOnly(['gid', 'name', 'score', 'last', 'updated'])
+        && request.resource.data.score is int;
+      allow delete: if isAdmin();
+    }
+
     // alles andere: gesperrt
     match /{document=**} {
       allow read, write: if false;
