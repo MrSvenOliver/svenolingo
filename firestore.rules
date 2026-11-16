@@ -5,7 +5,7 @@ service cloud.firestore {
     function signedIn() { return request.auth != null; }
     function isAdmin() { return signedIn() && request.auth.uid == 'YJhmNYq7J6ek6W3SN8zxKqDO6bo2'; }
     function isMe(uid) { return signedIn() && request.auth.uid == uid; }
-    function isLearner() { return signedIn() && request.auth.uid in ['h4TxYatjg2S1rMa0p5HM5qgzIBn2', 'Sr3uCID4jgO0V03km1EVr0yP5jV2', 'Jv0Zx0XgE8YVlPECUtTwixgHEC53']; }
+    function isLearner() { return signedIn() && !isAdmin(); }   // jedes Konto außer Sven (Registrieren ist ausgeschaltet, Konten legt nur Sven an)
 
     // Eigener Lernstand: nur die Person selbst, Sven darf lesen (Überblick)
     match /users/{uid} {

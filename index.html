@@ -2872,7 +2872,7 @@ const LIVE_IMPF = {"ser":[["era","E-ra"],
   ["salíais","sa-LI-ais"],
   ["salían","sa-LI-an"]]};
 const STAND = "16.11.2026";
-const BUILD = "00989a2217";
+const BUILD = "502dd1d552";
 
 const CLOUD = {"cfg":{"apiKey":"AIzaSyBBFF2squOw3gLcvqjTE9seE1L4D4Emy_g","authDomain":"svenolingo.firebaseapp.com","projectId":"svenolingo","storageBucket":"svenolingo.firebasestorage.app","messagingSenderId":"252077969505","appId":"1:252077969505:web:e2bf221a4d7864bc29da20"},"admin":"YJhmNYq7J6ek6W3SN8zxKqDO6bo2","names":{"h4TxYatjg2S1rMa0p5HM5qgzIBn2":"Klara","Sr3uCID4jgO0V03km1EVr0yP5jV2":"Noah","Jv0Zx0XgE8YVlPECUtTwixgHEC53":"Tabitha"}};
 
@@ -3985,7 +3985,7 @@ function cloudInit(){
   if (CLOUD.emu){ S.connectAuthEmulator(fbAuth, CLOUD.emu.auth, { disableWarnings: true }); S.connectFirestoreEmulator(fbDb, "127.0.0.1", CLOUD.emu.fs); }
   S.onAuthStateChanged(fbAuth, async u => {
     if (u){
-      CL.user = u; CL.uid = u.uid; CL.admin = u.uid === CLOUD.admin; CL.name = CL.admin ? "Sven" : (CLOUD.names[u.uid] || (u.email || "").split("@")[0]);
+      CL.user = u; CL.uid = u.uid; CL.admin = u.uid === CLOUD.admin; CL.name = CL.admin ? "Sven" : (CLOUD.names[u.uid] || mailName(u.email));
       await cloudLoad();
     } else {
       CL.user = null; CL.uid = ""; CL.admin = false; CL.name = ""; CL.fb = null; CL.fbAt = 0; PROG = {}; STATS = defaultStats(); SETTINGS = { audio: true, goal: 150, goalV2: true };
@@ -4008,6 +4008,7 @@ async function cloudLoad(){
   }
 }
 function cloudDirty(){ if (!ONLINE || !CL.user || CL.blocked) return; clearTimeout(CL.t); CL.t = setTimeout(cloudFlush, 2500); }
+function mailName(m){ const n = String(m || "").split("@")[0].split(/[._\-+0-9]/)[0] || "Ich"; return n.charAt(0).toUpperCase() + n.slice(1).toLowerCase(); }
 async function cloudFlush(){
   clearTimeout(CL.t); CL.t = null; if (!CL.user || CL.blocked) return;
   const uid = CL.uid, stamp = FBX.serverTimestamp();
@@ -4085,7 +4086,11 @@ async function boardLoad(force){
 }
 function boardRows(){
   const wk = weekKey(clock());
-  const rows = Object.entries(CLOUD.names).map(([uid, name]) => {
+  /* Namen: fest hinterlegte plus alle, die schon in der Rangliste stehen (neue Konten brauchen keine Code-Änderung) */
+  const names = Object.assign({}, CLOUD.names);
+  Object.entries(CL.board || {}).forEach(([uid, d]) => { if (uid !== CLOUD.admin && d && d.name && !names[uid]) names[uid] = String(d.name); });
+  if (CL.user && !CL.admin && !names[CL.uid]) names[CL.uid] = CL.name;
+  const rows = Object.entries(names).map(([uid, name]) => {
     const d = (CL.board || {})[uid] || {};
     const r = { uid, name, xp: d.wk === wk ? (d.wkXp || 0) : 0, total: d.totalXp || 0, streak: d.streak || 0 };
     if (uid === CL.uid){ r.xp = weekXp(); r.total = STATS.totalXp || 0; r.streak = STATS.streak || 0; }
