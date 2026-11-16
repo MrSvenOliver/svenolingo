@@ -435,6 +435,8 @@ button.fw:hover{background:var(--surface-3)}
 .head+.grp{margin-top:0}
 .mgrid{display:grid;gap:10px}
 .mgrid.c2{grid-template-columns:repeat(2,1fr)} .mgrid.c3{grid-template-columns:repeat(3,1fr)} .mgrid.c4{grid-template-columns:repeat(4,1fr)} .mgrid.c5{grid-template-columns:repeat(5,1fr)}
+.mgrid.ex5{grid-template-columns:minmax(0,1.3fr) minmax(0,1.1fr) repeat(3,minmax(0,1fr))} .mgrid.ex5 .mt.lg .mt-tt{white-space:normal;line-height:1.15;-webkit-hyphens:none;hyphens:none}
+.mt.fbtile{position:relative;overflow:visible} .mt.fbtile .badge.red{position:absolute;top:-7px;right:-7px;min-width:22px;padding:2px 7px;box-shadow:0 0 0 3px var(--bg,#FAF6F0)} .mgrid.ex5 .mt.lg{padding-left:12px;padding-right:12px;gap:10px}
 @media (max-width:820px){.mgrid.c4,.mgrid.c5{grid-template-columns:repeat(3,1fr)} .legend{grid-template-columns:1fr}}
 @media (max-width:600px){.mgrid.c3,.mgrid.c4,.mgrid.c5{grid-template-columns:repeat(2,1fr)}}
 .mt{display:flex;align-items:center;gap:11px;padding:11px 14px;min-height:58px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);text-align:left;color:var(--ink);transition:transform .15s,box-shadow .15s}
@@ -500,6 +502,32 @@ button.fw:hover{background:var(--surface-3)}
 .lv-room1 input{font:inherit;font-size:15px;width:120px;padding:9px 12px;border-radius:12px;border:1px solid var(--surface-3);background:var(--surface-2);text-transform:uppercase}
 .lv-simple .lv-lobby{display:flex;flex-direction:column;align-items:center;gap:10px}
 .rankchip{cursor:pointer}
+.mt .badge.red{background:#D7443A}
+#fbs .sheet{gap:12px}
+.fb-where{font-size:13px;color:var(--ink-3);background:var(--surface-2);padding:7px 11px;border-radius:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#fbtext{width:100%;box-sizing:border-box;resize:vertical;min-height:110px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--surface-3);background:var(--surface);font:inherit;font-size:15px;line-height:1.4;color:var(--ink);outline:none}
+#fbtext:focus{border-color:var(--accent)}
+.fb-wrap{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.fb-bar{display:flex;align-items:center;justify-content:space-between;padding:0 4px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-3)}
+.fb-bar .pill{text-transform:none;letter-spacing:0}
+.fb-list{padding:6px 16px;display:flex;flex-direction:column}
+.fb-item{padding:14px 0;display:flex;flex-direction:column;gap:6px}
+.fb-item + .fb-item{border-top:1px solid var(--surface-3)}
+.fb-item.done{opacity:.55}
+.fb-top{display:flex;align-items:center;gap:10px}
+.fb-d{font-size:12.5px;color:var(--ink-3);flex:1}
+.fb-ck{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--surface-3);color:var(--ink-3);font-size:15px;flex:none}
+.fb-ck:hover{border-color:#4F7A5A;color:#4F7A5A}
+.fb-ck.on{background:#4F7A5A;border-color:#4F7A5A;color:#fff}
+.fb-w{font-size:12.5px;color:var(--ink-3);word-break:break-word}
+.fb-t{font-size:15px;line-height:1.45;white-space:pre-wrap;word-break:break-word}
+.fb-empty{padding:28px;text-align:center;color:var(--ink-3)}
+.fb-dn .lgd-l{font-weight:600;color:var(--ink-2)}
+details.fb-dn>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;min-height:46px;padding:0 14px;border-radius:14px;background:rgba(255,255,255,.55);font-size:13px;color:var(--ink-3)}
+details.fb-dn>summary::-webkit-details-marker{display:none}
+details.fb-dn .lgd-r i{font-style:normal;font-size:17px;display:inline-block;transition:transform .2s}
+details.fb-dn[open] .lgd-r i{transform:rotate(90deg)}
+details.fb-dn .fb-list{margin-top:8px}
 .rk-list{max-width:560px;margin:0 auto;padding:10px 12px;display:flex;flex-direction:column}
 .rk-row{display:flex;align-items:center;gap:14px;padding:13px 12px;border-radius:12px}
 .rk-row + .rk-row{border-top:1px solid var(--surface-3)}
@@ -692,6 +720,9 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   .ex-head .back{padding:8px 8px;font-size:14px}
   .ex-count{font-size:13.5px}
   .report{display:none}
+  body.online .report{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;margin-right:8px;font-size:14px}
+  .report .rp-l{display:none}
+  .mgrid.ph-extras .fbtile{grid-column:1/-1}
   .ex-grid{display:flex;flex-direction:column;height:auto;min-height:0;max-height:none;gap:12px}
   .q-card{min-height:190px;padding:34px 18px 20px;gap:10px}
   .q-kick{top:12px;font-size:11.5px}
@@ -2840,8 +2871,8 @@ const LIVE_IMPF = {"ser":[["era","E-ra"],
   ["salíamos","sa-LI-a-mos"],
   ["salíais","sa-LI-ais"],
   ["salían","sa-LI-an"]]};
-const STAND = "15.11.2026";
-const BUILD = "d5d00b18f4";
+const STAND = "16.11.2026";
+const BUILD = "00989a2217";
 
 const CLOUD = {"cfg":{"apiKey":"AIzaSyBBFF2squOw3gLcvqjTE9seE1L4D4Emy_g","authDomain":"svenolingo.firebaseapp.com","projectId":"svenolingo","storageBucket":"svenolingo.firebasestorage.app","messagingSenderId":"252077969505","appId":"1:252077969505:web:e2bf221a4d7864bc29da20"},"admin":"YJhmNYq7J6ek6W3SN8zxKqDO6bo2","names":{"h4TxYatjg2S1rMa0p5HM5qgzIBn2":"Klara","Sr3uCID4jgO0V03km1EVr0yP5jV2":"Noah","Jv0Zx0XgE8YVlPECUtTwixgHEC53":"Tabitha"}};
 
@@ -3205,13 +3236,14 @@ function vHome(){
     ${mt({ cls: "lg", attrs: `data-act="nav" data-to="grammar"`, em: "🧩", tt: "Grammatik", pct: mastery(GRAM_ITEMS), right: mastery(GRAM_ITEMS) + " %", tip: `${BASIC_GRAM.length} Themen mit Erklärung` })}
   </div>
   <div class="grp">Extras</div>
-  <div class="mgrid c4 ${isPhone() ? "ph-extras" : ""}">
+  <div class="mgrid ${ONLINE && CL.user && !isPhone() ? "c5 ex5" : "c4"} ${isPhone() ? "ph-extras" : ""}">
     ${hardOpen()
       ? mt({ cls: "lg dark hardtile", attrs: `data-act="nav" data-to="hardmode"`, em: "💎", tt: `Hard Mode <span class="hm-open">offen</span>`, pct: hm, right: hm + " %", tip: `Für Fortgeschrittene · heute bis Mitternacht offen` })
       : mt({ cls: "lg dark hardtile locked", attrs: `data-act="hardLocked"`, em: "💎", tt: `Hard Mode <span class="lock">🔒</span>`, pct: Math.round(Math.min(xp, HARD_XP) / HARD_XP * 100), right: `noch ${hardLeft()} XP`, tip: `Öffnet sich jeden Tag ab ${HARD_XP} XP` })}
     ${isPhone() ? "" : mt({ cls: "lg teal livetile", attrs: `data-act="nav" data-to="live"`, em: "🎙️", tt: "Live Session", tip: `Für Gruppencalls und allein · nächste Session: ${LIVE_TASKS[lc.a].name} + ${LIVE_TASKS[lc.b].name}` })}
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="big" data-id="big"`, em: "🎯", tt: "Vokabeltest", tip: "20 Fragen aus allen Wörtern und Verbformen" })}
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="hard" data-id="hard"`, em: "🔁", tt: "Schwierige Wörter", right: hard ? `<span class="badge">${hard}</span>` : undefined, tip: hard ? `${hard} ${hard === 1 ? "Eintrag" : "Einträge"} mit Fehlern üben` : "Noch keine Fehler", disabled: !hard })}
+    ${fbTile()}
   </div>
   ${isPhone() ? `<div class="ph-foot">${a2hsHint()}<details class="lgd"><summary><span class="lgd-l">ℹ️ Legende</span><span class="lgd-r"><i>›</i></span></summary>` : `<div class="grp">Legende</div>`}
   <div class="legend card">
@@ -3224,7 +3256,7 @@ function vHome(){
       ["🔁", "Schwierige Wörter", "alles, was du schon falsch hattest"],
       [`<span class="mt-bar"><i style="width:60%"></i></span>`, "Prozent", "wie sicher du ein Thema kannst"],
       ["🎧", "Hör-Übungen", "Schalter aus = nichts wird vorgelesen"]
-    ].concat(ONLINE ? [["🏆", "Rangliste", "XP der Woche, montags geht es neu los"]] : []).filter(Boolean).map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
+    ].concat(ONLINE ? [["🏆", "Rangliste", "XP der Woche, montags geht es neu los"], CL.admin ? ["📬", "Feedback", "Meldungen aus der Gruppe, abhaken wenn erledigt"] : ["✉️", "Feedback", "Fehler oder Ideen direkt an Sven"]] : []).filter(Boolean).map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
   </div>${isPhone() ? `</details></div>` : ""}
   <div class="stand">Stand ${esc(STAND)}</div>
   <input type="file" id="restorefile" accept=".json,application/json" hidden>
@@ -3472,7 +3504,7 @@ function vSession(){
     fb = `<div class="fb"><div class="fb-msg muted">Wähle eine Antwort – oder drücke 1 bis 4.</div><div class="fb-btns"><button class="btn" disabled>Weiter</button></div></div>`;
   }
   return `<div class="page wide">
-  <div class="ex-head"><button class="back" data-act="back">← Beenden</button><div class="bar pbar"><i style="width:${pct}%"></i></div><div class="ex-count"><button class="report" data-act="report" title="Wort/Satz und Übersetzung in die Zwischenablage kopieren">⚑ Fehler melden</button>${Math.min(S.idx + 1, total)} / ${total}</div></div>
+  <div class="ex-head"><button class="back" data-act="back">← Beenden</button><div class="bar pbar"><i style="width:${pct}%"></i></div><div class="ex-count"><button class="report" data-act="report" aria-label="Fehler melden">⚑<span class="rp-l"> Fehler melden</span></button>${Math.min(S.idx + 1, total)} / ${total}</div></div>
   <div class="ex-grid"><div class="card q-card">${left}</div><div class="a-panel"><div class="a-body">${right}</div>${fb}</div></div></div>`;
 }
 function vSummary(){
@@ -3956,7 +3988,7 @@ function cloudInit(){
       CL.user = u; CL.uid = u.uid; CL.admin = u.uid === CLOUD.admin; CL.name = CL.admin ? "Sven" : (CLOUD.names[u.uid] || (u.email || "").split("@")[0]);
       await cloudLoad();
     } else {
-      CL.user = null; CL.uid = ""; CL.admin = false; CL.name = ""; PROG = {}; STATS = defaultStats(); SETTINGS = { audio: true, goal: 150, goalV2: true };
+      CL.user = null; CL.uid = ""; CL.admin = false; CL.name = ""; CL.fb = null; CL.fbAt = 0; PROG = {}; STATS = defaultStats(); SETTINGS = { audio: true, goal: 150, goalV2: true };
     }
     CL.ready = true; CL.busy = false; CL.board = null; CL.boardAt = 0; VIEW = { name: "home", params: {} }; render();
     if (u) boardLoad(true);
@@ -4080,10 +4112,104 @@ function vRank(){
   </div></div>`;
 }
 
+/* ================= ✉️ FEEDBACK ================= */
+const VIEW_NAMES = { home: "Startseite", rank: "Rangliste", words: "Wörter", verbs: "Verben", sentences: "Sätze", grammar: "Grammatik", hardmode: "Hard Mode", live: "Live Session", cat: "Thema", list: "Liste", verb: "Verb", gram: "Grammatik-Thema", flash: "Karteikarten", summary: "Ergebnis", session: "Übung" };
+function fbWhereNow(){
+  const v = VIEW.name, p = VIEW.params || {};
+  let w = VIEW_NAMES[v] || v;
+  if ((v === "cat" || v === "list") && p.id){ const c = catById(p.kind === "w" ? "w" : "s", p.id); if (c) w += ": " + (c.name || c.title || p.id); }
+  if (v === "verb" && p.id) w += ": " + p.id;
+  if (v === "gram" && p.id){ const g = GRAMMAR.find(x => x.id === p.id); if (g) w += ": " + (g.title || g.name || p.id); }
+  return w;
+}
+let FB_WHERE = "";
+function fbOpen(where, label){
+  if (!ONLINE || !CL.user) return;
+  FB_WHERE = where || fbWhereNow();
+  const old = document.getElementById("fbs"); if (old) old.remove();
+  const d = document.createElement("div"); d.id = "fbs";
+  d.innerHTML = `<div class="sheet-bg" data-act="fbClose"></div><div class="sheet card fbsheet" role="dialog" aria-label="Feedback">
+    <div class="sheet-h"><b>✉️ Feedback</b><button class="iconbtn sm" data-act="fbClose" aria-label="Schließen">✕</button></div>
+    ${label ? `<div class="fb-where">📍 ${esc(label)}</div>` : ""}
+    <textarea id="fbtext" maxlength="2000" rows="5" placeholder="${label ? "Was stimmt nicht?" : "Fehler gefunden oder eine Idee?"}"></textarea>
+    <button class="btn fb-send" data-act="fbSend">Senden</button></div>`;
+  document.body.appendChild(d);
+  if (!isPhone()) setTimeout(() => { const t = document.getElementById("fbtext"); if (t) t.focus(); }, 60);
+}
+function fbClose(){ const d = document.getElementById("fbs"); if (d) d.remove(); document.body.classList.remove("kb"); }
+async function fbSend(el){
+  const ta = document.getElementById("fbtext"); const text = ta ? ta.value.trim() : "";
+  if (!text){ toast("Schreib kurz, was dir aufgefallen ist."); if (ta) ta.focus(); return; }
+  el.disabled = true; el.textContent = "Sendet …";
+  try {
+    await FBX.addDoc(FBX.collection(fbDb, "feedback"), { uid: CL.uid, name: CL.name, text: text.slice(0, 2000), where: FB_WHERE.slice(0, 500), created: FBX.serverTimestamp(), done: false });
+    fbClose(); toast("Danke! Ist bei Sven angekommen.");
+    if (CL.admin){ CL.fbAt = 0; fbLoad(true); }
+  } catch (e) {
+    el.disabled = false; el.textContent = "Senden"; toast("Senden hat nicht geklappt. Verbindung prüfen.");
+  }
+}
+/* nur Sven */
+async function fbLoad(force){
+  if (!ONLINE || !CL.user || !CL.admin) return;
+  if (!force && CL.fbAt && Date.now() - CL.fbAt < 60000) return;
+  CL.fbAt = Date.now();
+  try {
+    const snap = await FBX.getDocs(FBX.collection(fbDb, "feedback"));
+    CL.fb = snap.docs.map(d => Object.assign({ id: d.id }, d.data()));
+    if (VIEW.name === "home" || VIEW.name === "fbadmin") render();
+  } catch (e) { CL.fbAt = 0; }
+}
+function fbTime(c){ if (!c) return 0; if (typeof c.toMillis === "function") return c.toMillis(); if (typeof c.seconds === "number") return c.seconds * 1000; return +c || 0; }
+function fbDate(c){ const t = fbTime(c); if (!t) return "gerade eben"; const d = new Date(t), p = n => String(n).padStart(2, "0"); return `${p(d.getDate())}.${p(d.getMonth() + 1)}. ${p(d.getHours())}:${p(d.getMinutes())}`; }
+function fbOpenItems(){ return (CL.fb || []).filter(f => !f.done).sort((a, b) => fbTime(b.created) - fbTime(a.created)); }
+function fbTile(){
+  if (!ONLINE || !CL.user) return "";
+  if (!CL.admin) return mt({ cls: "lg fbtile", attrs: `data-act="fbOpen"`, em: "✉️", tt: "Feedback", tip: "Fehler gefunden oder eine Idee? Direkt an Sven" });
+  fbLoad(false);
+  const n = fbOpenItems().length;
+  return mt({ cls: "lg fbtile", attrs: `data-act="nav" data-to="fbadmin"`, em: "📬", tt: "Feedback", right: n ? `<span class="badge red">${n}</span>` : undefined, tip: n ? `${n} neue ${n === 1 ? "Meldung" : "Meldungen"}` : "Keine neuen Meldungen" });
+}
+function vFbAdmin(){
+  if (!CL.admin){ VIEW = { name: "home", params: {} }; return vHome(); }
+  fbLoad(false);
+  const open = fbOpenItems(), done = (CL.fb || []).filter(f => f.done).sort((a, b) => fbTime(b.created) - fbTime(a.created));
+  const item = (f, isDone) => `<div class="fb-item ${isDone ? "done" : ""}">
+      <div class="fb-top"><b>${esc(f.name || "?")}</b><span class="fb-d">${esc(fbDate(f.created))}</span>
+        <button class="fb-ck ${isDone ? "on" : ""}" data-act="${isDone ? "fbUndo" : "fbDone"}" data-id="${esc(f.id)}" data-tip="${isDone ? "Wieder öffnen" : "Erledigt"}" aria-label="${isDone ? "Wieder öffnen" : "Erledigt"}">✓</button></div>
+      ${f.where ? `<div class="fb-w">📍 ${esc(f.where)}</div>` : ""}
+      <div class="fb-t">${esc(f.text || "")}</div></div>`;
+  return `<div class="page">${head("📬 Feedback")}
+  <div class="fb-wrap">
+    ${CL.fb ? "" : `<div class="card fb-empty">Lädt …</div>`}
+    ${CL.fb && !open.length ? `<div class="card fb-empty">✓ Alles erledigt</div>` : ""}
+    ${open.length ? `<div class="fb-bar"><span>${open.length} offen</span><button class="pill" data-act="fbCopy" data-tip="Zum Einfügen hier im Chat">📋 Alle kopieren</button></div>
+    <div class="card fb-list">${open.map(f => item(f, false)).join("")}</div>` : ""}
+    ${done.length ? `<details class="lgd fb-dn"><summary><span class="lgd-l">Erledigt (${done.length})</span><span class="lgd-r"><i>›</i></span></summary><div class="card fb-list">${done.map(f => item(f, true)).join("")}</div></details>` : ""}
+  </div></div>`;
+}
+async function fbMark(id, done){
+  const f = (CL.fb || []).find(x => x.id === id); if (!f) return;
+  f.done = done; render();
+  try { await FBX.updateDoc(FBX.doc(fbDb, "feedback", id), { done }); }
+  catch (e) { f.done = !done; render(); toast("Hat nicht geklappt. Verbindung prüfen."); }
+}
+const FB_ACTIONS = {
+  fbOpen: () => fbOpen(fbWhereNow() === "Startseite" ? "Startseite" : fbWhereNow()),
+  fbClose, fbSend: el => fbSend(el),
+  fbDone: el => fbMark(el.dataset.id, true),
+  fbUndo: el => fbMark(el.dataset.id, false),
+  fbCopy: () => {
+    const open = fbOpenItems(); if (!open.length) return;
+    const txt = ["Svenolingo-Feedback (" + open.length + " offen)", ""].concat(open.map((f, i) => `${i + 1}. ${f.name || "?"}, ${fbDate(f.created)}${f.where ? " · " + f.where : ""}\n${f.text}\n`)).join("\n");
+    copyText(txt).then(ok => toast(ok ? "Kopiert – jetzt hier im Chat einfügen." : "Kopieren hat nicht geklappt."));
+  }
+};
+
 /* ================= 📱 HANDY ================= */
 const PHONE_MQ = window.matchMedia ? window.matchMedia("(max-width: 640px)") : { matches: false };
 function isPhone(){ return !!PHONE_MQ.matches; }
-const TAB_VIEWS = ["home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram", "summary"];
+const TAB_VIEWS = ["fbadmin", "home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram", "summary"];
 function renderTabbar(){
   const t = document.getElementById("tabbar"); if (!t) return;
   const show = isPhone() && (!ONLINE || CL.user) && TAB_VIEWS.includes(VIEW.name);
@@ -4120,7 +4246,7 @@ const PHONE_ACTIONS = {
 if (PHONE_MQ.addEventListener) PHONE_MQ.addEventListener("change", () => render());
 /* Neue Version automatisch laden: beim Öffnen, beim Zurückkommen in die App und alle 15 Minuten.
    Neu geladen wird nur außerhalb von Übungen, der Fortschritt wird vorher gespeichert. */
-const UPD_SAFE = ["home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram"];
+const UPD_SAFE = ["fbadmin", "home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram"];
 const UPD_RE = new RegExp("const BU" + "ILD = \"([0-9a-f]{10})\"");
 let UPD = null, UPD_BUSY = false;
 async function updCheck(){
@@ -4134,7 +4260,7 @@ async function updCheck(){
   } catch (e) {} finally { UPD_BUSY = false; }
 }
 async function updApply(){
-  if (!UPD || !UPD_SAFE.includes(VIEW.name) || VIEW.params.sheet) return;
+  if (!UPD || !UPD_SAFE.includes(VIEW.name) || VIEW.params.sheet || document.getElementById("fbs")) return;
   const a = document.activeElement; if (a && /INPUT|TEXTAREA/.test(a.tagName)) return;
   try { sessionStorage.setItem("esv_upd", UPD); } catch (e) {}
   if (CL.t) { try { await cloudFlush(); } catch (e) {} }
@@ -4148,10 +4274,11 @@ if (ONLINE){
 document.addEventListener("focusin", e => { if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) document.body.classList.add("kb"); });
 document.addEventListener("focusout", () => setTimeout(() => { const a = document.activeElement; if (!a || !/INPUT|TEXTAREA/.test(a.tagName)) document.body.classList.remove("kb"); }, 60));
 
-const VIEWS = { rank: vRank, live: vLive, liverun: vLiveRun, livesum: vLiveSum, home: vHome, words: vWords, sentences: vSentences, grammar: vGrammar, hardmode: vHardmode, gram: vGram, verbs: vVerbs, cat: vCat, list: vList, verb: vVerb, flash: vFlash, session: vSession, summary: vSummary };
+const VIEWS = { fbadmin: vFbAdmin, rank: vRank, live: vLive, liverun: vLiveRun, livesum: vLiveSum, home: vHome, words: vWords, sentences: vSentences, grammar: vGrammar, hardmode: vHardmode, gram: vGram, verbs: vVerbs, cat: vCat, list: vList, verb: vVerb, flash: vFlash, session: vSession, summary: vSummary };
 function render(){ const app = document.getElementById("app"); if (!app) return;
   if (ONLINE && !CL.user){ app.innerHTML = vLogin(); document.querySelector(".home-btn").style.display = "none"; renderTabbar(); return; }
   if (isPhone() && VIEW.name === "live") VIEW = { name: "home", params: {} };
+  document.body.classList.toggle("online", !!(ONLINE && CL.user));
   app.innerHTML = (VIEWS[VIEW.name] || vHome)(); renderTabbar(); document.querySelector(".home-btn").style.display = VIEW.name === "home" ? "none" : ""; if (VIEW.name === "home" || VIEW.name === "summary") maybeCelebrate(); liveAfterRender(); if (UPD) setTimeout(updApply, 300); }
 
 const ACTIONS = {
@@ -4217,6 +4344,12 @@ function copyText(text){
 const TYPE_NAMES = { mc_t2n: "Spanisch → Bedeutung", mc_n2t: "Bedeutung → Spanisch", listen: "Hören", build_s: "Satz bauen", build_w: "Wort bauen", type: "Eintippen", pairs: "Paare zuordnen" };
 function reportError(){
   const ex = SESSION && SESSION.ex; if (!ex) return;
+  if (ONLINE && CL.user){
+    const items = ex.type === "pairs" ? ex.items : [ex.item];
+    fbOpen("Übung " + (TYPE_NAMES[ex.type] || ex.type) + " · " + items.map(i => i.es + " = " + i.de + " (" + i.id + ")").join(" | "),
+      (TYPE_NAMES[ex.type] || ex.type) + ": " + (items.length === 1 ? items[0].es : items.length + " Paare"));
+    return;
+  }
   const lines = ["Svenolingo – Fehler gemeldet (Stand " + STAND + ")", "Übung: " + (TYPE_NAMES[ex.type] || ex.type)];
   const items = ex.type === "pairs" ? ex.items : [ex.item];
   items.forEach(i => { lines.push("", "Spanisch: " + i.es, "Deutsch: " + i.de, "Aussprache: " + i.pron, "ID: " + i.id); });
@@ -4255,6 +4388,7 @@ document.addEventListener("click", e => {
 });
 document.addEventListener("keydown", e => {
   if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (document.getElementById("fbs")){ if (e.key === "Escape") fbClose(); else if (e.key === "Enter" && !e.shiftKey && !isPhone()){ e.preventDefault(); const b = document.querySelector("#fbs .fb-send"); if (b && !b.disabled) fbSend(b); } return; }
   if (ONLINE && !CL.user){ if (e.key === "Enter"){ e.preventDefault(); ACTIONS.login(); } return; }
   if (VIEW.params && VIEW.params.pw && e.target && e.target.tagName === "INPUT"){ if (e.key === "Enter"){ e.preventDefault(); ACTIONS.pwSave(); } return; }
   if (document.getElementById("levelup")){ if (e.key === "Escape" || e.key === "Enter"){ e.preventDefault(); e.key === "Enter" ? ACTIONS.levelGo() : closeLevelUp(); } return; }
@@ -4271,7 +4405,7 @@ document.addEventListener("keydown", e => {
     else if (e.key === "ArrowLeft") ACTIONS.fcprev();
   }
 });
-Object.assign(ACTIONS, LIVE_ACTIONS, CLOUD_ACTIONS, PHONE_ACTIONS);
+Object.assign(ACTIONS, LIVE_ACTIONS, CLOUD_ACTIONS, PHONE_ACTIONS, FB_ACTIONS);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && VIEW.name === "home") render(); });
 
 /* Test-Schnittstelle (nur lesend genutzt) */
