@@ -408,6 +408,74 @@ button.fw:hover{background:var(--surface-3)}
 .lv-sum{display:flex;flex-direction:column;gap:8px;width:100%;max-width:420px;margin:18px auto}
 .lv-sumrow{display:flex;justify-content:space-between;padding:10px 14px;border-radius:10px;background:var(--surface-2)}
 
+.qz-rule{font-size:13px;color:var(--ink-3)}
+.qz-p.es{font-family:var(--serif)}
+.qz-p.sm{font-size:24px}
+.qz-sub{margin-top:6px;font-size:14px;color:var(--ink-3)}
+.qz-who{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:34px}
+.qz-name.sm{font-size:15px;padding:6px 12px;background:var(--surface-2);color:var(--ink-3);animation:none}
+.qz-name.sm.done{background:#E6F0E8;color:#3F6B4B}
+.qz-fbtns{display:flex;gap:8px}
+.qz-paused{color:#8A6418}
+.qz-bar.paused i{background:#C9A24A}
+.qz-pausebar{text-align:center;font-weight:700;font-size:18px;color:#8A6418;background:#FFF1D6;border-radius:12px;padding:8px}
+.qz-fail{text-align:center;font-weight:700;color:#B5533C;background:#F7E6E1;border-radius:12px;padding:8px}
+.qz-o.sel{box-shadow:0 0 0 4px #fff,0 0 0 7px var(--ink)}
+.qz-o:disabled{opacity:.55}
+.qz-opts.rev .qz-o.no.picked{opacity:1;background:#A9402E;box-shadow:0 0 0 3px #fff,0 0 0 6px #A9402E}
+.qz-ot{display:flex;flex-direction:column;gap:4px;min-width:0}
+.qz-whos{font-size:15px;font-weight:600;opacity:.95;background:rgba(255,255,255,.2);border-radius:8px;padding:2px 8px;align-self:flex-start}
+.qz-none{text-align:center;color:var(--ink-3);font-weight:600}
+.qz-answers{padding:10px 22px}
+.qz-arow{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;padding:8px 0;font-size:21px}
+.qz-arow + .qz-arow{border-top:1px solid var(--surface-3)}
+.qz-arow.ok{color:#3F6B4B}.qz-arow.bad{color:#B5533C}
+.qz-arow em{font-style:normal;font-size:13px;color:var(--ink-3);background:var(--surface-2);border-radius:99px;padding:2px 9px}
+.qz-explain{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:14px 20px;font-size:17px}
+.qz-explain b{color:#3F6B4B}
+.qz-exl{color:var(--ink-2);font-size:15px;flex:1;min-width:200px}
+.qz-res .qz-exl{text-align:center;min-width:0;max-width:440px}
+.qz-hwrow{display:flex;justify-content:center;margin-top:14px}
+.livetile.idle{opacity:.6}
+/* ===== 📝 Hausaufgaben ===== */
+.hwrow{margin-top:12px}
+.mgrid.c1{grid-template-columns:minmax(0,1fr)}
+.hw-cnt{font-weight:700;font-size:14px;color:var(--ink-2)}
+.qz-dot.red{background:#D7443A;box-shadow:0 0 0 0 rgba(215,68,58,.6);animation:qzPulseR 1.6s infinite}
+@keyframes qzPulseR{70%{box-shadow:0 0 0 9px rgba(215,68,58,0)}100%{box-shadow:0 0 0 0 rgba(215,68,58,0)}}
+.hw-page{max-width:760px}
+.hw-intro,.hw-done{padding:16px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.hw-done{flex-direction:column;align-items:flex-start;background:#E6F0E8}
+.hw-prog{margin-left:auto;font-weight:700;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.hw-part{padding:6px 18px}
+.hw-help{padding:12px 0 4px;color:var(--ink-2);font-size:14px;line-height:1.45}
+.hw-item{display:flex;gap:12px;padding:14px 0}
+.hw-item + .hw-item{border-top:1px solid var(--surface-3)}
+.hw-n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--surface-2);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;color:var(--ink-3);margin-top:2px}
+.hw-b{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px}
+.hw-p{font-size:16px;line-height:1.45}
+.hw-p.es{font-family:var(--serif);font-size:19px}
+.hw-in{width:100%;box-sizing:border-box;padding:11px 14px;border-radius:12px;border:1.5px solid var(--surface-3);background:var(--surface);font:inherit;font-size:16px;color:var(--ink);outline:none}
+.hw-in:focus{border-color:var(--accent)}
+.hw-in:disabled{background:var(--surface-2);color:var(--ink-2)}
+.hw-ta{resize:vertical;min-height:130px;line-height:1.45}
+.hw-opts{display:flex;flex-wrap:wrap;gap:8px}
+.hw-slots{min-height:46px}
+.hw-say{display:inline-flex;gap:10px;align-items:center}
+.hw-foot{display:flex;justify-content:center;margin:22px 0 10px}
+.hw-confirm{padding:18px 20px;display:flex;flex-direction:column;gap:8px;margin-top:18px}
+.hw-adm{justify-content:center;margin-top:14px}
+.ev-q{padding:22px 24px;text-align:center}
+.ev-p{font-family:var(--serif);font-size:30px;line-height:1.3}
+.ev-list{padding:6px 20px}
+.ev-row{display:flex;align-items:baseline;gap:14px;padding:12px 0;font-size:20px}
+.ev-row + .ev-row{border-top:1px solid var(--surface-3)}
+.ev-n{flex:none;width:120px;font-weight:700}
+.ev-a{flex:1;min-width:0;word-break:break-word}
+.ev-a.free{font-size:16px;line-height:1.45;white-space:pre-wrap}
+.ev-row b.ok{color:#3F6B4B}.ev-row b.bad{color:#B5533C}
+.ev-row.ok .ev-a{color:#3F6B4B}.ev-row.bad .ev-a{color:#B5533C}
+.ev-sol{padding:16px 22px;font-size:22px;font-weight:700;color:#3F6B4B;background:#E6F0E8}
 /* ===== 🎙️ Live-Quiz ===== */
 .qz-page{max-width:980px}
 .qz-setup,.qz-lobby{padding:26px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
@@ -669,6 +737,38 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   .mt:hover:not(:disabled),.tile:hover,.quickbtn:hover:not(:disabled),.btn-hero:hover,.iconbtn:hover,.chip:hover:not(:disabled),.opt:hover:not(:disabled),.home-btn:hover,.spk:hover{transform:none}
   .opt:hover:not(:disabled){border-color:transparent}
 }
+.flipc{height:46px;perspective:900px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.flipc .fc-in{position:relative;height:100%;transition:transform .5s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d}
+.flipc.on .fc-in{transform:rotateX(180deg)}
+.flipc .fc-f,.flipc .fc-b{position:absolute;inset:0;display:flex;align-items:center;gap:10px;border-radius:14px;font-size:13px;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.flipc .fc-f{justify-content:space-between;padding:0 14px;background:rgba(255,255,255,.55);color:var(--ink-3)}
+.flipc .fc-f i{font-style:normal;font-size:17px;line-height:1}
+.flipc .fc-b{transform:rotateX(180deg);padding:0 4px 0 14px;background:var(--surface);color:var(--ink-2);box-shadow:var(--shadow-sm,0 1px 3px rgba(60,40,20,.08))}
+.flipc .a2-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.flipc .a2-sh{display:inline-block;padding:0 4px;border-radius:6px;background:var(--surface-2)}
+.flipc .pill{padding:6px 12px;font-size:13px}
+.flipc .a2-x{width:38px;height:38px;border-radius:50%;color:var(--ink-3);font-size:14px;flex:none}
+.lgd-l{font-weight:600;color:var(--ink-2)}
+.vflip{height:96px;margin:4px 0 2px}
+.vflip .fc-b{padding:10px 14px;align-items:center}
+.vflip .vhelp{white-space:normal;font-size:12.5px;line-height:1.4}
+/* Übungen: Lücke, Hinweis, Erklärung, Stern, Schwachstelle (19.11.) */
+.gapline{line-height:1.45}
+.gap{display:inline-block;min-width:2.6em;padding:0 .3em;border-bottom:3px solid var(--accent);color:var(--accent-ink);font-weight:700}
+.gap.ok{border-color:#4F7A5A;color:#3F6B4B}
+.gap.bad{border-color:#C8553D;color:#B5533C}
+.q-hint{margin-top:6px;font-size:15px;color:var(--accent-ink);font-weight:600}
+.de-help{margin-top:8px}
+.explain{margin-top:10px;font-size:14px;line-height:1.4;color:var(--ink-2);background:var(--surface-2);padding:8px 12px;border-radius:12px;text-align:left}
+.q-sec.focus{bottom:auto;top:18px;left:20px;transform:none;background:#FFF1D6;color:#8A6418}
+.star{font-size:19px;line-height:1;width:34px;height:34px;border-radius:50%;color:var(--ink-3);margin-right:6px;display:inline-flex;align-items:center;justify-content:center}
+.star:hover{background:var(--surface-2)}
+.star.on{color:#E0A526}
+.mt .badge.gold{background:#E7B04A;color:#2E2622}
+.vbtns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.fc-say{display:flex;gap:10px;align-items:center;justify-content:center}
+mark{background:#FFE7A3;color:inherit;border-radius:4px;padding:0 2px}
+.mgrid.ex6{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:640px){
   :root{--gap:12px}
   body{font-size:16px;padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
@@ -714,17 +814,6 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   details.lgd[open]>summary{border-radius:14px 14px 0 0;background:var(--surface)}
   details.lgd .legend{grid-template-columns:1fr;padding:4px 14px 14px;gap:9px;border-radius:0 0 14px 14px;box-shadow:none;font-size:12.5px}
   .page.home .stand{display:none}
-  .flipc{height:46px;perspective:900px;cursor:pointer;-webkit-tap-highlight-color:transparent}
-  .flipc .fc-in{position:relative;height:100%;transition:transform .5s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d}
-  .flipc.on .fc-in{transform:rotateX(180deg)}
-  .flipc .fc-f,.flipc .fc-b{position:absolute;inset:0;display:flex;align-items:center;gap:10px;border-radius:14px;font-size:13px;-webkit-backface-visibility:hidden;backface-visibility:hidden}
-  .flipc .fc-f{justify-content:space-between;padding:0 14px;background:rgba(255,255,255,.55);color:var(--ink-3)}
-  .flipc .fc-f i{font-style:normal;font-size:17px;line-height:1}
-  .flipc .fc-b{transform:rotateX(180deg);padding:0 4px 0 14px;background:var(--surface);color:var(--ink-2);box-shadow:var(--shadow-sm,0 1px 3px rgba(60,40,20,.08))}
-  .flipc .a2-t{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .flipc .a2-sh{display:inline-block;padding:0 4px;border-radius:6px;background:var(--surface-2)}
-  .flipc .pill{padding:6px 12px;font-size:13px}
-  .flipc .a2-x{width:38px;height:38px;border-radius:50%;color:var(--ink-3);font-size:14px;flex:none}
   /* Leiste unten */
   .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:space-around;padding:6px 8px calc(6px + env(safe-area-inset-bottom));background:rgba(250,246,240,.92);-webkit-backdrop-filter:saturate(1.6) blur(18px);backdrop-filter:saturate(1.6) blur(18px);border-top:1px solid rgba(70,45,20,.08)}
   .tabbar .tb{flex:1;max-width:140px;min-height:50px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;font-weight:600;color:var(--ink-3);border-radius:12px}
@@ -789,13 +878,21 @@ button,a,.opt,.chip,.mt{touch-action:manipulation;-webkit-tap-highlight-color:tr
   .report{display:none}
   body.online .report{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;margin-right:8px;font-size:14px}
   .report .rp-l{display:none}
-  .mgrid.ph-extras .fbtile{grid-column:1/-1}
+  .q-sec.focus{top:10px;left:12px}
+  .star{margin-right:2px}
   .mgrid.ph-extras .livetile{grid-column:1/-1}
   .qz-p{font-size:28px}
   .qz-q{padding:20px 18px 16px}
   .qz-opts{grid-template-columns:1fr;gap:10px}
   .qz-o{min-height:62px;font-size:18px;padding:12px 16px}
   .qz-typebox input{font-size:18px}
+  .qz-p.sm{font-size:20px}
+  .qz-arow{font-size:17px}
+  .qz-foot{flex-wrap:wrap;justify-content:center}
+  .ev-n{width:84px}
+  .ev-row{font-size:16px}
+  .ev-p{font-size:22px}
+  .hw-p.es{font-size:17px}
   .ex-grid{display:flex;flex-direction:column;height:auto;min-height:0;max-height:none;gap:12px}
   .q-card{min-height:190px;padding:34px 18px 20px;gap:10px}
   .q-kick{top:12px;font-size:11.5px}
@@ -1086,7 +1183,14 @@ const VOCAB_CATS = [{"id":"w_verduras","emoji":"🥕","name":"Gemüse","words":[
   ["accidente","ak-thi-DEN-te","Unfall","accidentes"],
   ["ayuda","a-JU-da","Hilfe"],
   ["dolor","do-LOR","Schmerz","dolores"],
-  ["medicamento","me-di-ka-MEN-to","Medikament","medicamentos"]]},
+  ["medicamento","me-di-ka-MEN-to","Medikament","medicamentos"],
+  ["spray nasal","SPRAI na-SSAL","Nasenspray"],
+  ["gotas","GO-tas","Tropfen"],
+  ["jarabe","cha-RA-be","Hustensaft, Sirup","jarabes"],
+  ["pastilla","pas-TI-ja","Tablette","pastillas"],
+  ["tirita","ti-RI-ta","Pflaster","tiritas"],
+  ["estoy resfriado","es-TOI rres-FRJA-do","ich bin erkältet"],
+  ["tengo la nariz tapada","TEN-go la na-RITH ta-PA-da","meine Nase ist zu"]]},
 {"id":"w_koerper","emoji":"🫀","name":"Körper","words":[["cabeza","ka-BE-tha","Kopf"],
   ["cara","KA-ra","Gesicht"],
   ["ojo","O-cho","Auge","ojos"],
@@ -1242,7 +1346,25 @@ const VOCAB_CATS = [{"id":"w_verduras","emoji":"🥕","name":"Gemüse","words":[
   ["de nada","de NA-da","gern geschehen"],
   ["perdón","per-DON","Entschuldigung"],
   ["vale","BA-le","okay, in Ordnung"],
-  ["¿qué tal?","KE TAL","wie geht's?"]]},
+  ["¿qué tal?","KE TAL","wie geht's?"],
+  ["perdona","per-DO-na","Entschuldige (du)"],
+  ["perdone","per-DO-ne","Entschuldigen Sie"],
+  ["perdóname","per-DO-na-me","Verzeih mir"],
+  ["disculpa","dis-KUL-pa","Entschuldige (um Aufmerksamkeit bitten)"],
+  ["disculpe","dis-KUL-pe","Entschuldigen Sie (um Aufmerksamkeit bitten)"]]},
+{"id":"w_relleno","emoji":"💭","name":"Füllwörter & Zeit gewinnen","words":[["¿cómo se dice…?","KO-mo se DI-the","Wie sagt man …?"],
+  ["¿cómo se llama…?","KO-mo se JA-ma","Wie heißt …?"],
+  ["¿cómo era…?","KO-mo E-ra","Wie war das noch …?"],
+  ["pues","PWES","also, na ja"],
+  ["a ver","a BER","mal sehen, also"],
+  ["o sea","o SE-a","das heißt, also"],
+  ["es que…","ES ke","es ist so, dass …"],
+  ["es decir","ES de-THIR","das heißt (genauer gesagt)"],
+  ["la verdad es que…","la ber-DAD ES ke","ehrlich gesagt …"],
+  ["¿me explico?","me eks-PLI-ko","Verstehst du, was ich meine?"],
+  ["un momento","un mo-MEN-to","einen Moment"],
+  ["déjame pensar","DE-cha-me pen-SSAR","lass mich überlegen"],
+  ["venga","BEN-ga","komm schon, na los"]]},
 {"id":"w_pronombres","emoji":"👤","name":"Personalpronomen","words":[["yo","JO","ich"],
   ["tú","TU","du"],
   ["él","EL","er"],
@@ -1356,7 +1478,7 @@ const VOCAB_CATS = [{"id":"w_verduras","emoji":"🥕","name":"Gemüse","words":[
 const WORD_GROUPS = [{"title":"Essen & Trinken","cats":["w_verduras","w_frutas","w_carne","w_pescado","w_nueces","w_hierbas","w_basics","w_bebidas","w_vinos","w_restaurante","w_vajilla"]},
 {"title":"Alltag & Unterwegs","cats":["w_casa","w_familia","w_stadt","w_richtungen","w_einkaufen","w_kleidung","w_notfall","w_koerper","w_playa","w_wetter"]},
 {"title":"Zahlen & Zeit","cats":["w_zahlen","w_uhrzeit","w_kalender","w_monate"]},
-{"title":"Bausteine der Sprache","cats":["w_saludos","w_pronombres","w_fragen","w_conectores","w_klein","w_eigenschaften","w_farben","w_verbos"]}];
+{"title":"Bausteine der Sprache","cats":["w_saludos","w_relleno","w_pronombres","w_fragen","w_conectores","w_klein","w_eigenschaften","w_farben","w_verbos"]}];
 const SENTENCE_CATS = [{"id":"s_essen","emoji":"🥘","name":"Essen & Trinken","note":null,"grammar":false,"words":[["essen01","Quiero tomate y agua.","KJE-ro to-MA-te i A-gwa","Ich möchte Tomate und Wasser."],
   ["essen02","Ella quiere pollo y vino tinto.","E-ja KJE-re PO-jo i BI-no TIN-to","Sie möchte Hähnchen und Rotwein."],
   ["essen03","Queremos cerveza y pescado.","ke-RE-mos ther-BE-tha i pes-KA-do","Wir möchten Bier und Fisch."],
@@ -1506,7 +1628,11 @@ const SENTENCE_CATS = [{"id":"s_essen","emoji":"🥘","name":"Essen & Trinken","
   ["notfall11","¿Está lejos?","es-TA LE-chos","Ist es weit?"],
   ["notfall12","Está cerca.","es-TA THER-ka","Es ist nah."],
   ["notfall13","Todo recto y luego a la derecha.","TO-do RREK-to i LWE-go a la de-RE-tscha","Geradeaus und dann rechts."],
-  ["notfall14","Luego a la izquierda.","LWE-go a la ith-KJER-da","Dann links."]]},
+  ["notfall14","Luego a la izquierda.","LWE-go a la ith-KJER-da","Dann links."],
+  ["notfall15","Quería un spray nasal, por favor.","ke-RI-a un SPRAI na-SSAL por fa-BOR","Ich hätte gern ein Nasenspray, bitte."],
+  ["notfall16","Estoy resfriado y tengo la nariz tapada.","es-TOI rres-FRJA-do i TEN-go la na-RITH ta-PA-da","Ich bin erkältet und meine Nase ist zu."],
+  ["notfall17","¿Tiene algo para la tos?","TJE-ne AL-go PA-ra la TOS","Haben Sie etwas gegen Husten?"],
+  ["notfall18","Necesito unas tiritas.","ne-the-SSI-to U-nas ti-RI-tas","Ich brauche Pflaster."]]},
 {"id":"s_einkaufen","emoji":"🛍️","name":"Einkaufen","note":null,"grammar":false,"words":[["einkauf01","¿Cuánto cuesta esto?","KWAN-to KWES-ta ES-to","Was kostet das hier?"],
   ["einkauf02","¿Cuánto cuestan las fresas?","KWAN-to KWES-tan las FRE-ssas","Was kosten die Erdbeeren?"],
   ["einkauf03","Es muy caro.","ES MUI KA-ro","Das ist sehr teuer."],
@@ -1578,6 +1704,14 @@ const SENTENCE_CATS = [{"id":"s_essen","emoji":"🥘","name":"Essen & Trinken","
   ["arbeit12","Necesito el portátil.","ne-the-SSI-to el por-TA-til","Ich brauche den Laptop."],
   ["arbeit13","Mi compañera trabaja en un hotel.","mi kom-pa-NJE-ra tra-BA-cha en un o-TEL","Meine Kollegin arbeitet in einem Hotel."],
   ["arbeit14","Mañana tengo el día libre.","ma-NJA-na TEN-go el DI-a LI-bre","Morgen habe ich frei."]]},
+{"id":"s_relleno","emoji":"💭","name":"Zeit gewinnen","note":null,"grammar":false,"words":[["relleno01","Perdón, ¿cómo se dice esto en español?","per-DON KO-mo se DI-the ES-to en es-pa-NJOL","Entschuldigung, wie sagt man das auf Spanisch?"],
+  ["relleno02","¿Cómo se llama esto en español?","KO-mo se JA-ma ES-to en es-pa-NJOL","Wie heißt das auf Spanisch?"],
+  ["relleno03","A ver, déjame pensar.","a BER DE-cha-me pen-SSAR","Mal sehen, lass mich überlegen."],
+  ["relleno04","Pues no sé, la verdad.","PWES NO SE la ber-DAD","Na ja, ich weiß es ehrlich gesagt nicht."],
+  ["relleno05","Es que no tengo tiempo.","ES ke NO TEN-go TJEM-po","Es ist so, dass ich keine Zeit habe."],
+  ["relleno06","O sea, que mañana no puedes.","o SE-a ke ma-NJA-na NO PWE-des","Das heißt, morgen kannst du nicht."],
+  ["relleno07","La verdad es que está muy rico.","la ber-DAD ES ke es-TA MUI RRI-ko","Ehrlich gesagt ist es sehr lecker."],
+  ["relleno08","Bueno, vale, nos vemos luego.","BWE-no BA-le nos BE-mos LWE-go","Na gut, okay, wir sehen uns später."]]},
 {"id":"g_serestar","emoji":"🔀","name":"ser & estar","note":null,"grammar":true,"words":[["serestar01","Soy alemán.","SOI a-le-MAN","Ich bin Deutscher."],
   ["serestar02","Soy de Alemania.","SOI de a-le-MA-nja","Ich komme aus Deutschland."],
   ["serestar03","Ella es cocinera.","E-ja ES ko-thi-NE-ra","Sie ist Köchin."],
@@ -1777,7 +1911,25 @@ const SENTENCE_CATS = [{"id":"s_essen","emoji":"🥘","name":"Essen & Trinken","
   ["si13","Iría a la fiesta si no tuviera que trabajar.","i-RI-a a la FJES-ta si NO tu-BJE-ra ke tra-ba-CHAR","Ich würde zur Party gehen, wenn ich nicht arbeiten müsste.","Was wäre, wenn"],
   ["si14","Si yo fuera tú, no lo compraría.","si JO FWE-ra TU NO lo kom-pra-RI-a","Wenn ich du wäre, würde ich es nicht kaufen.","Ratschläge"],
   ["si15","Si tuvieras fiebre, deberías ir al médico.","si tu-BJE-ras FJE-bre de-be-RI-as IR al ME-di-ko","Wenn du Fieber hättest, solltest du zum Arzt gehen.","Ratschläge"],
-  ["si16","Si pudiera, te ayudaría.","si pu-DJE-ra te a-ju-da-RI-a","Wenn ich könnte, würde ich dir helfen.","Ratschläge"]]}];
+  ["si16","Si pudiera, te ayudaría.","si pu-DJE-ra te a-ju-da-RI-a","Wenn ich könnte, würde ich dir helfen.","Ratschläge"]]},
+{"id":"g_usted","emoji":"🤝","name":"Sie oder sie?","note":null,"grammar":true,"words":[["ust01","¿Tiene una mesa para dos?","TJE-ne U-na ME-ssa PA-ra DOS","Haben Sie einen Tisch für zwei?","Sie (eine Person)"],
+  ["ust03","¿De dónde es usted, señora López?","de DON-de ES us-TED se-NJO-ra LO-peth","Woher kommen Sie, Frau López?","Sie (eine Person)"],
+  ["ust05","¿Quiere un café?","KJE-re un ka-FE","Möchten Sie einen Kaffee? (eine Person)","Sie (eine Person)"],
+  ["ust08","¿Puede hablar más despacio, por favor?","PWE-de a-BLAR MAS des-PA-thjo por fa-BOR","Können Sie bitte langsamer sprechen?","Sie (eine Person)"],
+  ["ust11","¿Tiene cita con el médico?","TJE-ne THI-ta kon el ME-di-ko","Haben Sie einen Termin beim Arzt?","Sie (eine Person)"],
+  ["ust12","¿Qué le duele?","KE le DWE-le","Was tut Ihnen weh?","Sie (eine Person)"],
+  ["ust13","Señor García, ¿dónde vive?","se-NJOR gar-THI-a DON-de BI-be","Herr García, wo wohnen Sie?","Sie (eine Person)"],
+  ["ust17","¿Necesita ayuda?","ne-the-SSI-ta a-JU-da","Brauchen Sie Hilfe? (eine Person)","Sie (eine Person)"],
+  ["ust06","¿Quieren un café?","KJE-ren un ka-FE","Möchten Sie einen Kaffee? (mehrere)","Sie (mehrere)"],
+  ["ust09","¿Dónde viven ustedes?","DON-de BI-ben us-TE-des","Wo wohnen Sie? (mehrere)","Sie (mehrere)"],
+  ["ust15","¿Están ustedes bien?","es-TAN us-TE-des BJEN","Geht es Ihnen gut? (mehrere)","Sie (mehrere)"],
+  ["ust19","Señores, ¿qué desean tomar?","se-NJO-res KE de-SSE-an to-MAR","Meine Herren, was möchten Sie trinken?","Sie (mehrere)"],
+  ["ust02","Tienen una mesa para dos.","TJE-nen U-na ME-ssa PA-ra DOS","Sie haben einen Tisch für zwei. (sie, Mehrzahl)","sie (Mehrzahl)"],
+  ["ust04","Klara y Tabitha aprenden español.","KLA-ra i ta-BIT-a a-PREN-den es-pa-NJOL","Klara und Tabitha lernen Spanisch.","sie (Mehrzahl)"],
+  ["ust07","Quieren pagar con tarjeta.","KJE-ren pa-GAR kon tar-CHE-ta","Sie wollen mit Karte zahlen. (sie, Mehrzahl)","sie (Mehrzahl)"],
+  ["ust10","Viven cerca de la playa.","BI-ben THER-ka de la PLA-ja","Sie wohnen in der Nähe vom Strand. (sie, Mehrzahl)","sie (Mehrzahl)"],
+  ["ust16","Ellas llegan mañana a Málaga.","E-jas JE-gan ma-NJA-na a MA-la-ga","Sie kommen morgen in Málaga an. (sie, Mehrzahl)","sie (Mehrzahl)"],
+  ["ust18","Necesitan ayuda.","ne-the-SSI-tan a-JU-da","Sie brauchen Hilfe. (sie, Mehrzahl)","sie (Mehrzahl)"]]}];
 const GRAMMAR = [{"id":"g_serestar","emoji":"🔀","name":"ser & estar","sub":"Zweimal „sein“ – wann welches?","blocks":[{"h":"Kurzregel","p":"ser sagt, was jemand oder etwas ist. estar sagt, wie oder wo jemand oder etwas gerade ist."},
 {"h":"ser – was bleibt","p":"Wer oder was ist es?","rows":[["Herkunft, Nationalität","Soy alemán. · Soy de Alemania."],
   ["Beruf","Ella es cocinera."],
@@ -1826,13 +1978,15 @@ const GRAMMAR = [{"id":"g_serestar","emoji":"🔀","name":"ser & estar","sub":"Z
   ["Einfache Vergangenheit","comí · fui · estuve"]]},
 {"h":"Perfekt (he comido) – Zeitraum ist noch nicht vorbei","p":"In Spanien für heute, diese Woche, dieses Jahr und oft auch für Erfahrungen. Signalwörter: hoy, esta mañana, esta semana, ya, todavía no, nunca. Beispiel: Hoy he comido pescado. · ¿Has estado en Madrid?"},
 {"h":"Einfache Vergangenheit (comí) – Zeitraum ist abgeschlossen","p":"Für gestern, letzte Woche, letztes Jahr oder ein genaues Datum. Signalwörter: ayer, anoche, la semana pasada, el año pasado, en 2020. Beispiel: Ayer comí pescado. · La semana pasada fuimos a la playa."},
+{"h":"Signalwörter auf einen Blick","rows":[["he comido (Perfekt)","hoy · esta mañana · esta tarde · esta semana · este mes · este año · ya · todavía no · nunca · alguna vez"],
+  ["comí (einfache Vergangenheit)","ayer · anoche · anteayer · el lunes pasado · la semana pasada · el año pasado · en 2019 · hace dos días"]]},
 {"h":"So bildest du die Formen","rows":[["haber","he · has · ha · hemos · habéis · han"],
   ["Partizip","-ar → -ado (hablado) · -er/-ir → -ido (comido)"],
-  ["Besondere Partizipien","hecho · dicho · visto · puesto"],
+  ["Besondere Partizipien","hecho · dicho · visto · puesto · vuelto"],
   ["Einfache Vergangenheit -ar","-é · -aste · -ó · -amos · -asteis · -aron"],
   ["Einfache Vergangenheit -er/-ir","-í · -iste · -ió · -imos · -isteis · -ieron"],
   ["Achtung","ser und ir haben dieselben Formen: fui = ich war / ich ging"]]},
-{"h":"Tipp","p":"Alle Formen findest du bei jedem Verb unter „Verben in allen Personen“ (Reiter Vergangenheit und Perfekt). In Lateinamerika nimmt man öfter die einfache Form, auch für heute."}],"sentCat":"g_pasado"},
+{"h":"Tipp","p":"Frag dich: Ist der Zeitraum schon vorbei (gestern, letzte Woche)? Dann comí. Läuft er noch (heute, diese Woche) oder geht es um „schon mal / noch nie“? Dann he comido. In Lateinamerika nimmt man öfter die einfache Form, auch für heute."}],"sentCat":"g_pasado"},
 {"id":"g_futuro","emoji":"⏩","name":"Zukunft","sub":"ir a + Grundform","blocks":[{"h":"Eine Form für alles","p":"Im Gespräch sagt man die Zukunft meist mit ir a + Grundform, wie im Englischen „going to“: Voy a comer = Ich werde essen."},
 {"h":"Bildung","rows":[["yo","voy a comer"],
   ["tú","vas a comer"],
@@ -1943,7 +2097,13 @@ const GRAMMAR = [{"id":"g_serestar","emoji":"🔀","name":"ser & estar","sub":"Z
 {"h":"Nach si nie die würde-Form","rows":[["richtig","Si tuviera dinero, compraría un coche."],
   ["falsch","Si tendría dinero, …"]]},
 {"h":"Reihenfolge","p":"Der si-Teil kann auch hinten stehen: Viajaría más si tuviera tiempo."},
-{"h":"In Spanien","p":"Man hört auch eine zweite Form mit -se: tuviese, fuese. Sie bedeutet dasselbe."}],"sentCat":"h_si"}];
+{"h":"In Spanien","p":"Man hört auch eine zweite Form mit -se: tuviese, fuese. Sie bedeutet dasselbe."}],"sentCat":"h_si"},
+{"id":"g_usted","emoji":"🤝","name":"Sie oder sie?","sub":"usted, ustedes oder ellos – welche Verbform?","blocks":[{"h":"Dreimal „Sie/sie“","rows":[["Sie – eine Person, höflich","usted + er/sie-Form · ¿Tiene una mesa?"],
+  ["Sie – mehrere, höflich","ustedes + sie-Form (Mehrzahl) · ¿Tienen una mesa?"],
+  ["sie – mehrere Leute","ellos / ellas + sie-Form (Mehrzahl) · Tienen una mesa."]]},
+{"h":"So erkennst du es im Deutschen","p":"Großes „Sie“ mitten im Satz ist die Höflichkeitsform. Sprichst du eine Person an, nimmst du die Verbform von él/ella: ¿Dónde vive usted? Sprichst du mehrere höflich an, nimmst du die Form von ellos: ¿Dónde viven ustedes? Kleines „sie“ meint andere Leute, über die du sprichst: Viven en Madrid. Am Satzanfang hilft nur die Frage: Sprichst du jemanden an, oder redest du über jemanden?"},
+{"h":"usted darf oft fehlen","p":"Die Verbform ist dieselbe wie bei él/ella. Deshalb setzt man usted gern dazu, wenn es sonst unklar wäre: ¿Es usted de aquí? Oft reicht aber die Verbform allein: ¿Tiene una mesa para dos?"},
+{"h":"Wann siezt man in Spanien?","p":"Meistens duzt man. usted hört man bei älteren Menschen, auf dem Amt, beim Arzt und im gehobenen Restaurant."}],"sentCat":"g_usted"}];
 const VERBS = [{"id":"ser","inf":"ser","pron":"SER","de":"sein (dauerhaft)","added":false,"tenses":{"pres":[["yo","soy","SOI","ich bin","yo soy","JO SOI","ich bin nicht"],
   ["tú","eres","E-res","du bist","tú eres","TU E-res","du bist nicht"],
   ["él / ella / usted","es","ES","er/sie/es ist · Sie sind","él es","EL / E-ja / us-TED ES","er/sie/es ist nicht · Sie sind nicht"],
@@ -2707,7 +2867,7 @@ const VERBS = [{"id":"ser","inf":"ser","pron":"SER","de":"sein (dauerhaft)","add
   ["ellos / ellas / ustedes","están saliendo","es-TAN sa-LJEN-do","sie gehen gerade aus · Sie gehen gerade aus","ellos están saliendo","E-jos / E-jas / us-TE-des es-TAN sa-LJEN-do","sie gehen gerade nicht aus · Sie gehen gerade nicht aus"]]},"ger":"saliendo","part":"salido"}];
 const TENSE_NAMES = {"pres":"Gegenwart","past":"Vergangenheit","perf":"Perfekt","fut":"Zukunft","prog":"Verlaufsform"};
 const MIGRATE = {"w:w_casa:mañana":"w:w_uhrzeit:mañana","w:w_casa:noche":"w:w_uhrzeit:noche","w:w_casa:hora":"w:w_uhrzeit:hora","w:w_casa:aquí":"w:w_klein:aquí","w:w_casa:también":"w:w_klein:también","w:w_casa:frutos secos":"w:w_nueces:frutos secos","w:w_casa:hierbas":"w:w_hierbas:hierbas","w:w_casa:arroz":"w:w_basics:arroz","w:w_casa:alcohol":"w:w_vinos:alcohol","s:s_essen:0":"s:essen01","s:s_essen:1":"s:essen02","s:s_essen:2":"s:essen03","s:s_essen:5":"s:essen06","s:s_essen:6":"s:essen07","s:s_essen:7":"s:essen08","s:s_essen:8":"s:essen09","s:s_essen:10":"s:essen11","s:s_essen:12":"s:essen13","s:s_essen:13":"s:essen14","s:s_essen:17":"s:essen18","s:s_essen:18":"s:essen19","s:s_essen:21":"s:essen22","s:s_tisch:0":"s:tisch01","s:s_tisch:2":"s:tisch03","s:s_tisch:3":"s:tisch04","s:s_tisch:4":"s:tisch05","s:s_tisch:5":"s:tisch06","s:s_tisch:7":"s:tisch08","s:s_tisch:9":"s:tisch10","s:s_tisch:12":"s:tisch13","s:s_tisch:15":"s:tisch16","s:s_tisch:16":"s:tisch17","s:s_tisch:18":"s:tisch19","s:s_tisch:20":"s:tisch21","s:s_unterwegs:0":"s:weg01","s:s_unterwegs:2":"s:weg03","s:s_unterwegs:4":"s:weg05","s:s_unterwegs:6":"s:weg07","s:s_unterwegs:7":"s:weg08","s:s_unterwegs:9":"s:weg10","s:s_unterwegs:11":"s:weg12","s:s_unterwegs:12":"s:weg13","s:s_unterwegs:15":"s:weg16","s:s_unterwegs:16":"s:weg17","s:s_unterwegs:17":"s:weg18","s:s_unterwegs:20":"s:weg21","s:s_unterwegs:21":"s:weg22","s:s_unterwegs:23":"s:weg24","s:s_unterwegs:24":"s:weg25","s:s_nein:0":"s:nein01","s:s_nein:2":"s:nein03","s:s_nein:4":"s:nein05","s:s_nein:5":"s:nein06","s:s_nein:6":"s:nein07","s:s_nein:7":"s:nein08","s:s_nein:9":"s:nein10","s:s_nein:11":"s:nein12","s:s_nein:12":"s:nein13","s:s_fragen:0":"s:frage01","s:s_fragen:2":"s:frage03","s:s_fragen:3":"s:frage04","s:s_fragen:4":"s:frage05","s:s_fragen:5":"s:frage06","s:s_fragen:7":"s:frage08","s:s_fragen:8":"s:frage09","s:s_fragen:17":"s:frage18","s:s_fragen:21":"s:frage22","s:s_fragen:22":"s:frage23","s:s_fragen:23":"s:frage24","s:s_fragen:24":"s:frage25","s:s_antworten:0":"s:antw01","s:s_antworten:1":"s:antw02","s:s_antworten:2":"s:antw03","s:s_antworten:3":"s:antw04","s:s_antworten:4":"s:antw05","s:s_antworten:5":"s:antw06","s:s_antworten:6":"s:antw07","s:s_antworten:7":"s:antw08","s:s_cafe:0":"s:cafe01","s:s_cafe:1":"s:cafe02","s:s_cafe:2":"s:cafe03","s:s_cafe:3":"s:cafe04","s:s_cafe:4":"s:cafe05","s:s_cafe:5":"s:cafe06","s:s_cafe:6":"s:cafe07","s:s_cafe:7":"s:cafe08","s:s_cafe:8":"s:cafe09","s:s_cafe:9":"s:cafe10","s:s_cafe:10":"s:cafe11","s:s_cafe:11":"s:cafe12","s:s_cafe:12":"s:cafe13","s:s_cafe:13":"s:cafe14","s:s_cafe:14":"s:cafe15","s:s_cafe:15":"s:cafe16","s:s_cafe:16":"s:cafe17","s:s_cafe:17":"s:cafe18","s:s_cafe:18":"s:cafe19","s:s_cafe:19":"s:cafe20","s:s_verabreden:0":"s:treff01","s:s_verabreden:1":"s:treff02","s:s_verabreden:2":"s:treff03","s:s_verabreden:3":"s:treff04","s:s_verabreden:4":"s:treff05","s:s_verabreden:5":"s:treff06","s:s_verabreden:6":"s:treff07","s:s_verabreden:7":"s:treff08","s:s_verabreden:8":"s:treff09","s:s_verabreden:9":"s:treff10","s:s_verabreden:10":"s:treff11","s:s_verabreden:11":"s:treff12","s:s_verabreden:12":"s:treff13","s:s_verabreden:13":"s:treff14","s:s_verabreden:14":"s:treff15","s:s_verabreden:15":"s:treff16","s:s_ich:0":"s:ich01","s:s_ich:1":"s:ich02","s:s_ich:2":"s:ich03","s:s_ich:3":"s:ich04","s:s_ich:4":"s:ich05","s:s_ich:5":"s:ich06","s:s_ich:6":"s:ich07","s:s_ich:7":"s:ich08","s:s_ich:8":"s:ich09","s:s_ich:9":"s:ich10","s:s_ich:10":"s:ich11","s:s_ich:11":"s:ich12","s:s_ich:12":"s:ich13","s:s_ich:13":"s:ich14","s:s_ich:14":"s:ich15","s:s_ich:15":"s:ich16","s:s_ich:16":"s:ich17","s:s_notfall:0":"s:notfall01","s:s_notfall:1":"s:notfall02","s:s_notfall:2":"s:notfall03","s:s_notfall:3":"s:notfall04","s:s_notfall:4":"s:notfall05","s:s_notfall:5":"s:notfall06","s:s_notfall:6":"s:notfall07","s:s_notfall:7":"s:notfall08","s:s_notfall:8":"s:notfall09","s:s_notfall:9":"s:notfall10","s:s_notfall:10":"s:notfall11","s:s_notfall:11":"s:notfall12","s:s_notfall:12":"s:notfall13","s:s_notfall:13":"s:notfall14","s:g_serestar:0":"s:serestar01","s:g_serestar:1":"s:serestar02","s:g_serestar:2":"s:serestar03","s:g_serestar:3":"s:serestar04","s:g_serestar:4":"s:serestar05","s:g_serestar:5":"s:serestar06","s:g_serestar:6":"s:serestar07","s:g_serestar:7":"s:serestar08","s:g_serestar:8":"s:serestar09","s:g_serestar:9":"s:serestar10","s:g_serestar:10":"s:serestar11","s:g_serestar:11":"s:serestar12","s:g_serestar:12":"s:serestar13","s:g_serestar:13":"s:serestar14","s:g_serestar:14":"s:serestar15","s:g_serestar:15":"s:serestar16","s:g_serestar:16":"s:serestar17","s:g_serestar:17":"s:serestar18","s:s_porpara:0":"s:porpara01","s:s_porpara:1":"s:porpara02","s:s_porpara:2":"s:porpara03","s:s_porpara:3":"s:porpara04","s:s_porpara:4":"s:porpara05","s:s_porpara:5":"s:porpara06","s:s_porpara:6":"s:porpara07","s:s_porpara:7":"s:porpara08","s:s_porpara:8":"s:porpara09","s:s_porpara:9":"s:porpara10","s:s_porpara:10":"s:porpara11","s:s_porpara:11":"s:porpara12","s:s_porpara:12":"s:porpara13","s:s_porpara:13":"s:porpara14","s:s_porpara:14":"s:porpara15","s:s_porpara:15":"s:porpara16","s:g_gustar:0":"s:gustar01","s:g_gustar:1":"s:gustar02","s:g_gustar:2":"s:gustar03","s:g_gustar:3":"s:gustar04","s:g_gustar:4":"s:gustar05","s:g_gustar:5":"s:gustar06","s:g_gustar:6":"s:gustar07","s:g_gustar:7":"s:gustar08","s:g_gustar:8":"s:gustar09","s:g_gustar:9":"s:gustar10","s:g_gustar:10":"s:gustar11","s:g_gustar:11":"s:gustar12","s:g_du:0":"s:du01","s:g_du:1":"s:du02","s:g_du:2":"s:du03","s:g_du:3":"s:du04","s:g_du:4":"s:du05","s:g_du:5":"s:du06","s:g_du:6":"s:du07","s:g_du:7":"s:du08","s:g_du:8":"s:du09","s:g_du:9":"s:du10","s:g_pasado:0":"s:pasado01","s:g_pasado:1":"s:pasado02","s:g_pasado:2":"s:pasado03","s:g_pasado:3":"s:pasado04","s:g_pasado:4":"s:pasado05","s:g_pasado:5":"s:pasado06","s:g_pasado:6":"s:pasado07","s:g_pasado:7":"s:pasado08","s:g_pasado:8":"s:pasado09","s:g_pasado:9":"s:pasado10","s:g_pasado:10":"s:pasado11","s:g_pasado:11":"s:pasado12","s:g_pasado:12":"s:pasado13","s:g_pasado:13":"s:pasado14","s:g_pasado:14":"s:pasado15","s:g_futuro:0":"s:futuro01","s:g_futuro:1":"s:futuro02","s:g_futuro:2":"s:futuro03","s:g_futuro:3":"s:futuro04","s:g_futuro:4":"s:futuro05","s:g_futuro:5":"s:futuro06","s:g_futuro:6":"s:futuro07","s:g_futuro:7":"s:futuro08","s:g_futuro:8":"s:futuro09","s:g_futuro:9":"s:futuro10","s:g_futuro:10":"s:futuro11","s:g_gerundio:0":"s:gerundio01","s:g_gerundio:1":"s:gerundio02","s:g_gerundio:2":"s:gerundio03","s:g_gerundio:3":"s:gerundio04","s:g_gerundio:4":"s:gerundio05","s:g_gerundio:5":"s:gerundio06","s:g_gerundio:6":"s:gerundio07","s:g_gerundio:7":"s:gerundio08","s:g_gerundio:8":"s:gerundio09","s:g_gerundio:9":"s:gerundio10","s:g_gerundio:10":"s:gerundio11","s:g_hora:0":"s:hora01","s:g_hora:1":"s:hora02","s:g_hora:2":"s:hora03","s:g_hora:3":"s:hora04","s:g_hora:4":"s:hora05","s:g_hora:5":"s:hora06","s:g_hora:6":"s:hora07","s:g_hora:7":"s:hora08","s:g_hora:8":"s:hora09","s:g_hora:9":"s:hora10","s:g_hora:10":"s:hora11"};
-const SENT_ALTS = {"nein05":["Ellos no quieren pescado, pero sí carne."],"nein06":["Comemos pescado, pero no carne."],"nein07":["Él bebe cerveza, pero no vino."],"nein12":["No quiero café, pero sí té."],"antw07":["Bebo té, pero no café."],"pron17":["Lo vi ayer en el bar."]};
+const SENT_ALTS = {"nein05":["Ellos no quieren pescado, pero sí carne."],"nein06":["Comemos pescado, pero no carne."],"nein07":["Él bebe cerveza, pero no vino."],"nein12":["No quiero café, pero sí té."],"antw07":["Bebo té, pero no café."],"pron17":["Lo vi ayer en el bar."],"relleno01":["Perdón, ¿cómo se dice eso en español?"],"notfall15":["Me da un spray nasal, por favor."],"notfall16":["Estoy resfriada y tengo la nariz tapada."],"cafe05":["Quería un café con leche, por favor.","Me pone un café con leche, por favor."],"cafe10":["¿Me pone una cerveza?"],"du03":["¿Qué quiere?"],"du08":["¿Usted es de aquí?"],"ust01":["¿Tiene usted una mesa para dos?"],"ust03":["¿De dónde es, señora López?"],"ust08":["¿Puede usted hablar más despacio, por favor?"],"ust13":["Señor García, ¿dónde vive usted?"]};
 const LIVE = {"puzzle":[{"id":"pz01","theme":"resto","level":1,"de":"Ich hätte gern einen Milchkaffee, bitte.","chunks":["Quería","un café","con leche,","por favor."],"extra":[],"es":"Quería un café con leche, por favor.","pron":"ke-RI-a un ka-FE kon LE-tsche por fa-BOR"},
 {"id":"pz02","theme":"resto","level":2,"de":"Bringen Sie uns die Rechnung, bitte?","chunks":["¿Nos","trae","la cuenta,","por favor?"],"extra":["traemos"],"es":"¿Nos trae la cuenta, por favor?","pron":"nos TRA-e la KWEN-ta por fa-BOR"},
 {"id":"pz03","theme":"resto","level":3,"de":"Würde es Ihnen etwas ausmachen, uns noch eine Flasche Wasser zu bringen?","chunks":["¿Le","importaría","traernos","otra botella","de agua?"],"extra":["trae"],"es":"¿Le importaría traernos otra botella de agua?","pron":"le im-por-ta-RI-a tra-ER-nos O-tra bo-TE-ja de A-gwa"},
@@ -2788,6 +2948,120 @@ const LIVE = {"puzzle":[{"id":"pz01","theme":"resto","level":1,"de":"Ich hätte 
 {"id":"fj10","theme":"salud","level":1,"time":180,"text":"Me [duelen|duele] la cabeza. Necesito [un|una] pastilla.","n":2},
 {"id":"fj11","theme":"salud","level":2,"time":150,"text":"Ayer [voy|fui] al médico porque [tengo|tenía] fiebre. La médica me [dió|dio] una receta.","n":3},
 {"id":"fj12","theme":"salud","level":3,"time":120,"text":"Si [estaría|estuviera] enfermo, me quedaría en casa. El médico me pidió que [bebo|bebiera] mucha agua. ¿Las pastillas? [Les|Las] tomo cada ocho horas. Ayer [estaba|estuve] todo el día en la cama.","n":4}]};
+const CLOZE = [{"id":"cz001","text":"¿Me ___ la cuenta, por favor?","answers":["trae","traes","puede traer","puedes traer"],"de":"Bringen Sie mir bitte die Rechnung?","topic":"v","level":2,"explain":"„¿Me trae …?“ ist die höfliche Bitte; „¿Me traes …?“ unter Freunden.","cat":"s_cafe","es":"¿Me trae la cuenta, por favor?","pron":"me TRA-e la KWEN-ta por fa-BOR"},
+{"id":"cz002","text":"___ un café con leche, por favor.","answers":["Quería","Me pone","Querría","Quiero","Me pones","Ponme"],"de":"Ich hätte gern einen Milchkaffee, bitte.","topic":"v","level":2,"explain":"Beim Bestellen sagt man in Spanien gern „Quería …“ oder „Me pone …“.","cat":"s_cafe","es":"Quería un café con leche, por favor.","pron":"ke-RI-a un ka-FE kon LE-tsche por fa-BOR"},
+{"id":"cz003","text":"Una mesa ___ dos, por favor.","answers":["para"],"de":"Einen Tisch für zwei, bitte.","topic":"w","level":1,"explain":"Für wen oder wie viele: para.","cat":"s_cafe","es":"Una mesa para dos, por favor.","pron":"U-na ME-ssa PA-ra DOS por fa-BOR"},
+{"id":"cz004","text":"¿Puedo pagar ___ tarjeta?","answers":["con"],"de":"Kann ich mit Karte zahlen?","topic":"w","level":1,"explain":"Bezahlen mit etwas: pagar con …","cat":"s_cafe","es":"¿Puedo pagar con tarjeta?","pron":"PWE-do pa-GAR kon tar-CHE-ta"},
+{"id":"cz006","text":"La comida ___ muy rica.","answers":["está"],"de":"Das Essen ist sehr lecker.","topic":"v","level":2,"explain":"Wie etwas gerade schmeckt: estar (está rico).","cat":"g_serestar","opts":["está","es","son","estoy"],"es":"La comida está muy rica.","pron":"la ko-MI-da es-TA MUI RRI-ka"},
+{"id":"cz007","text":"¿Tenéis mesa en la ___?","answers":["terraza"],"de":"Habt ihr einen Tisch auf der Terrasse?","topic":"w","level":1,"explain":"la terraza = die Terrasse","cat":"s_cafe","es":"¿Tenéis mesa en la terraza?","pron":"te-NEJS ME-ssa en la te-RRA-tha"},
+{"id":"cz008","text":"Agua ___ gas, por favor.","answers":["sin"],"de":"Wasser ohne Kohlensäure, bitte.","topic":"w","level":1,"explain":"sin gas = ohne Kohlensäure · con gas = mit Kohlensäure","cat":"s_cafe","es":"Agua sin gas, por favor.","pron":"A-gwa sin GAS por fa-BOR"},
+{"id":"cz009","text":"Para mí, un ___ con leche.","answers":["café"],"de":"Für mich einen Milchkaffee.","topic":"w","level":1,"explain":"café con leche = Milchkaffee","cat":"s_cafe","es":"Para mí, un café con leche.","pron":"PA-ra MI un ka-FE kon LE-tsche"},
+{"id":"cz010","text":"¿Qué ___ para comer?","answers":["hay","tenéis","tienen","tiene"],"de":"Was gibt es zu essen?","topic":"v","level":2,"explain":"hay = es gibt. „¿Qué tenéis …?“ geht auch.","cat":"s_cafe","es":"¿Qué hay para comer?","pron":"KE AI PA-ra ko-MER"},
+{"id":"cz011","text":"Tengo una ___ para dos noches.","answers":["reserva"],"de":"Ich habe eine Reservierung für zwei Nächte.","topic":"w","level":1,"explain":"la reserva = die Reservierung","cat":"s_unterkunft","es":"Tengo una reserva para dos noches.","pron":"TEN-go U-na rre-SSER-ba PA-ra DOS NO-tsches"},
+{"id":"cz012","text":"¿El desayuno está ___?","answers":["incluido"],"de":"Ist das Frühstück inklusive?","topic":"w","level":2,"explain":"incluido = inklusive, inbegriffen","cat":"s_unterkunft","es":"¿El desayuno está incluido?","pron":"el de-ssa-JU-no es-TA in-KLUI-do"},
+{"id":"cz013","text":"¿A qué ___ es el desayuno?","answers":["hora"],"de":"Um wie viel Uhr ist das Frühstück?","topic":"w","level":1,"explain":"¿A qué hora …? = Um wie viel Uhr …?","cat":"s_unterkunft","es":"¿A qué hora es el desayuno?","pron":"a KE O-ra ES el de-ssa-JU-no"},
+{"id":"cz014","text":"¿Cómo ___ a la estación?","answers":["llego"],"de":"Wie komme ich zum Bahnhof?","topic":"v","level":2,"explain":"llegar a = ankommen; ¿Cómo llego a …? = Wie komme ich zu …?","cat":"s_notfall","hint":"(llegar, yo)","es":"¿Cómo llego a la estación?","pron":"KO-mo JE-go a la es-ta-THJON"},
+{"id":"cz015","text":"Todo recto y luego a la ___.","answers":["derecha"],"de":"Geradeaus und dann rechts.","topic":"w","level":1,"explain":"a la derecha = rechts · a la izquierda = links","cat":"s_notfall","es":"Todo recto y luego a la derecha.","pron":"TO-do RREK-to i LWE-go a la de-RE-tscha"},
+{"id":"cz016","text":"El aire acondicionado no ___.","answers":["funciona"],"de":"Die Klimaanlage funktioniert nicht.","topic":"v","level":2,"explain":"funcionar = funktionieren; er/sie/es-Form: funciona","cat":"s_unterkunft","es":"El aire acondicionado no funciona.","pron":"el AI-re a-kon-di-thjo-NA-do NO fun-THJO-na"},
+{"id":"cz017","text":"¿Puedo ___ la maleta aquí?","answers":["dejar"],"de":"Kann ich den Koffer hier lassen?","topic":"v","level":2,"explain":"Nach poder kommt die Grundform: puedo dejar.","cat":"s_unterkunft","es":"¿Puedo dejar la maleta aquí?","pron":"PWE-do de-CHAR la ma-LE-ta a-KI"},
+{"id":"cz018","text":"Nos ___ tres noches.","answers":["quedamos"],"de":"Wir bleiben drei Nächte.","topic":"v","level":3,"explain":"quedarse = bleiben; wir-Form: nos quedamos","cat":"s_unterkunft","es":"Nos quedamos tres noches.","pron":"nos ke-DA-mos TRES NO-tsches"},
+{"id":"cz019","text":"No hay agua ___.","answers":["caliente"],"de":"Es gibt kein warmes Wasser.","topic":"w","level":1,"explain":"caliente = warm, heiß","cat":"s_unterkunft","es":"No hay agua caliente.","pron":"NO AI A-gwa ka-LJEN-te"},
+{"id":"cz020","text":"¿Dónde ___ el baño?","answers":["está"],"de":"Wo ist die Toilette?","topic":"v","level":1,"explain":"Wo etwas ist: estar (está).","cat":"g_serestar","opts":["está","es","hay","son"],"es":"¿Dónde está el baño?","pron":"DON-de es-TA el BA-njo"},
+{"id":"cz021","text":"Mi casa ___ muy grande.","answers":["es"],"de":"Mein Haus ist sehr groß.","topic":"v","level":1,"explain":"Eigenschaften, die bleiben: ser (es grande).","cat":"g_serestar","opts":["es","está","son","soy"],"es":"Mi casa es muy grande.","pron":"mi KA-ssa ES MUI GRAN-de"},
+{"id":"cz022","text":"Hoy ___ muy cansado.","answers":["estoy"],"de":"Heute bin ich sehr müde.","topic":"v","level":1,"explain":"Zustand im Moment: estar (estoy cansado).","cat":"g_serestar","opts":["estoy","soy","está","es"],"es":"Hoy estoy muy cansado.","pron":"OI es-TOI MUI kan-SSA-do"},
+{"id":"cz023","text":"Ella ___ médica.","answers":["es"],"de":"Sie ist Ärztin.","topic":"v","level":1,"explain":"Beruf: ser (es médica).","cat":"g_serestar","opts":["es","está","son","eres"],"es":"Ella es médica.","pron":"E-ja ES ME-di-ka"},
+{"id":"cz024","text":"Me ___ la cabeza.","answers":["duele"],"de":"Mir tut der Kopf weh.","topic":"v","level":2,"explain":"doler funktioniert wie gustar: me duele la cabeza.","cat":"s_notfall","es":"Me duele la cabeza.","pron":"me DWE-le la ka-BE-tha"},
+{"id":"cz025","text":"Me ___ los pies.","answers":["duelen"],"de":"Mir tun die Füße weh.","topic":"v","level":2,"explain":"Bei mehreren Dingen: me duelen.","cat":"s_notfall","es":"Me duelen los pies.","pron":"me DWE-len los PJES"},
+{"id":"cz026","text":"Quería un spray ___, por favor.","answers":["nasal"],"de":"Ich hätte gern ein Nasenspray, bitte.","topic":"w","level":1,"explain":"el spray nasal = das Nasenspray","cat":"s_notfall","es":"Quería un spray nasal, por favor.","pron":"ke-RI-a un SPRAI na-SSAL por fa-BOR"},
+{"id":"cz027","text":"Estoy ___ y tengo la nariz tapada.","answers":["resfriado","resfriada"],"de":"Ich bin erkältet und meine Nase ist zu.","topic":"w","level":2,"explain":"estar resfriado/resfriada = erkältet sein","cat":"s_notfall","es":"Estoy resfriado y tengo la nariz tapada.","pron":"es-TOI rres-FRJA-do i TEN-go la na-RITH ta-PA-da"},
+{"id":"cz028","text":"¿Dónde ___ una farmacia?","answers":["hay"],"de":"Wo gibt es eine Apotheke?","topic":"v","level":2,"explain":"Etwas suchen, das es irgendwo gibt: ¿Dónde hay …?","cat":"s_notfall","opts":["hay","está","es","tiene"],"es":"¿Dónde hay una farmacia?","pron":"DON-de AI U-na far-MA-thja"},
+{"id":"cz029","text":"Perdón, ¿cómo ___ «Nasenspray» en español?","answers":["se dice"],"de":"Entschuldigung, wie sagt man „Nasenspray“ auf Spanisch?","topic":"v","level":1,"explain":"¿Cómo se dice …? = Wie sagt man …?","cat":"s_relleno","es":"Perdón, ¿cómo se dice «Nasenspray» en español?","pron":"per-DON KO-mo se DI-the na-ssens-PRAI en es-pa-NJOL"},
+{"id":"cz030","text":"Señora López, ¿de dónde ___ usted?","answers":["es"],"de":"Frau López, woher kommen Sie?","topic":"v","level":1,"explain":"usted nimmt die er/sie-Form: es.","cat":"g_usted","opts":["es","son","eres","sois"],"es":"Señora López, ¿de dónde es usted?","pron":"se-NJO-ra LO-peth de DON-de ES us-TED"},
+{"id":"cz031","text":"Señor García, ¿dónde ___?","answers":["vive"],"de":"Herr García, wo wohnen Sie?","topic":"v","level":2,"explain":"Eine Person siezen: er/sie-Form (vive).","cat":"g_usted","opts":["vive","viven","vives","vivís"],"es":"Señor García, ¿dónde vive?","pron":"se-NJOR gar-THI-a DON-de BI-be"},
+{"id":"cz032","text":"Klara y Tabitha ___ español.","answers":["aprenden"],"de":"Klara und Tabitha lernen Spanisch.","topic":"v","level":1,"explain":"Zwei Personen = sie (Mehrzahl): aprenden.","cat":"g_usted","hint":"(aprender)","opts":["aprenden","aprende","aprendéis","aprendemos"],"es":"Klara y Tabitha aprenden español.","pron":"KLA-ra i ta-BIT-a a-PREN-den es-pa-NJOL"},
+{"id":"cz033","text":"¿___ un café, señora?","answers":["Quiere"],"de":"Möchten Sie einen Kaffee? (eine Person)","topic":"v","level":1,"explain":"Eine Person siezen: quiere.","cat":"g_usted","opts":["Quiere","Quieren","Quieres","Queréis"],"es":"¿Quiere un café, señora?","pron":"KJE-re un ka-FE se-NJO-ra"},
+{"id":"cz034","text":"Señores, ¿___ algo más?","answers":["quieren","desean"],"de":"Meine Herren, möchten Sie noch etwas? (mehrere)","topic":"v","level":2,"explain":"Mehrere siezen: ustedes + sie-Form (quieren).","cat":"g_usted","opts":["quieren","quiere","queréis","quieres"],"es":"Señores, ¿quieren algo más?","pron":"se-NJO-res KJE-ren AL-go MAS"},
+{"id":"cz035","text":"Nos ___ mañana.","answers":["vemos"],"de":"Wir sehen uns morgen.","topic":"v","level":1,"explain":"nos vemos = wir sehen uns","cat":"s_verabreden","es":"Nos vemos mañana.","pron":"nos BE-mos ma-NJA-na"},
+{"id":"cz036","text":"¿A qué hora ___?","answers":["quedamos","nos vemos"],"de":"Um wie viel Uhr treffen wir uns?","topic":"v","level":2,"explain":"quedar = sich verabreden; „nos vemos“ geht auch.","cat":"s_verabreden","es":"¿A qué hora quedamos?","pron":"a KE O-ra ke-DA-mos"},
+{"id":"cz037","text":"Llego en diez ___.","answers":["minutos"],"de":"Ich komme in zehn Minuten.","topic":"w","level":1,"explain":"el minuto, los minutos","cat":"s_verabreden","es":"Llego en diez minutos.","pron":"JE-go en DJETH mi-NU-tos"},
+{"id":"cz038","text":"Me ___ el café sin azúcar.","answers":["gusta"],"de":"Ich mag den Kaffee ohne Zucker.","topic":"v","level":1,"explain":"Eine Sache: me gusta.","cat":"g_gustar","opts":["gusta","gustan","gusto","gustas"],"es":"Me gusta el café sin azúcar.","pron":"me GUS-ta el ka-FE sin a-THU-kar"},
+{"id":"cz039","text":"Me ___ las fresas.","answers":["gustan"],"de":"Ich mag Erdbeeren.","topic":"v","level":1,"explain":"Mehrere Sachen: me gustan.","cat":"g_gustar","opts":["gustan","gusta","gusto","gustamos"],"es":"Me gustan las fresas.","pron":"me GUS-tan las FRE-ssas"},
+{"id":"cz040","text":"¿Te ___ la paella?","answers":["gusta"],"de":"Magst du Paella?","topic":"v","level":1,"explain":"te gusta = dir gefällt","cat":"g_gustar","es":"¿Te gusta la paella?","pron":"te GUS-ta la pa-E-ja"},
+{"id":"cz041","text":"Este regalo es ___ ti.","answers":["para"],"de":"Dieses Geschenk ist für dich.","topic":"w","level":1,"explain":"Empfänger: para.","cat":"s_porpara","opts":["para","por","a","de"],"es":"Este regalo es para ti.","pron":"ES-te rre-GA-lo ES PA-ra TI"},
+{"id":"cz042","text":"Gracias ___ la comida.","answers":["por"],"de":"Danke für das Essen.","topic":"w","level":1,"explain":"Dank für etwas: gracias por.","cat":"s_porpara","opts":["por","para","a","con"],"es":"Gracias por la comida.","pron":"GRA-thjas por la ko-MI-da"},
+{"id":"cz043","text":"Mañana ___ a ir a la playa.","answers":["vamos"],"de":"Morgen gehen wir an den Strand.","topic":"v","level":2,"explain":"Zukunft: ir a + Grundform (vamos a ir).","cat":"g_futuro","hint":"(ir, nosotros)","es":"Mañana vamos a ir a la playa.","pron":"ma-NJA-na BA-mos a IR a la PLA-ja"},
+{"id":"cz044","text":"Ahora ___ comiendo.","answers":["estoy"],"de":"Ich esse gerade.","topic":"v","level":2,"explain":"Verlaufsform: estar + -ando/-iendo (estoy comiendo).","cat":"g_gerundio","hint":"(estar, yo)","es":"Ahora estoy comiendo.","pron":"a-O-ra es-TOI ko-MJEN-do"},
+{"id":"cz045","text":"Son las tres ___ cuarto.","answers":["y"],"de":"Es ist Viertel nach drei.","topic":"w","level":2,"explain":"Viertel nach: y cuarto · Viertel vor: menos cuarto","cat":"g_hora","opts":["y","menos","de","a"],"es":"Son las tres y cuarto.","pron":"SON las TRES i KWAR-to"},
+{"id":"cz046","text":"¿Cuánto ___ las fresas?","answers":["cuestan"],"de":"Was kosten die Erdbeeren?","topic":"v","level":2,"explain":"Mehrere Dinge: cuestan · ein Ding: cuesta","cat":"s_einkaufen","es":"¿Cuánto cuestan las fresas?","pron":"KWAN-to KWES-tan las FRE-ssas"},
+{"id":"cz047","text":"Solo estoy ___, gracias.","answers":["mirando"],"de":"Ich schaue nur, danke.","topic":"v","level":2,"explain":"Verlaufsform von mirar: mirando","cat":"s_einkaufen","es":"Solo estoy mirando, gracias.","pron":"SO-lo es-TOI mi-RAN-do GRA-thjas"},
+{"id":"cz048","text":"Hoy hace mucho ___.","answers":["calor"],"de":"Heute ist es sehr heiß.","topic":"w","level":1,"explain":"hace calor = es ist heiß · hace frío = es ist kalt","cat":"s_wetter","es":"Hoy hace mucho calor.","pron":"OI A-the MU-tscho ka-LOR"},
+{"id":"pa001","text":"Hoy ___ paella.","answers":["he comido"],"de":"Heute habe ich Paella gegessen.","topic":"past","level":1,"explain":"„hoy“: Der Tag ist noch nicht vorbei → he comido.","cat":"g_pasado","hint":"(comer, yo)","opts":["he comido","comí","como","ha comido"],"es":"Hoy he comido paella.","pron":"OI e ko-MI-do pa-E-ja"},
+{"id":"pa002","text":"Ayer ___ en un restaurante italiano.","answers":["cenamos"],"de":"Gestern haben wir in einem italienischen Restaurant zu Abend gegessen.","topic":"past","level":1,"explain":"„ayer“ ist abgeschlossen → einfache Vergangenheit.","cat":"g_pasado","hint":"(cenar, nosotros)","opts":["cenamos","hemos cenado","cenáis","cenaron"],"es":"Ayer cenamos en un restaurante italiano.","pron":"a-JER the-NA-mos en un rres-tau-RAN-te i-ta-LJA-no"},
+{"id":"pa003","text":"Esta semana ___ mucho.","answers":["ha trabajado"],"de":"Diese Woche hat sie viel gearbeitet.","topic":"past","level":1,"explain":"„esta semana“ läuft noch → ha trabajado.","cat":"g_pasado","hint":"(trabajar, ella)","opts":["ha trabajado","trabajó","trabaja","he trabajado"],"es":"Esta semana ha trabajado mucho.","pron":"ES-ta se-MA-na a tra-ba-CHA-do MU-tscho"},
+{"id":"pa004","text":"El sábado pasado ___ a la playa.","answers":["fueron"],"de":"Letzten Samstag sind sie an den Strand gegangen.","topic":"past","level":2,"explain":"„el sábado pasado“ ist vorbei → fueron (ir).","cat":"g_pasado","hint":"(ir, ellos)","opts":["fueron","han ido","van","fuimos"],"es":"El sábado pasado fueron a la playa.","pron":"el SA-ba-do pa-SSA-do FWE-ron a la PLA-ja"},
+{"id":"pa005","text":"¿Ya ___ la cuenta?","answers":["has pagado"],"de":"Hast du schon die Rechnung bezahlt?","topic":"past","level":1,"explain":"„ya“ (schon) → Perfekt: has pagado.","cat":"g_pasado","hint":"(pagar, tú)","opts":["has pagado","pagaste","pagas","ha pagado"],"es":"¿Ya has pagado la cuenta?","pron":"JA as pa-GA-do la KWEN-ta"},
+{"id":"pa006","text":"En 2019 ___ en Madrid.","answers":["viví"],"de":"2019 habe ich in Madrid gewohnt.","topic":"past","level":2,"explain":"Eine Jahreszahl ist abgeschlossen → viví.","cat":"g_pasado","hint":"(vivir, yo)","opts":["viví","he vivido","vivo","vivió"],"es":"En 2019 viví en Madrid.","pron":"en bi-BI en ma-DRID"},
+{"id":"pa007","text":"Todavía no ___ la película.","answers":["hemos visto"],"de":"Wir haben den Film noch nicht gesehen.","topic":"past","level":2,"explain":"„todavía no“ (noch nicht) → Perfekt. Partizip von ver: visto.","cat":"g_pasado","hint":"(ver, nosotros)","opts":["hemos visto","vimos","vemos","habéis visto"],"es":"Todavía no hemos visto la película.","pron":"to-da-BI-a NO E-mos BIS-to la pe-LI-ku-la"},
+{"id":"pa008","text":"Hace dos días ___ tarde.","answers":["llegasteis"],"de":"Vor zwei Tagen seid ihr spät angekommen.","topic":"past","level":2,"explain":"„hace dos días“ (vor zwei Tagen) → einfache Vergangenheit.","cat":"g_pasado","hint":"(llegar, vosotros)","opts":["llegasteis","habéis llegado","llegáis","llegaron"],"es":"Hace dos días llegasteis tarde.","pron":"A-the DOS DI-as je-GAS-tejs TAR-de"},
+{"id":"pa009","text":"Esta mañana ___ un café con leche.","answers":["he tomado"],"de":"Heute Morgen habe ich einen Milchkaffee getrunken.","topic":"past","level":1,"explain":"„esta mañana“ gehört zu heute → he tomado.","cat":"g_pasado","hint":"(tomar, yo)","opts":["he tomado","tomé","tomo","ha tomado"],"es":"Esta mañana he tomado un café con leche.","pron":"ES-ta ma-NJA-na e to-MA-do un ka-FE kon LE-tsche"},
+{"id":"pa010","text":"Anoche Tabitha ___ un spray nasal en la farmacia.","answers":["compró"],"de":"Gestern Abend hat Tabitha in der Apotheke ein Nasenspray gekauft.","topic":"past","level":2,"explain":"„anoche“ (gestern Abend) → compró.","cat":"g_pasado","hint":"(comprar)","opts":["compró","ha comprado","compra","compré"],"es":"Anoche Tabitha compró un spray nasal en la farmacia.","pron":"a-NO-tsche ta-BIT-a kom-PRO un SPRAI na-SSAL en la far-MA-thja"},
+{"id":"pa011","text":"Ayer ___ vino tinto y agua.","answers":["pedimos"],"de":"Gestern haben wir Rotwein und Wasser bestellt.","topic":"past","level":2,"explain":"„ayer“ → einfache Vergangenheit. pedimos sieht aus wie die Gegenwart, „ayer“ zeigt die Vergangenheit.","cat":"g_pasado","hint":"(pedir, nosotros)","opts":["pedimos","hemos pedido","pedís","pidieron"],"es":"Ayer pedimos vino tinto y agua.","pron":"a-JER pe-DI-mos BI-no TIN-to i A-gwa"},
+{"id":"pa012","text":"Hoy todavía no ___ nada.","answers":["he comido"],"de":"Heute habe ich noch nichts gegessen.","topic":"past","level":1,"explain":"„hoy“ und „todavía no“ → Perfekt.","cat":"g_pasado","hint":"(comer, yo)","opts":["he comido","comí","como","has comido"],"es":"Hoy todavía no he comido nada.","pron":"OI to-da-BI-a NO e ko-MI-do NA-da"},
+{"id":"pa013","text":"La semana pasada ___ a mi hermana.","answers":["vi"],"de":"Letzte Woche habe ich meine Schwester gesehen.","topic":"past","level":2,"explain":"„la semana pasada“ → vi (ver).","cat":"g_pasado","hint":"(ver, yo)","opts":["vi","he visto","veo","vio"],"es":"La semana pasada vi a mi hermana.","pron":"la se-MA-na pa-SSA-da BI a mi er-MA-na"},
+{"id":"pa014","text":"Este año ___ dos veces a España.","answers":["hemos viajado"],"de":"Dieses Jahr sind wir zweimal nach Spanien gereist.","topic":"past","level":2,"explain":"„este año“ läuft noch → Perfekt.","cat":"g_pasado","hint":"(viajar, nosotros)","opts":["hemos viajado","viajamos","viajáis","han viajado"],"es":"Este año hemos viajado dos veces a España.","pron":"ES-te A-njo E-mos bja-CHA-do DOS BE-thes a es-PA-nja"},
+{"id":"pa015","text":"El lunes pasado ___ con tarjeta.","answers":["pagó"],"de":"Letzten Montag hat er mit Karte bezahlt.","topic":"past","level":2,"explain":"„el lunes pasado“ → pagó.","cat":"g_pasado","hint":"(pagar, él)","opts":["pagó","ha pagado","paga","pagué"],"es":"El lunes pasado pagó con tarjeta.","pron":"el LU-nes pa-SSA-do pa-GO kon tar-CHE-ta"},
+{"id":"pa016","text":"¿Alguna vez ___ en Sevilla?","answers":["has estado"],"de":"Warst du schon mal in Sevilla?","topic":"past","level":2,"explain":"Erfahrung (alguna vez = schon mal) → Perfekt.","cat":"g_pasado","hint":"(estar, tú)","opts":["has estado","estabas","estás","ha estado"],"es":"¿Alguna vez has estado en Sevilla?","pron":"al-GU-na BETH as es-TA-do en se-BI-ja"},
+{"id":"pa017","text":"Nunca ___ paella.","answers":["he hecho"],"de":"Ich habe noch nie Paella gemacht.","topic":"past","level":3,"explain":"„nunca“ (bis heute nie) → Perfekt. Partizip von hacer: hecho.","cat":"g_pasado","hint":"(hacer, yo)","opts":["he hecho","hice","hago","ha hecho"],"es":"Nunca he hecho paella.","pron":"NUN-ka e E-tscho pa-E-ja"},
+{"id":"pa018","text":"Anoche ___ muy tarde a casa.","answers":["volvimos"],"de":"Gestern Abend sind wir sehr spät nach Hause gekommen.","topic":"past","level":2,"explain":"„anoche“ → volvimos (volver).","cat":"g_pasado","hint":"(volver, nosotros)","opts":["volvimos","hemos vuelto","volvemos","volvieron"],"es":"Anoche volvimos muy tarde a casa.","pron":"a-NO-tsche bol-BI-mos MUI TAR-de a KA-ssa"},
+{"id":"pa019","text":"Esta tarde ___ al supermercado.","answers":["he ido"],"de":"Heute Nachmittag bin ich in den Supermarkt gegangen.","topic":"past","level":1,"explain":"„esta tarde“ gehört zu heute → he ido.","cat":"g_pasado","hint":"(ir, yo)","opts":["he ido","fui","voy","ha ido"],"es":"Esta tarde he ido al supermercado.","pron":"ES-ta TAR-de e I-do al su-per-mer-KA-do"},
+{"id":"pa020","text":"El año pasado ___ en Sevilla.","answers":["estuve"],"de":"Letztes Jahr war ich in Sevilla.","topic":"past","level":3,"explain":"„el año pasado“ → estuve (estar, unregelmäßig).","cat":"g_pasado","hint":"(estar, yo)","opts":["estuve","he estado","estoy","estuvo"],"es":"El año pasado estuve en Sevilla.","pron":"el A-njo pa-SSA-do es-TU-be en se-BI-ja"},
+{"id":"pa021","text":"Hoy ___ mucho en la playa.","answers":["han nadado"],"de":"Heute sind sie viel am Strand geschwommen.","topic":"past","level":2,"explain":"„hoy“ → Perfekt: han nadado.","cat":"g_pasado","hint":"(nadar, ellos)","opts":["han nadado","nadaron","nadan","hemos nadado"],"es":"Hoy han nadado mucho en la playa.","pron":"OI an na-DA-do MU-tscho en la PLA-ja"},
+{"id":"pa022","text":"Ayer no ___ nada.","answers":["dijo"],"de":"Gestern hat sie nichts gesagt.","topic":"past","level":3,"explain":"„ayer“ → dijo (decir, unregelmäßig).","cat":"g_pasado","hint":"(decir, ella)","opts":["dijo","ha dicho","dice","dije"],"es":"Ayer no dijo nada.","pron":"a-JER NO DI-cho NA-da"},
+{"id":"pa023","text":"Esta semana ___ tres libros.","answers":["habéis leído"],"de":"Diese Woche habt ihr drei Bücher gelesen.","topic":"past","level":2,"explain":"„esta semana“ → Perfekt: habéis leído.","cat":"g_pasado","hint":"(leer, vosotros)","opts":["habéis leído","leísteis","leéis","han leído"],"es":"Esta semana habéis leído tres libros.","pron":"ES-ta se-MA-na a-BEJS le-I-do TRES LI-bros"},
+{"id":"pa024","text":"En 2022 ___ un coche nuevo.","answers":["compramos"],"de":"2022 haben wir ein neues Auto gekauft.","topic":"past","level":2,"explain":"Jahreszahl → einfache Vergangenheit.","cat":"g_pasado","hint":"(comprar, nosotros)","opts":["compramos","hemos comprado","compráis","compraron"],"es":"En 2022 compramos un coche nuevo.","pron":"en kom-PRA-mos un KO-tsche NWE-bo"},
+{"id":"pa025","text":"¿Qué ___ ayer?","answers":["hiciste"],"de":"Was hast du gestern gemacht?","topic":"past","level":2,"explain":"„ayer“ → hiciste (hacer).","cat":"g_pasado","hint":"(hacer, tú)","opts":["hiciste","has hecho","haces","hizo"],"es":"¿Qué hiciste ayer?","pron":"KE i-THIS-te a-JER"},
+{"id":"pa026","text":"¿Qué ___ hoy?","answers":["has hecho"],"de":"Was hast du heute gemacht?","topic":"past","level":2,"explain":"„hoy“ → has hecho.","cat":"g_pasado","hint":"(hacer, tú)","opts":["has hecho","hiciste","haces","ha hecho"],"es":"¿Qué has hecho hoy?","pron":"KE as E-tscho OI"}];
+const HOMEWORK = [{"id":"hw2026_11_19","title":"Vergangenheit, Sie oder sie, Füllwörter","from":"19.11.2026","minutes":"30–45 Min.","parts":[{"id":"A","type":"cloze","title":"Lückentext","help":"Setz die richtige Vergangenheitsform ein.","items":[{"p":"Hoy ___ paella.","hint":"(comer, yo)","a":["he comido"]},
+{"p":"Ayer ___ en un restaurante italiano.","hint":"(cenar, nosotros)","a":["cenamos"]},
+{"p":"Esta semana ___ mucho.","hint":"(trabajar, ella)","a":["ha trabajado"]},
+{"p":"El sábado pasado ___ a la playa.","hint":"(ir, ellos)","a":["fueron"]},
+{"p":"¿Ya ___ la cuenta?","hint":"(pagar, tú)","a":["has pagado"]},
+{"p":"En 2019 ___ en Madrid.","hint":"(vivir, yo)","a":["viví"]},
+{"p":"Todavía no ___ la película.","hint":"(ver, nosotros)","a":["hemos visto"]},
+{"p":"Hace dos días ___ tarde.","hint":"(llegar, vosotros)","a":["llegasteis"]},
+{"p":"Esta mañana ___ un café con leche.","hint":"(tomar, yo)","a":["he tomado"]},
+{"p":"Anoche Tabitha ___ un spray nasal en la farmacia.","hint":"(comprar)","a":["compró"]}]},
+{"id":"B","type":"translate","title":"Übersetzen","help":"Schreib den Satz auf Spanisch.","items":[{"p":"Entschuldigung, wie sagt man das auf Spanisch?","a":["Perdón, ¿cómo se dice esto en español?","Perdón, ¿cómo se dice eso en español?"]},
+{"p":"Haben Sie einen Tisch für zwei? (eine Person, höflich)","a":["¿Tiene una mesa para dos?","¿Tiene usted una mesa para dos?"]},
+{"p":"Sie haben einen Tisch für zwei. (Mehrzahl, „sie“)","a":["Tienen una mesa para dos."]},
+{"p":"Gestern haben wir Rotwein und Wasser bestellt.","a":["Ayer pedimos vino tinto y agua."]},
+{"p":"Heute habe ich noch nichts gegessen.","a":["Hoy todavía no he comido nada."]},
+{"p":"Ihr habt gestern die Rechnung bezahlt.","a":["Ayer pagasteis la cuenta."]},
+{"p":"Woher kommen Sie, Herr García?","a":["¿De dónde es usted, señor García?"]},
+{"p":"Ich hätte gern ein Nasenspray, bitte.","a":["Quería un spray nasal, por favor."]}]},
+{"id":"C","type":"mc","title":"Antippen","help":"Welche Antwort passt?","items":[{"p":"Hoy ___ mucho.","o":["trabajé","he trabajado","trabajaba","trabajaré"],"c":1},
+{"p":"Ayer ___ al cine.","o":["hemos ido","fuimos","vamos","iremos"],"c":1},
+{"p":"„Möchten Sie einen Kaffee?“ (eine Person)","o":["¿Quieren un café?","¿Quiere un café?","¿Quieres un café?","¿Queréis un café?"],"c":1},
+{"p":"Señor García, ¿dónde ___? (wohnen Sie)","o":["vive","viven","vives","vivís"],"c":0},
+{"p":"Klara y Tabitha ___ español.","o":["aprende","aprenden","aprendéis","aprendemos"],"c":1},
+{"p":"Esta semana ___ a Málaga. (nosotros)","o":["fuimos","hemos ido","íbamos","vamos a ir"],"c":1},
+{"p":"Dir fällt ein Wort nicht ein. Was sagst du?","o":["¿Cómo se dice…?","¿Cómo estás?","¿Qué tal?","¿Cuánto cuesta?"],"c":0},
+{"p":"El año pasado ___ en Sevilla. (yo, estar)","o":["he estado","estuve","estoy","estaré"],"c":1}]},
+{"id":"D","type":"free","title":"Kurzer Text","help":"Schreib 5–6 Sätze auf Spanisch: Was hast du heute gemacht, und was hast du letztes Wochenende gemacht? Mindestens zweimal he comido-Form (hoy, esta mañana, esta semana) und mindestens zweimal comí-Form (ayer, el sábado pasado, el fin de semana pasado).","items":[{"p":"Mein Tag und mein Wochenende","a":["Hoy he desayunado en casa y he trabajado mucho. Esta tarde he ido al supermercado. El sábado pasado fui a la playa con unos amigos. Comimos paella y bebimos vino blanco. El domingo descansé."]}]},
+{"id":"E","type":"order","title":"Sätze ordnen","help":"Tippe die Wörter in der richtigen Reihenfolge an.","items":[{"p":"Gestern haben wir in einem italienischen Restaurant zu Abend gegessen.","a":["Ayer cenamos en un restaurante italiano."]},
+{"p":"Heute habe ich noch nichts gegessen.","a":["Hoy todavía no he comido nada."]},
+{"p":"Woher kommen Sie, Herr García?","a":["¿De dónde es usted, señor García?"]},
+{"p":"Letzte Woche sind wir an den Strand gegangen.","a":["La semana pasada fuimos a la playa."]},
+{"p":"Entschuldigung, wie sagt man das auf Spanisch?","a":["Perdón, ¿cómo se dice esto en español?"]}]},
+{"id":"F","type":"fix","title":"Fehler finden","help":"In jedem Satz steckt genau ein Fehler. Schreib den Satz richtig.","items":[{"p":"Ayer he comido paella.","a":["Ayer comí paella."]},
+{"p":"Hoy fui al médico.","a":["Hoy he ido al médico."]},
+{"p":"Señora López, ¿dónde viven? (eine Person)","a":["Señora López, ¿dónde vive?","Señora López, ¿dónde vive usted?"]},
+{"p":"Esta semana trabajé mucho.","a":["Esta semana he trabajado mucho."]},
+{"p":"Klara y Tabitha aprende español.","a":["Klara y Tabitha aprenden español."]}]},
+{"id":"G","type":"dictation","title":"Hören und schreiben","help":"Hör dir den Satz an (gern mehrmals) und schreib ihn auf.","items":[{"say":"Esta mañana he tomado un café.","a":["Esta mañana he tomado un café."]},
+{"say":"El sábado pasado fuimos a la playa.","a":["El sábado pasado fuimos a la playa."]},
+{"say":"¿Tiene una mesa para dos?","a":["¿Tiene una mesa para dos?"]},
+{"say":"Es que no tengo tiempo.","a":["Es que no tengo tiempo."]}]}]}];
 const LIVE_IMPF = {"ser":[["era","E-ra"],
   ["eras","E-ras"],
   ["era","E-ra"],
@@ -2944,8 +3218,8 @@ const LIVE_IMPF = {"ser":[["era","E-ra"],
   ["salíamos","sa-LI-a-mos"],
   ["salíais","sa-LI-ais"],
   ["salían","sa-LI-an"]]};
-const STAND = "16.11.2026";
-const BUILD = "5148abf5be";
+const STAND = "19.11.2026";
+const BUILD = "bfdaca7e2f";
 const LOGO = "data:image/jpeg;base64,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";
 
 const CLOUD = {"cfg":{"apiKey":"AIzaSyBBFF2squOw3gLcvqjTE9seE1L4D4Emy_g","authDomain":"svenolingo.firebaseapp.com","projectId":"svenolingo","storageBucket":"svenolingo.firebasestorage.app","messagingSenderId":"252077969505","appId":"1:252077969505:web:e2bf221a4d7864bc29da20"},"admin":"YJhmNYq7J6ek6W3SN8zxKqDO6bo2","names":{"h4TxYatjg2S1rMa0p5HM5qgzIBn2":"Klara","Sr3uCID4jgO0V03km1EVr0yP5jV2":"Noah","Jv0Zx0XgE8YVlPECUtTwixgHEC53":"Tabitha"}};
@@ -2985,6 +3259,8 @@ function verbCat(id, t){ return t === "pres" ? "verb:" + id : "verb:" + id + ":"
 const QUIZ_TENSES = ["pres", "past", "perf", "fut", "prog"];
 QUIZ_TENSES.forEach(t => VERBS.forEach(v => { const fs = v.tenses[t]; if (!fs) return;
   fs.forEach((f, i) => addItem({ id: t === "pres" ? "v:" + v.id + ":" + i : "v:" + v.id + ":" + t + ":" + i, kind: "v", cat: verbCat(v.id, t), es: f[0] + " " + f[1], say: f[4], pron: f[5], de: f[3], verb: v.id, tense: t, person: i, form: f[1], pronouns: f[0].split(" / ") })); }));
+CLOZE.forEach(c => addItem({ id: "c:" + c.id, kind: "c", cat: "cz:" + c.cat, ccat: c.cat, es: c.es, say: c.es, pron: c.pron, de: c.de, gap: c.text, answers: c.answers, hint: c.hint || "", explain: c.explain, topic: c.topic, level: c.level, opts: c.opts || null, toks: tokens(c.es), alts: [] }));
+const CLOZE_ITEMS = ITEMS.filter(i => i.kind === "c");
 const WORD_ITEMS = ITEMS.filter(i => i.kind === "w");
 const SENT_ITEMS = ITEMS.filter(i => i.kind === "s");
 const GRAM_CAT = new Set(SENTENCE_CATS.filter(c => c.grammar).map(c => c.id));
@@ -3006,12 +3282,13 @@ function P(id){ return PROG[id] || { b: 0, d: 0, s: 0, c: 0, w: 0 }; }
 const FIX_NEED = 2;
 function openFix(p){ return p.f !== undefined ? p.f : (p.w > 0 && p.b <= 1 ? FIX_NEED : 0); }
 function record(item, ok){
+  try { fxRecord(item, ok); } catch (e) {}
   const p = Object.assign({}, P(item.id)); const t = today();
   p.f = openFix(p);
   p.s++;
   if (ok){ p.c++; p.b = Math.min(5, p.b + 1); p.d = t + INTERVALS[p.b - 1]; if (p.f > 0){ p.f--; if (!p.f && SESSION) SESSION.fixed = (SESSION.fixed || 0) + 1; } }
   else { p.w++; p.b = p.b > 0 ? 1 : 0; p.d = t + (p.b > 0 ? 1 : 0); p.f = FIX_NEED; }
-  PROG[item.id] = p; save(KEYS.prog, PROG);
+  PROG[item.id] = p; save(KEYS.prog, PROG); if (!ONLINE) save(KEYS.stats, STATS);   // online speichert cloudDirty beides
   return p;
 }
 function isDue(item, t){ const p = P(item.id); return p.b >= 1 && p.d <= t; }
@@ -3062,34 +3339,144 @@ function maybeCelebrate(){
   document.body.appendChild(o);
 }
 
+
+/* ================= 🎯 SCHWACHSTELLEN GEZIELT WIEDERHOLEN (seit 19.11.2026) =================
+   Ein Fokus entsteht, wenn derselbe Eintrag in 7 Tagen 2× falsch war oder dasselbe Muster 3× (über
+   mindestens 2 Einträge). Er läuft 4 Übungstage und endet früher, wenn er an 2 Tagen je 3× richtig war.
+   Gespeichert in STATS.fx (online im Konto, sonst lokal). */
+const FX_ITEM = 2, FX_PAT = 3, FX_DAYS = 4, FX_WINDOW = 7, FX_OKDAY = 3, FX_OKDAYS = 2, FX_EVERY = 5;
+function fxState(){ if (!STATS.fx || typeof STATS.fx !== "object") STATS.fx = { e: {}, f: {}, pd: 0, ld: 0 }; const x = STATS.fx; x.e = x.e || {}; x.f = x.f || {}; return x; }
+function fxKeys(item){
+  const k = ["i:" + item.id];
+  if (item.kind === "v"){ k.push("p:" + item.tense + ":" + item.person, "t:" + item.tense, "v:" + item.verb); }
+  else if (item.kind === "s" && GRAM_CAT.has(item.cat)) k.push("g:" + item.cat);
+  else if (item.kind === "c" && GRAM_CAT.has(item.ccat)) k.push("g:" + item.ccat);
+  return k;
+}
+function fxDay(){
+  const x = fxState(), t = today();
+  if (x.ld !== t){ x.ld = t; x.pd = (x.pd || 0) + 1;
+    Object.keys(x.f).forEach(k => { if (x.pd - x.f[k].s >= FX_DAYS) delete x.f[k]; }); }
+  return x;
+}
+function fxRecord(item, ok){
+  const x = fxDay(), t = today();
+  for (const key of fxKeys(item)){
+    if (!ok){
+      // Einträge als Text „Tag|ID“ (Firestore erlaubt keine Listen in Listen)
+      const list = (x.e[key] || []).filter(e => t - parseInt(e, 10) < FX_WINDOW); list.push(t + "|" + item.id); x.e[key] = list.slice(-12);
+      const pat = !key.startsWith("i:");
+      const ids = new Set(list.map(e => e.slice(e.indexOf("|") + 1)));
+      if (!x.f[key] && (pat ? list.length >= FX_PAT && ids.size >= 2 : list.length >= FX_ITEM)) x.f[key] = { s: x.pd, ok: {} };
+    } else if (x.f[key]){
+      const f = x.f[key]; f.ok[t] = (f.ok[t] || 0) + 1;
+      if (Object.values(f.ok).filter(n => n >= FX_OKDAY).length >= FX_OKDAYS) delete x.f[key];
+    }
+  }
+  Object.keys(x.e).forEach(k => { x.e[k] = (x.e[k] || []).filter(e => typeof e === "string" && t - parseInt(e, 10) < FX_WINDOW); if (!x.e[k].length) delete x.e[k]; });
+}
+function fxActive(){ return Object.keys(fxState().f); }
+function fxCandidates(key){
+  const [kind, a, b] = key.split(":"); const rest = key.slice(2);
+  if (kind === "i") return BY_ID[rest] ? [BY_ID[rest]] : [];
+  if (kind === "p") return VERB_ITEMS.filter(i => i.tense === a && i.person === +b);
+  if (kind === "t") return VERB_ITEMS.filter(i => i.tense === a);
+  if (kind === "v") return VERB_ITEMS.filter(i => i.verb === a);
+  if (kind === "g") return (CAT_ITEMS[rest] || []).concat(CAT_ITEMS["cz:" + rest] || []);
+  return [];
+}
+function fxEntry(S){
+  const keys = fxActive(); if (!keys.length) return null;
+  const area = S.area; const hardOk = S.hardArea;
+  const opts = [];
+  keys.forEach(k => { const c = fxCandidates(k).filter(i => hardOk || !isHard(i)); if (!c.length) return;
+    const match = c.filter(i => !area || i.kind === area || (area === "s" && i.kind === "c"));
+    opts.push({ k, c: match.length ? match : c, pri: match.length ? 2 : 1 }); });
+  if (!opts.length) return null;
+  const best = Math.max(...opts.map(o => o.pri));
+  const o = pick(opts.filter(x => x.pri === best));
+  let c = o.c.filter(i => i.id !== S.lastFocusId); if (!c.length) c = o.c;
+  const item = pick(c); S.lastFocusId = item.id;
+  const forceType = item.kind === "c" ? "cloze" : canPastGap(item) && pastStarted() && Math.random() < .5 ? "pastgap" : canType(item) ? "type" : undefined;
+  return { item, forceType, focus: true };
+}
+/* ================= ⭐ GEMERKT (Noahs Wunsch 18.11.) ================= */
+function starList(){ if (!Array.isArray(STATS.stars)) STATS.stars = []; return STATS.stars; }
+function isStar(id){ return starList().includes(id); }
+function starItems(){ return starList().map(id => BY_ID[id]).filter(Boolean); }
+function toggleStar(id){ const l = starList(); const i = l.indexOf(id); if (i >= 0) l.splice(i, 1); else l.push(id); save(KEYS.stats, STATS); return i < 0; }
+
 /* ================= SPRACHAUSGABE ================= */
 let esVoice = null, voicesKnown = false;
 const HAS_TTS = typeof window !== "undefined" && "speechSynthesis" in window;
+/* Stimme (Svens Entscheidung N, 19.11.): immer männlich, Spanisch aus Spanien. Keine Auswahl als Einstellung. */
+const VOICE_MALE = /jorge|[aá]lvaro|pablo|diego|enrique|juan|carlos|miguel|sergio/i;
+const VOICE_FEMALE = /m[oó]nica|luc[ií]a|elvira|helena|laura|marisol|paulina|conchita|ana\b|carmen|isabel|elena|sara/i;
+const VOICE_GOOD = /premium|enhanced|erweitert|mejorad|neural|natural|online/i;
+let esVoiceMale = false;
+function voiceScore(v){
+  const lang = (v.lang || "").replace("_", "-").toLowerCase();
+  let s = 0;
+  if (lang === "es-es") s += 100; else if (/^es(-|$)/.test(lang)) s += 10; else return -1;
+  if (VOICE_MALE.test(v.name)) s += 50; else if (!VOICE_FEMALE.test(v.name) && /male|hombre|männlich/i.test(v.name) && !/female/i.test(v.name)) s += 40;
+  else if (/^(eddy|reed)\b/i.test(v.name)) s += 30;   // Apples einfache Männerstimmen (z. B. Svens Mac 19.11.) – besser als weiblich, schlechter als Jorge
+  if (/^jorge/i.test(v.name)) s += 5;
+  if (VOICE_GOOD.test(v.name)) s += 8;
+  if (v.localService) s += 1;
+  return s;
+}
 function pickVoice(){
   if (!HAS_TTS) return;
   const vs = speechSynthesis.getVoices() || [];
   voicesKnown = vs.length > 0;
-  const norm = v => (v.lang || "").replace("_", "-").toLowerCase();
-  const spain = vs.filter(v => norm(v) === "es-es");
-  const anyEs = vs.filter(v => /^es(-|$)/.test(norm(v)));
-  const rank = v => (/google/i.test(v.name) ? 0 : /m[oó]nica|jorge|lucia|lucía|alvaro|álvaro|elvira|helena|laura|pablo/i.test(v.name) ? 1 : 2);
-  const pool = spain.length ? spain : anyEs;
-  esVoice = pool.slice().sort((a, b) => rank(a) - rank(b))[0] || null;
+  const ranked = vs.map(v => ({ v, s: voiceScore(v) })).filter(x => x.s >= 0).sort((a, b) => b.s - a.s);
+  esVoice = ranked.length ? ranked[0].v : null;
+  esVoiceMale = !!esVoice && (esVoice.lang || "").replace("_", "-").toLowerCase() === "es-es" && (VOICE_MALE.test(esVoice.name) || (/male|hombre|männlich/i.test(esVoice.name) && !/female/i.test(esVoice.name)));
 }
 if (HAS_TTS){ pickVoice(); speechSynthesis.onvoiceschanged = () => { const had = !!esVoice; pickVoice(); if (had !== !!esVoice && VIEW.name === "home") render(); }; }
 function voiceOK(){ return HAS_TTS && !!esVoice; }
+/* Langsam: manche Stimmen ignorieren die Geschwindigkeit. Dann Wort für Wort mit kurzen Pausen. */
+let SPEAK_T = null, SLOW_WORDS = false; const SPEAK_MS = { n: 0, chars: 0 };
+function utter(text, rate, onend){
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = esVoice ? esVoice.lang.replace("_", "-") : "es-ES";
+  if (esVoice) u.voice = esVoice;
+  u.rate = rate; u.pitch = 1; if (onend) u.onend = onend;
+  return u;
+}
 function speak(text, slow){
   if (!HAS_TTS || !text) return;
   if (!esVoice){ pickVoice(); }
   if (!esVoice && voicesKnown) return;           // keine spanische Stimme -> nichts Falsches vorlesen
   try {
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = esVoice ? esVoice.lang.replace("_", "-") : "es-ES";
-    if (esVoice) u.voice = esVoice;
-    u.rate = slow ? 0.62 : 0.9; u.pitch = 1;
-    speechSynthesis.speak(u);
+    speechSynthesis.cancel(); clearTimeout(SPEAK_T);
+    // nach cancel() kurz warten, sonst verschlucken einige Browser das nächste Sprechen
+    SPEAK_T = setTimeout(() => {
+      try {
+        if (slow && SLOW_WORDS){
+          const words = String(text).split(/\s+/).filter(Boolean); let i = 0;
+          const next = () => { if (i >= words.length) return; const u = utter(words[i++], 0.8, () => { SPEAK_T = setTimeout(next, 250); }); speechSynthesis.speak(u); };
+          next(); return;
+        }
+        const u = utter(text, slow ? 0.62 : 0.9); let t0 = 0;
+        u.onstart = () => { t0 = performance.now(); };
+        u.onend = () => { if (!t0) return; const ms = performance.now() - t0, perChar = ms / Math.max(1, text.length);
+          if (!slow){ SPEAK_MS.n++; SPEAK_MS.chars = SPEAK_MS.chars ? (SPEAK_MS.chars * 3 + perChar) / 4 : perChar; }
+          else if (SPEAK_MS.n >= 1 && perChar < SPEAK_MS.chars * 1.15 && text.length > 12) SLOW_WORDS = true;   // „langsam“ war nicht langsamer
+        };
+        speechSynthesis.speak(u);
+      } catch (e) {}
+    }, 90);
   } catch (e) {}
+}
+function voiceHelpHtml(){
+  const ua = navigator.userAgent || "";
+  const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && "ontouchend" in document);
+  const android = /Android/.test(ua);
+  const steps = ios ? "Einstellungen › Bedienungshilfen › Gesprochene Inhalte › Stimmen › Spanisch (Spanien) › Jorge laden. Danach Svenolingo neu öffnen."
+    : android ? "Einstellungen › Text-in-Sprache › Google-Sprachdienste › Spanisch (Spanien) › männliche Stimme wählen. Danach Svenolingo neu öffnen."
+    : "Systemeinstellungen › Bedienungshilfen › Gesprochene Inhalte › Systemstimme › Stimmen verwalten › Spanisch (Spanien) › Jorge. Danach den Browser neu öffnen.";
+  return `<div class="flipc vflip" data-act="a2hsFlip"><div class="fc-in"><div class="fc-f"><span class="lgd-l">🎙️ Stimme Jorge laden</span><i>›</i></div><div class="fc-b"><span class="a2-t vhelp">${esc(steps)}</span></div></div></div>`;
 }
 
 /* ================= AUSSPRACHE-TIPPS ================= */
@@ -3117,47 +3504,215 @@ function distractorPool(item){
   let pool = (CAT_ITEMS[item.cat] || []).filter(o => o.id !== item.id && o.es !== item.es && o.de !== item.de);
   return pool;
 }
-function mcOptions(item, field){
-  const pool = shuffle(distractorPool(item));
-  const seen = new Set([item[field]]); const ds = [];
-  for (const o of pool){ if (!seen.has(o[field])){ seen.add(o[field]); ds.push(o); } if (ds.length === 3) break; }
-  const opts = shuffle([item].concat(ds)).map(o => ({ id: o.id, text: o[field] }));
-  return { opts, correct: opts.findIndex(o => o.id === item.id) };
-}
 function canBuildWord(item){ return item.kind === "w" && item.single && item.es.length >= 3 && item.es.length <= 11; }
 function canBuildSentence(item){ return item.kind === "s" && item.toks.length >= 3; }
-function canType(item){ return item.kind !== "s" || item.toks.length <= 6; }
-const normT = s => String(s).toLowerCase().replace(/[¿?¡!.,;:"«»]/g, " ").replace(/\s+/g, " ").trim();
+function canType(item){ return item.kind === "c" || item.kind !== "s" || item.toks.length <= 8; }
+const normT = s => String(s).toLowerCase().replace(/[¿?¡!.,;:"«»…]/g, " ").replace(/\s+/g, " ").trim();
 const stripAcc = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+/* ================= ✍️ TIPPEN: PRÜFUNG MIT TOLERANZ (seit 19.11.2026) =================
+   Reihenfolge: genau → nur Akzente → Subjektpronomen dazu/weg (nur das passende) → Varianten mit Hinweis
+   (perdona & Co.) → kleiner Tippfehler (ab 5 Buchstaben, nie wenn ein anderes echtes Wort herauskommt). */
+const PRON_P = { yo: [0], tu: [1], el: [2], ella: [2], usted: [2], nosotros: [3], nosotras: [3], vosotros: [4], vosotras: [4], ellos: [5], ellas: [5], ustedes: [5] };
+const FORM_P = {};                 // erstes Wort jeder Verbform (ohne Akzent) → Personen
+const FORM_INDEX = {};             // einwortige Verbform (ohne Akzent) → [{verb, tense, person}]
+VERBS.forEach(v => Object.entries(v.tenses).forEach(([t, fs]) => fs && fs.forEach((f, i) => {
+  const parts = normT(f[1]).split(" "); const w = stripAcc(parts[0]);
+  (FORM_P[w] = FORM_P[w] || new Set()).add(i);
+  if (parts.length === 1) (FORM_INDEX[w] = FORM_INDEX[w] || []).push({ verb: v.id, tense: t, person: i });
+})));
+const WORDSET = new Set();         // alle spanischen Wörter und Formen der App (ohne Akzent)
+function addWords(s){ normT(s).split(" ").forEach(t => t && WORDSET.add(stripAcc(t))); }
+ITEMS.forEach(i => { addWords(i.es); (i.alts || []).forEach(addWords); });
+VERBS.forEach(v => { addWords(v.inf); Object.values(v.tenses).forEach(fs => fs && fs.forEach(f => addWords(f[1]))); });
+CLOZE.forEach(c => c.answers.forEach(addWords));
+/* Entschuldigung: perdón ist am häufigsten, Varianten zählen mit Hinweis (Svens Entscheidung L) */
+const ALSO_OK = { "perdón": [[["perdona", "perdone", "disculpa", "disculpe"], "Auch richtig. Am häufigsten: perdón."], [["perdóname"], "Geht, heißt aber eher „Verzeih mir“."]] };
+const FAMILY = [new Set(["perdon", "perdona", "perdone", "perdoname", "disculpa", "disculpe"])];
+function sameFamily(a, b){ const x = stripAcc(normT(a)), y = stripAcc(normT(b)); return FAMILY.some(f => f.has(x) && f.has(y)); }
+/* Damerau-Levenshtein (ein Buchstabe falsch, fehlt, zu viel oder zwei vertauscht = 1) */
+function dl(a, b){
+  const m = a.length, n = b.length; if (Math.abs(m - n) > 2) return 3;
+  const d = Array.from({ length: m + 1 }, (_, i) => { const r = new Array(n + 1).fill(0); r[0] = i; return r; });
+  for (let j = 0; j <= n; j++) d[0][j] = j;
+  for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++){
+    const c = a[i - 1] === b[j - 1] ? 0 : 1;
+    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + c);
+    if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + 1);
+  }
+  return d[m][n];
+}
+/* Varianten einer Eingabe/Lösung ohne Subjektpronomen. Bei der Eingabe nur, wenn das Pronomen zur Verbform passt. */
+function pronVariants(s, strict){
+  const out = [{ txt: s, off: 0 }]; const t = s.split(" ");
+  if (t.length < 2) return out;
+  const p = PRON_P[stripAcc(t[0])]; if (!p) return out;
+  const ps = FORM_P[stripAcc(t[1])];
+  if (!strict || (ps && p.some(x => ps.has(x)))) out.push({ txt: t.slice(1).join(" "), off: 1 });
+  return out;
+}
+function checkText(cands, input, item){
+  const got = normT(input);
+  if (!got) return { res: "wrong", sol: cands[0] };
+  const C = cands.map(c => ({ raw: c, n: normT(c) }));
+  for (const c of C) if (c.n === got) return { res: "exact", sol: c.raw };
+  for (const c of C) if (stripAcc(c.n) === stripAcc(got)) return { res: "accent", sol: c.raw };
+  const G = pronVariants(got, true);
+  for (const c of C) for (const cv of pronVariants(c.n, false)) for (const g of G){
+    if (g.txt === cv.txt) return { res: "exact", sol: c.raw };
+    if (stripAcc(g.txt) === stripAcc(cv.txt)) return { res: "accent", sol: c.raw };
+  }
+  const also = item && ALSO_OK[item.es];
+  if (also) for (const [list, hint] of also) if (list.some(w => stripAcc(normT(w)) === stripAcc(got))) return { res: "alt", sol: cands[0], hint };
+  // kleiner Tippfehler
+  for (const c of C) for (const cv of pronVariants(c.n, false)) for (const g of G){
+    const gt = stripAcc(g.txt).split(" "), ct = stripAcc(cv.txt).split(" ");
+    if (gt.length !== ct.length) continue;
+    const limit = ct.length <= 6 ? 1 : 2; let typos = 0; const marks = []; let ok = true;
+    for (let i = 0; i < ct.length && ok; i++){
+      if (gt[i] === ct[i]) continue;
+      if (ct[i].length >= 5 && !WORDSET.has(gt[i]) && dl(gt[i], ct[i]) === 1){ typos++; marks.push(i + cv.off); }
+      else ok = false;
+    }
+    if (ok && typos >= 1 && typos <= limit) return { res: "typo", sol: c.raw, marks };
+  }
+  return { res: "wrong", sol: cands[0] };
+}
 function typeAnswers(item){
   if (item.kind === "v") return [item.form].concat(item.pronouns.map(p => p + " " + item.form));
+  if (item.kind === "c") return item.answers.slice();
   return [item.es].concat(item.alts || []);
 }
-function typeCheck(item, input){
-  const got = normT(input); if (!got) return "wrong";
-  const cands = typeAnswers(item).map(normT);
-  if (cands.includes(got)) return "exact";
-  if (cands.map(stripAcc).includes(stripAcc(got))) return "accent";
-  return "wrong";
+function typeCheckInfo(item, input){ return checkText(typeAnswers(item), input, item); }
+function typeCheck(item, input){ return typeCheckInfo(item, input).res; }
+function solLabel(item){ return item.kind === "v" ? item.form + " (" + item.pronouns.join("/").replace("nosotros", "nosotros/nosotras").replace("vosotros", "vosotros/vosotras") + ")" : item.kind === "c" ? item.answers[0] : item.es; }
+/* Lösung mit markierter Tippfehler-Stelle */
+function markSol(sol, marks){
+  if (!marks || !marks.length) return esc(sol);
+  return sol.split(/\s+/).map((w, i) => marks.includes(i) ? `<mark>${esc(w)}</mark>` : esc(w)).join(" ");
 }
+function checkMsg(info, item){
+  if (info.res === "accent") return `<b>Fast perfekt!</b>Achte auf die Akzente: <span class="sol">${esc(info.sol)}</span>`;
+  if (info.res === "typo") return `<b>Fast!</b>Kleiner Tippfehler – richtig: <span class="sol">${markSol(info.sol, info.marks)}</span>`;
+  if (info.res === "alt") return `<b>Richtig!</b>${esc(info.hint)}`;
+  return null;
+}
+
+/* ================= SCHWERERE ANTWORTEN ZUM ANTIPPEN (seit 19.11.2026) ================= */
+const STOP_ES = new Set("el la los las un una unos unas de del a al y o en con sin por para que es no se me te le lo mi tu su muy mas pero hay esta este esto eso son".split(" "));
+const STOP_DE = new Set("der die das den dem des ein eine einen einem einer und oder in im am an auf mit ohne für zu ist bin bist sind seid hat habe hast haben nicht ich du er sie es wir ihr mir dir mich dich sehr noch schon bitte".split(" "));
+function cWords(s, stop){ return normT(s).split(" ").map(stripAcc).filter(w => w.length > 2 && !stop.has(w)); }
+function overlap(a, b){ const B = new Set(b); return a.filter(w => B.has(w)).length; }
+function badOpt(item, o, field){
+  if (!o || o.id === item.id) return true;
+  if (normT(o[field]) === normT(item[field])) return true;
+  if (o.de === item.de || normT(o.es) === normT(item.es)) return true;
+  if ((item.alts || []).some(a => normT(a) === normT(o.es))) return true;
+  if (sameFamily(item.es, o.es)) return true;
+  return false;
+}
+function topPick(scored, n){ scored.sort((a, b) => b.s - a.s); return shuffle(scored.slice(0, Math.max(n, 6))).sort((a, b) => b.s - a.s).slice(0, n).map(x => x.o); }
+function verbDistractors(item, field){
+  const vi = VERB_ITEMS.filter(o => !badOpt(item, o, field));
+  const A = shuffle(vi.filter(o => o.verb === item.verb && o.person === item.person && o.tense !== item.tense));
+  const B = shuffle(vi.filter(o => o.verb !== item.verb && o.person === item.person && o.tense === item.tense));
+  const Cc = shuffle(vi.filter(o => o.verb === item.verb && o.tense === item.tense && o.person !== item.person));
+  const out = []; const seen = new Set([normT(item[field])]);
+  const take = (list, n) => { for (const o of list){ if (n <= 0) break; const k = normT(o[field]); if (!seen.has(k)){ seen.add(k); out.push(o); n--; } } };
+  take(A, 2); take(B, 2 - Math.min(2, out.length)); take(Cc, 1); take(A.concat(B, Cc), 3 - out.length);
+  return out.slice(0, 3);
+}
+function nearSentence(item){
+  const words = item.es.split(" ");
+  for (let i = 0; i < words.length; i++){
+    const m = words[i].match(/^([¿¡]?)([A-Za-zÁÉÍÓÚÑÜáéíóúñü]+)([.,!?;:]*)$/); if (!m) continue;
+    const hits = FORM_INDEX[stripAcc(m[2].toLowerCase())]; if (!hits) continue;
+    const h = hits[0]; const v = VERBS.find(x => x.id === h.verb); const fs = v.tenses[h.tense];
+    const others = fs.map((f, k) => ({ f: f[1], k })).filter(x => x.k !== h.person && !/\s/.test(x.f) && stripAcc(x.f) !== stripAcc(m[2].toLowerCase()));
+    if (!others.length) continue;
+    let f = pick(others).f; if (m[2][0] === m[2][0].toUpperCase()) f = f[0].toUpperCase() + f.slice(1);
+    const w2 = words.slice(); w2[i] = m[1] + f + m[3]; const es = w2.join(" ");
+    if (normT(es) === normT(item.es) || (item.alts || []).some(a => normT(a) === normT(es)) || SENT_ITEMS.some(s => normT(s.es) === normT(es))) continue;
+    return { id: "near:" + item.id, es, de: "", near: true };
+  }
+  return null;
+}
+function sentDistractors(item, field){
+  const pool = SENT_ITEMS.filter(o => !badOpt(item, o, field) && isHard(o) === isHard(item));
+  const ie = cWords(item.es, STOP_ES), idd = cWords(item.de, STOP_DE);
+  const scored = pool.map(o => ({ o, s: overlap(cWords(o.es, STOP_ES), ie) * 2 + overlap(cWords(o.de, STOP_DE), idd) + (o.cat === item.cat ? 1 : 0) + Math.random() * .6 }));
+  const out = []; const used = new Set();
+  // jedes auffällige Wort der Lösung soll möglichst auch in einer falschen Antwort vorkommen
+  for (const w of ie.filter(w => w.length >= 4)){
+    if (out.length >= 3) break;
+    if (out.some(o => cWords(o.es, STOP_ES).includes(w))) continue;
+    const best = scored.filter(x => !used.has(x.o.id) && cWords(x.o.es, STOP_ES).includes(w)).sort((a, b) => b.s - a.s)[0];
+    if (best){ out.push(best.o); used.add(best.o.id); }
+  }
+  // höchstens ein Beinahe-Satz (andere Person derselben Verbform), nur bei spanischen Antworten
+  if (field === "es" && out.length >= 1 && Math.random() < .5){ const n = nearSentence(item); if (n){ if (out.length >= 3) out.pop(); out.push(n); } }
+  for (const o of topPick(scored.filter(x => !used.has(x.o.id)), 3)){ if (out.length >= 3) break; if (!out.some(x => normT(x[field]) === normT(o[field]))){ out.push(o); used.add(o.id); } }
+  return out.slice(0, 3);
+}
+function wordDistractors(item, field){
+  const pool = WORD_ITEMS.filter(o => !badOpt(item, o, field));
+  const ie = stripAcc(item.es.toLowerCase());
+  const scored = pool.map(o => { const oe = stripAcc(o.es.toLowerCase()); let s = (o.cat === item.cat ? 3 : 0) + Math.random();
+    if (field === "es"){ const d = dl(oe, ie); if (d <= 2) s += 3 - d; if (Math.abs(oe.length - ie.length) <= 1) s += 1; if (oe.slice(-1) === ie.slice(-1)) s += .5; }
+    return { o, s }; });
+  return topPick(scored, 3);
+}
+function mcOptions(item, field){
+  let ds = [];
+  if (item.kind === "v") ds = verbDistractors(item, field);
+  else if (item.kind === "s") ds = sentDistractors(item, field);
+  else if (item.kind === "w") ds = wordDistractors(item, field);
+  const seen = new Set([normT(item[field])].concat(ds.map(o => normT(o[field]))));
+  if (ds.length < 3) for (const o of shuffle(distractorPool(item))){ if (ds.length >= 3) break; if (!badOpt(item, o, field) && !seen.has(normT(o[field]))){ seen.add(normT(o[field])); ds.push(o); } }
+  const opts = shuffle([item].concat(ds.slice(0, 3))).map(o => ({ id: o.id, text: o[field] }));
+  return { opts, correct: opts.findIndex(o => o.id === item.id) };
+}
+
+/* Wie oft getippt wird (Klaras Wunsch 16.11.): normal etwa 40 %, im Hard Mode etwa 60 % */
+const TYPE_SHARE = 0.4, TYPE_SHARE_HARD = 0.6;
+function catStarted(cat){ return (CAT_ITEMS[cat] || []).some(i => P(i.id).s > 0) || (CAT_ITEMS["cz:" + cat] || []).some(i => P(i.id).s > 0); }
+function pastStarted(){ return catStarted("g_pasado"); }
+const PAST_SIGNAL = { perf: ["Hoy", "Esta mañana", "Esta tarde", "Esta semana", "Este año"], past: ["Ayer", "Anoche", "El lunes pasado", "La semana pasada", "El año pasado", "Hace dos días", "En 2019"] };
+const PAST_VERBS_SKIP = new Set(["saber", "creer", "entender", "poder", "querer", "ser", "estar", "tener"]);
+function canPastGap(item){ return item.kind === "v" && (item.tense === "past" || item.tense === "perf") && !PAST_VERBS_SKIP.has(item.verb); }
 function chooseType(item, lastType){
   const p = P(item.id); const seen = p.s > 0;
+  if (item.kind === "c") return item.opts && (!seen || Math.random() < .35) ? "cloze_mc" : "cloze";
   if (!seen) return "mc_t2n";                                     // Neues erst zeigen: Spanisch -> Bedeutung
+  if (canPastGap(item) && pastStarted() && Math.random() < .3) return Math.random() < .5 ? "pastgap" : "pastgap_mc";
+  if (canType(item) && Math.random() < (isHard(item) ? TYPE_SHARE_HARD : TYPE_SHARE)) return "type";
   const types = ["mc_t2n", "mc_n2t"];
   if (canBuildSentence(item)) types.push("build_s", "build_s");
-  if (canType(item)) types.push("type");
-  if (seen && canBuildWord(item)) types.push("build_w");
-  if (seen && SETTINGS.audio && voiceOK()) types.push("listen");
+  if (canBuildWord(item)) types.push("build_w");
+  if (SETTINGS.audio && voiceOK()) types.push("listen");
   const pool = types.filter(t => t !== lastType);
   return pick(pool.length ? pool : types);
 }
 function makeExercise(entry, lastType){
   const item = entry.item;
-  const type = entry.forceType || chooseType(item, lastType);
-  const ex = { type, item, retry: !!entry.retry, isNew: P(item.id).s === 0, answered: false, ok: null };
+  let type = entry.forceType || chooseType(item, lastType);
+  const ex = { type, item, retry: !!entry.retry, focus: !!entry.focus, isNew: P(item.id).s === 0, answered: false, ok: null };
   if (type === "mc_t2n" || type === "listen"){ Object.assign(ex, mcOptions(item, "de")); }
   else if (type === "mc_n2t"){ Object.assign(ex, mcOptions(item, "es")); }
-  else if (type === "type"){ ex.typed = ""; ex.result = null; }
+  else if (type === "type" || type === "cloze" || type === "pastgap"){ ex.typed = ""; ex.result = null; }
+  if (type === "cloze_mc" && !(item.opts && item.opts.length)) ex.type = type = "cloze";
+  if (type === "cloze_mc"){ const o = shuffle(item.opts.map((t, i) => ({ id: i, text: t }))); Object.assign(ex, { opts: o, correct: o.findIndex(x => x.id === 0) }); }
+  if (type === "pastgap" || type === "pastgap_mc"){
+    const v = VERBS.find(x => x.id === item.verb); ex.signal = pick(PAST_SIGNAL[item.tense]);
+    ex.gap = ex.signal + " ___."; ex.hint = "(" + v.inf + ", " + item.pronouns[0] + ")";
+    ex.full = ex.signal + " " + item.form + "."; ex.explain = item.tense === "perf" ? "„" + ex.signal.toLowerCase() + "“: Der Zeitraum läuft noch → Perfekt (" + item.form + ")." : "„" + ex.signal.toLowerCase() + "“ ist abgeschlossen → einfache Vergangenheit (" + item.form + ").";
+    if (type === "pastgap_mc"){
+      const other = VERB_ITEMS.find(o => o.verb === item.verb && o.person === item.person && o.tense === (item.tense === "perf" ? "past" : "perf"));
+      const pres = VERB_ITEMS.find(o => o.verb === item.verb && o.person === item.person && o.tense === "pres");
+      const pers = shuffle(VERB_ITEMS.filter(o => o.verb === item.verb && o.tense === item.tense && o.person !== item.person && o.form !== item.form))[0];
+      const list = [item.form].concat([other, pres, pers].filter(Boolean).map(o => o.form)).filter((f, i, a) => a.indexOf(f) === i).slice(0, 4);
+      const o = shuffle(list.map((t, i) => ({ id: i, text: t }))); Object.assign(ex, { opts: o, correct: o.findIndex(x => x.id === 0) });
+    }
+  }
   else if (type === "build_s"){
     const own = new Set(item.toks);
     const extra = shuffle([].concat(...(CAT_ITEMS[item.cat] || []).filter(o => o.id !== item.id).map(o => o.toks)).filter(t => !own.has(t)));
@@ -3186,7 +3741,7 @@ function pairsPool(catId, requireSeen){
 function makePairs(catHint, requireSeen){
   let items = catHint ? pairsPool(catHint, requireSeen) : [];
   if (items.length < 4){
-    const cats = shuffle(Object.keys(CAT_ITEMS));
+    const cats = shuffle(Object.keys(CAT_ITEMS).filter(c => !c.startsWith("cz:")));
     for (const c of cats){ const p = pairsPool(c, requireSeen); if (p.length === 4){ items = p; break; } }
   }
   if (items.length < 4) return null;
@@ -3216,8 +3771,9 @@ function newCandidates(kindItems, groupKey){
 }
 function pickNew(limit){
   const w = newCandidates(WORD_ITEMS, i => i.cat), v = newCandidates(VERB_ITEMS, i => i.cat), s = newCandidates(SENT_ITEMS.filter(i => !isHard(i)), i => i.cat);
-  const pattern = ["w", "w", "v", "w", "s"]; const src = { w, v, s }; const out = []; let k = 0, guard = 0;
-  while (out.length < limit && (w.length || v.length || s.length) && guard++ < 200){
+  const c = shuffle(CLOZE_ITEMS.filter(i => P(i.id).b === 0 && catStarted(i.ccat)));
+  const pattern = ["w", "w", "v", "w", "s", "c"]; const src = { w, v, s, c }; const out = []; let k = 0, guard = 0;
+  while (out.length < limit && (w.length || v.length || s.length || c.length) && guard++ < 200){
     const kind = pattern[k++ % pattern.length];
     if (src[kind].length) out.push(src[kind].shift());
   }
@@ -3251,7 +3807,14 @@ function buildQuizQueue(kind, id){
   else if (kind === "hard") items = shuffle(hardItems().slice(0, 15));
   else if (kind === "hardall") items = shuffle(HARD_ITEMS).slice(0, 15);
   else if (kind === "verb") items = shuffle(CAT_ITEMS[id] || []);
-  else items = shuffle(CAT_ITEMS[id] || []).slice(0, 10);
+  else if (kind === "pastverb"){ const its = shuffle(VERB_ITEMS.filter(i => i.verb === id && (i.tense === "past" || i.tense === "perf"))).slice(0, 10); return its.map((item, k) => ({ item, forceType: k % 3 === 2 ? "pastgap_mc" : "pastgap" })); }
+  else if (kind === "stars") items = shuffle(starItems()).slice(0, 15);
+  else {
+    items = shuffle(CAT_ITEMS[id] || []).slice(0, 10);
+    const cz = shuffle(CAT_ITEMS["cz:" + id] || []).slice(0, id === "g_pasado" ? 5 : 3);
+    if (cz.length){ items = shuffle(items.slice(0, Math.max(5, 10 - cz.length)).concat(cz)); }
+  }
+  if (kind === "big" && pastStarted()) items = items.slice(0, 17).concat(shuffle(CAT_ITEMS["cz:g_pasado"] || []).slice(0, 3));
   return withPairSlots(items.map(item => ({ item })));
 }
 
@@ -3316,14 +3879,16 @@ function vHome(){
     ${mt({ cls: "lg", attrs: `data-act="nav" data-to="sentences"`, em: "💬", tt: "Sätze", pct: mastery(SENT_PLAIN), right: mastery(SENT_PLAIN) + " %", tip: `${SENT_PLAIN.length} Sätze · ${SENTENCE_CATS.filter(c => !c.grammar).length} Themen` })}
     ${mt({ cls: "lg", attrs: `data-act="nav" data-to="grammar"`, em: "🧩", tt: "Grammatik", pct: mastery(GRAM_ITEMS), right: mastery(GRAM_ITEMS) + " %", tip: `${BASIC_GRAM.length} Themen mit Erklärung` })}
   </div>
+  ${hwTile()}
   <div class="grp">Extras</div>
-  <div class="mgrid ${ONLINE && CL.user && !isPhone() ? "c5 ex5" : "c4"} ${isPhone() ? "ph-extras" : ""}">
+  <div class="mgrid ${ONLINE && CL.user && !isPhone() ? "c3 ex6" : "c4"} ${isPhone() ? "ph-extras" : ""}">
     ${hardOpen()
       ? mt({ cls: "lg dark hardtile open", attrs: `data-act="nav" data-to="hardmode"`, em: "💎", tt: `Hard Mode`, pct: hm, right: hm + " %", tip: `Für Fortgeschrittene · heute bis Mitternacht offen` })
       : mt({ cls: "lg dark hardtile locked", attrs: `data-act="hardLocked"`, em: "💎", tt: `Hard Mode <span class="lock">🔒</span>`, pct: Math.round(Math.min(xp, HARD_XP) / HARD_XP * 100), right: `noch ${hardLeft()} XP`, tip: `Öffnet sich jeden Tag ab ${HARD_XP} XP` })}
     ${qzTile()}
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="big" data-id="big"`, em: "🎯", tt: "Vokabeltest", tip: "20 Fragen aus allen Wörtern und Verbformen" })}
     ${mt({ cls: "lg", attrs: `data-act="quiz" data-kind="hard" data-id="hard"`, em: "🔁", tt: "Fehler ausbügeln", right: hard ? `<span class="badge">${hard}</span>` : undefined, tip: hard ? `${hard} ${hard === 1 ? "Fehler" : "Fehler"} offen · 2× richtig, dann weg` : "Keine offenen Fehler", disabled: !hard })}
+    ${mt({ cls: "lg startile", attrs: `data-act="quiz" data-kind="stars" data-id="stars"`, em: "⭐", tt: "Gemerkt", right: starItems().length ? `<span class="badge gold">${starItems().length}</span>` : undefined, tip: starItems().length ? `${starItems().length} gemerkt · nochmal üben` : "Mit ⭐ in einer Übung merken", disabled: !starItems().length })}
     ${fbTile()}
   </div>
   ${isPhone() ? `<div class="ph-foot">${a2hsHint()}<details class="lgd"><summary><span class="lgd-l">ℹ️ Legende</span><span class="lgd-r"><i>›</i></span></summary>` : `<div class="grp">Legende</div>`}
@@ -3332,12 +3897,14 @@ function vHome(){
       ["🔥", "Serie", "Tage in Folge mit erreichtem Tagesziel"],
       ["💎", "Hard Mode", `ab ${HARD_XP} XP am Tag offen bis 24 Uhr`],
       ["⭐", "XP", `${XP_OK} pro richtige Antwort · Tagesziel unter ⚙️`],
-      isPhone() ? null : ["🎙️", "Live Session", "für Gruppencalls oder allein, ohne XP"],
+      ONLINE ? ["🎙️", "Live Session", "Quiz im Call · richtig = 500 Punkte, schneller = bis zu 500 extra"] : null,
       ["▶", "Heute üben", "fällige Wiederholungen und neue Wörter"],
       ["🔁", "Fehler ausbügeln", "deine Fehler, bis du sie 2× richtig hast"],
+      ["⭐", "Gemerkt", "mit ⭐ markierte Aufgaben nochmal üben"],
+      ["🎯", "Schwachstelle", "kommt ein paar Tage öfter dran, bis es sitzt"],
       [`<span class="mt-bar"><i style="width:60%"></i></span>`, "Prozent", "wie sicher du ein Thema kannst"],
       ["🎧", "Hör-Übungen", "Schalter aus = nichts wird vorgelesen"]
-    ].concat(ONLINE ? [["🏆", "Rangliste", "XP der Woche, montags geht es neu los"], CL.admin ? ["📬", "Feedback", "Meldungen aus der Gruppe, abhaken wenn erledigt"] : ["✉️", "Feedback", "Fehler oder Ideen direkt an Sven"]] : []).filter(Boolean).map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
+    ].concat(ONLINE ? [["📝", "Hausaufgaben", "bis zur nächsten Session, ohne XP"], ["🏆", "Rangliste", "XP der Woche, montags geht es neu los"], CL.admin ? ["📬", "Feedback", "Meldungen aus der Gruppe, abhaken wenn erledigt"] : ["✉️", "Feedback", "Fehler oder Ideen direkt an Sven"]] : []).filter(Boolean).map(([e, t, d]) => `<div class="lg-i"><span class="lg-em">${e}</span><span><b>${t}</b> ${d}</span></div>`).join("")}
   </div>${isPhone() ? `</details></div>` : ""}
   <div class="stand">Stand ${esc(STAND)}</div>
   <input type="file" id="restorefile" accept=".json,application/json" hidden>
@@ -3350,6 +3917,7 @@ function vSettingsSheet(){
     ${vAccountRows()}
     <div class="srow"><span>Tagesziel</span><span class="spills">${[100, 150, 250].map(g => `<button class="pill ${SETTINGS.goal === g ? "on" : ""}" data-act="goal" data-g="${g}">${g} XP</button>`).join("")}</span></div>
     <div class="srow"><span>Hör-Übungen</span><button class="toggle bare" data-act="toggleAudio" aria-label="Hör-Übungen"><span class="switch ${SETTINGS.audio ? "on" : ""}"></span></button></div>
+    ${HAS_TTS ? `<div class="srow muted small"><span>Stimme</span><span>${esVoice ? esc(esVoice.name.replace(/\s*\(.*?\)\s*/g, " ").trim()) : "keine spanische"}</span></div>${esVoiceMale ? "" : voiceHelpHtml()}` : ""}
     ${ONLINE ? "" : `<div class="srow"><span>Fortschritt</span><span class="sbtns"><button class="pill" data-act="backup">💾 Sichern</button><button class="pill" data-act="restore">📂 Laden</button></span></div>`}
     <div class="srow"><span>${ONLINE ? "Fortschritt" : ""}</span>${VIEW.params.confirmReset ? `<span class="sbtns"><span class="small">Wirklich alles löschen?</span><button class="linkbtn danger" data-act="reset">Ja</button><button class="linkbtn" data-act="noReset">Nein</button></span>` : `<button class="linkbtn" data-act="askReset">Zurücksetzen</button>`}</div>
     <div class="srow muted small"><span>Stand</span><span>${esc(STAND)}</span></div>
@@ -3462,7 +4030,7 @@ function vVerb(){
   <div class="verb-meta">${spk(v.inf)} &nbsp; <span style="vertical-align:middle">${esc(v.pron)} · ${esc(v.de)}</span>${v.added ? `<span class="tag">ergänzt</span>` : ""}</div>
   <div class="bar-row"><div class="seg">${["pres", "past", "perf", "fut", "prog"].map(k => `<button class="${t === k ? "on" : ""}" data-act="tense" data-t="${k}">${TENSE_NAMES[k]}</button>`).join("")}</div></div>
   <div class="bar-row"><div class="seg"><button class="${neg ? "" : "on"}" data-act="neg" data-v="0">Bejahung</button><button class="${neg ? "on" : ""}" data-act="neg" data-v="1">Verneinung</button></div>
-  ${CAT_ITEMS[verbCat(v.id, t)] ? `<button class="btn" data-act="quiz" data-kind="verb" data-id="${esc(verbCat(v.id, t))}">✏️ Quiz: ${esc(TENSE_NAMES[t])}</button>` : ""}</div>
+  <div class="vbtns">${CAT_ITEMS[verbCat(v.id, t)] ? `<button class="btn" data-act="quiz" data-kind="verb" data-id="${esc(verbCat(v.id, t))}">✏️ Quiz: ${esc(TENSE_NAMES[t])}</button>` : ""}${v.tenses.past && v.tenses.perf ? `<button class="btn-ghost" data-act="quiz" data-kind="pastverb" data-id="${esc(v.id)}" data-tip="he ${esc(v.part || "")} oder einfache Vergangenheit – mit Signalwort">🕰️ Vergangenheit üben</button>` : ""}</div></div>
   ${extra ? `<div class="verb-extra">${extra}</div>` : ""}
   <div class="card vtab">${rows}</div></div>`;
 }
@@ -3473,7 +4041,7 @@ function startFlash(kind, id){ FC = { kind, id, items: itemsFor(kind, id).slice(
 function vFlash(){
   const it = FC.items[FC.idx]; const title = FC.kind === "all" ? "Alle Vokabeln" : catById(FC.kind, FC.id).name;
   const long = it.es.length > 22;
-  const esFace = `<div class="big ${long ? "long" : ""}">${esc(it.es)}</div><div class="pr">${esc(it.pron)}</div>${it.plural ? `<div class="pl">Plural: ${esc(it.plural)}</div>` : ""}${spk(it.say, "lg")}`;
+  const esFace = `<div class="big ${long ? "long" : ""}">${esc(it.es)}</div><div class="pr">${esc(it.pron)}</div>${it.plural ? `<div class="pl">Plural: ${esc(it.plural)}</div>` : ""}<div class="fc-say">${spk(it.say, "lg")}<button class="slow" data-act="say" data-text="${esc(it.say)}" data-slow="1">🐢 langsam</button></div>`;
   const deFace = `<div class="big ${it.de.length > 22 ? "long" : ""}">${esc(it.de)}</div>${it.sec ? `<div class="pl">Abschnitt: ${esc(it.sec)}</div>` : ""}`;
   const front = FC.deFirst ? deFace : esFace, backF = FC.deFirst ? esFace : deFace;
   return `<div class="page">${head(title, "Karteikarten – reines Lernen, ohne Wertung")}
@@ -3490,7 +4058,10 @@ function vFlash(){
 /* ---- Übungs-Sitzung ---- */
 let SESSION = null;
 function startSession(mode, queue, title){
-  SESSION = { mode, title, queue, idx: 0, doneIds: new Set(), ex: null, lastType: null, correct: 0, wrong: 0, xp: 0, goalHit: false, answeredCount: 0, retried: new Set(), lastCat: null };
+  const kinds = {}; queue.forEach(e => { if (e.item){ const k = e.item.kind === "c" ? "s" : e.item.kind; kinds[k] = (kinds[k] || 0) + 1; } });
+  const area = Object.keys(kinds).sort((a, b) => kinds[b] - kinds[a])[0] || null;
+  SESSION = { mode, title, queue, idx: 0, doneIds: new Set(), ex: null, lastType: null, correct: 0, wrong: 0, xp: 0, goalHit: false, answeredCount: 0, retried: new Set(), lastCat: null,
+              area: mode === "daily" ? null : area, hardArea: queue.some(e => e.item && isHard(e.item)), sinceFocus: 0, lastFocusId: null };
   STACK.push(VIEW); VIEW = { name: "session", params: {} }; nextExercise(true); window.scrollTo(0, 0);
 }
 function nextExercise(first){
@@ -3502,13 +4073,18 @@ function nextExercise(first){
       if (px){ S.ex = px; break; }
       S.queue.splice(S.idx, 1); continue;
     }
-    S.ex = makeExercise(e, S.lastType); S.lastType = S.ex.type; S.lastCat = e.item.cat; break;
+    let entry = e;
+    if (!e.retry && !e.focus && S.mode !== "homework"){
+      S.sinceFocus = (S.sinceFocus || 0) + 1;
+      if (S.sinceFocus >= FX_EVERY){ const f = fxEntry(S); if (f){ entry = f; S.queue[S.idx] = f; S.sinceFocus = 0; } }
+    }
+    S.ex = makeExercise(entry, S.lastType); S.lastType = S.ex.type; S.lastCat = entry.item.cat; break;
   }
   if (S.idx >= S.queue.length){ VIEW = { name: "summary", params: {} }; render(); return; }
   render();
   const ex = S.ex;
   if (SETTINGS.audio && (ex.type === "listen" || ex.type === "mc_t2n")) setTimeout(() => speak(ex.item.say), 250);
-  if (ex.type === "type"){ const inp = document.getElementById("typein"); if (inp) inp.focus(); }
+  if (["type", "cloze", "pastgap"].includes(ex.type)){ const inp = document.getElementById("typein"); if (inp) inp.focus(); }
 }
 function finishAnswer(ok){
   const S = SESSION, ex = S.ex;
@@ -3521,7 +4097,7 @@ function finishAnswer(ok){
     if (!ex.retry){ record(ex.item, ok); S.doneIds.add(ex.item.id); }
     if (ok){ S.correct++; const g = ex.retry ? XP_RETRY : XP_OK; S.xp += g; if (addXp(g)) S.goalHit = true; }
     else { S.wrong++; if (!ex.retry && !S.retried.has(ex.item.id)){ S.retried.add(ex.item.id); S.queue.push({ item: ex.item, retry: true }); } }
-    if (SETTINGS.audio) setTimeout(() => speak(ex.item.say), 120);
+    if (SETTINGS.audio) setTimeout(() => speak(ex.full || ex.item.say), 120);
   }
   render();
 }
@@ -3532,7 +4108,7 @@ function vSession(){
   const it = ex.item; const isS = it && (it.kind === "s" || it.es.length > 22);
   const sizeCls = it ? (it.kind === "s" ? "s" : (it.es.length > 14 ? "m" : "")) : "";
   const deSize = it ? (it.de.length > 40 ? "s" : it.de.length > 16 ? "m" : "") : "";
-  const badge = (ex.isNew && !ex.retry ? `<div class="badge-new">NEU</div>` : "") + (isHard(it) ? `<div class="q-sec hard">💎 Hard Mode${it.sec ? " · " + esc(it.sec) : ""}</div>` : it && it.sec ? `<div class="q-sec">Abschnitt: ${esc(it.sec)}</div>` : "");
+  const badge = (ex.focus ? `<div class="q-sec focus">🎯 Schwachstelle</div>` : "") + (ex.isNew && !ex.retry ? `<div class="badge-new">NEU</div>` : "") + (isHard(it) ? `<div class="q-sec hard">💎 Hard Mode${it.sec ? " · " + esc(it.sec) : ""}</div>` : it && it.sec ? `<div class="q-sec">Abschnitt: ${esc(it.sec)}</div>` : "");
   const tips = it ? tipsFor(it.es) : [];
   const tipHtml = tips.length ? `<div class="tips">${tips.map(t => `<div class="tip">💡 ${t}</div>`).join("")}</div>` : "";
   const revealHtml = it ? `<div class="reveal"><div class="es ${isS ? "s" : ""}">${esc(it.es)}</div><div class="pr">${esc(it.pron)}</div><div style="display:flex;gap:10px;align-items:center">${spk(it.say, "sm")}<button class="slow" data-act="say" data-text="${esc(it.say)}" data-slow="1">🐢 langsam</button></div></div>` : "";
@@ -3545,22 +4121,28 @@ function vSession(){
   } else if (ex.type === "build_s" || ex.type === "build_w"){
     left = `<div class="q-kick">${ex.type === "build_s" ? "Bilde den Satz auf Spanisch" : "Bilde das spanische Wort"}</div>${badge}<div class="q-main de ${ex.type === "build_s" ? (it.de.length > 40 ? "s" : "m") : deSize}">${esc(it.de)}</div>` + (ex.answered ? revealHtml + tipHtml : `<div class="q-sub">Tippe die Kacheln in der richtigen Reihenfolge an.</div>`);
   } else if (ex.type === "type"){
-    left = `<div class="q-kick">Schreib es auf Spanisch</div>${badge}<div class="q-main de ${deSize}">${esc(it.de)}</div>` + (ex.answered ? revealHtml + tipHtml : `<div class="q-sub">Tippe die Antwort ein. Fehlende Akzente zählen als richtig, du bekommst dann einen Hinweis.</div>`);
+    left = `<div class="q-kick">Schreib es auf Spanisch</div>${badge}<div class="q-main de ${deSize}">${esc(it.de)}</div>` + (ex.answered ? revealHtml + tipHtml : "");
+  } else if (ex.type === "cloze" || ex.type === "cloze_mc" || ex.type === "pastgap" || ex.type === "pastgap_mc"){
+    const isPast = ex.type.startsWith("pastgap") || it.topic === "past";
+    const gapTxt = ex.gap || it.gap; const hint = ex.hint || it.hint;
+    const fill = ex.answered ? `<span class="gap ${ex.ok ? "ok" : "bad"}">${esc(ex.type.startsWith("pastgap") ? it.form : (ex.result && ex.result.sol) || it.answers[0])}</span>` : `<span class="gap">___</span>`;
+    left = `<div class="q-kick">${isPast ? "🕰️ Welche Vergangenheit?" : "🧩 Lücke füllen"}</div>${badge}<div class="q-main gapline ${gapTxt.length > 40 ? "s" : "m"}">${esc(gapTxt).replace("___", fill)}</div>${hint ? `<div class="q-hint">${esc(hint)}</div>` : ""}${it.kind === "c" && (it.level === 1 || ex.isNew || ex.answered) ? `<div class="q-sub de-help">${esc(it.de)}</div>` : ""}`
+      + (ex.answered ? `<div class="reveal"><div class="pr">${esc(ex.full ? "" : it.pron)}</div><div style="display:flex;gap:10px;align-items:center">${spk(ex.full || it.say, "sm")}<button class="slow" data-act="say" data-text="${esc(ex.full || it.say)}" data-slow="1">🐢 langsam</button></div><div class="explain">💡 ${esc(ex.explain || it.explain || "")}</div></div>` : "");
   } else if (ex.type === "pairs"){
     left = `<div class="q-kick">Paare zuordnen</div><div style="font-size:52px">🧩</div><div class="q-main m">Finde die Paare</div><div class="q-sub">Tippe ein spanisches Wort und dann seine Bedeutung.</div><div class="q-pron">${ex.done.length} / ${ex.items.length} gefunden</div>`;
   }
   // rechte Seite
-  if (ex.type === "mc_t2n" || ex.type === "mc_n2t" || ex.type === "listen"){
+  if (ex.type === "mc_t2n" || ex.type === "mc_n2t" || ex.type === "listen" || ex.type === "cloze_mc" || ex.type === "pastgap_mc"){
     right = `<div class="opts">${ex.opts.map((o, i) => {
       let cls = ""; if (ex.answered){ if (i === ex.correct) cls = "ok"; else if (i === ex.chosen) cls = "bad"; else cls = "dim"; }
-      return `<button class="opt ${cls} ${ex.type === "mc_n2t" ? "es-opt" : ""}" data-act="pick" data-i="${i}" ${ex.answered ? "disabled" : ""}><span class="key">${i + 1}</span><span class="opt-t">${esc(o.text)}</span></button>`; }).join("")}</div>`;
+      return `<button class="opt ${cls} ${ex.type === "mc_n2t" || ex.type === "cloze_mc" || ex.type === "pastgap_mc" ? "es-opt" : ""}" data-act="pick" data-i="${i}" ${ex.answered ? "disabled" : ""}><span class="key">${i + 1}</span><span class="opt-t">${esc(o.text)}</span></button>`; }).join("")}</div>`;
   } else if (ex.type === "build_s" || ex.type === "build_w"){
     const letter = ex.type === "build_w" ? "letter" : "";
     right = `<div class="slots ${ex.answered ? (ex.ok ? "ok" : "bad") : ""}">${ex.placed.map((bi, k) => `<button class="chip ${letter}" data-act="unplace" data-k="${k}" ${ex.answered ? "disabled" : ""}>${esc(ex.bank[bi].t)}</button>`).join("")}</div>
       <div class="bank">${ex.bank.map((b, i) => `<button class="chip ${letter} ${b.used ? "used" : ""}" data-act="place" data-i="${i}" ${ex.answered ? "disabled" : ""}>${esc(b.t)}</button>`).join("")}</div>`;
-  } else if (ex.type === "type"){
-    right = `<div class="typebox ${ex.answered ? (ex.result === "wrong" ? "bad" : "ok") : ""}">
-      <input id="typein" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Spanisch eintippen …" value="${esc(ex.typed)}" ${ex.answered ? "disabled" : ""}></div>`;
+  } else if (ex.type === "type" || ex.type === "cloze" || ex.type === "pastgap"){
+    right = `<div class="typebox ${ex.answered ? (ex.result && ex.result.res === "wrong" ? "bad" : "ok") : ""}" data-tip="Akzente und kleine Tippfehler sind okay.">
+      <input id="typein" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="${ex.type === "type" ? "Spanisch eintippen …" : "Lücke füllen …"}" value="${esc(ex.typed)}" ${ex.answered ? "disabled" : ""}></div>`;
   } else if (ex.type === "pairs"){
     const cls = (side, o) => { if (ex.done.includes(o.id)) return "done"; if (ex.flash && ex.flash[side] === o.id) return "wrong"; if ((side === "L" ? ex.selL : ex.selR) === o.id) return "sel"; return ""; };
     right = `<div class="pairs"><div class="pcol">${ex.left.map(o => `<button class="pchip es ${cls("L", o)}" data-act="pair" data-side="L" data-id="${esc(o.id)}">${esc(o.text)}</button>`).join("")}</div>
@@ -3570,12 +4152,14 @@ function vSession(){
   if (ex.answered){
     let msg;
     if (ex.type === "pairs") msg = ex.ok ? `<b>${pick(PRAISE)}</b>Alle Paare fehlerfrei gefunden.` : `<b>Geschafft!</b>Mit ${ex.mist.length > 2 ? "einigen Fehlern" : "einem Fehler"} – weiter so.`;
-    else if (ex.type === "type" && ex.result === "accent") msg = `<b>Fast perfekt!</b>Achte auf die Akzente: <span class="sol">${esc(it.es)}</span>`;
+    else if (ex.result && checkMsg(ex.result, it)) msg = checkMsg(ex.result, it);
+    else if (ex.ok && (ex.type.startsWith("cloze") || ex.type.startsWith("pastgap"))) msg = `<b>${pick(PRAISE)}</b>${esc(ex.full || it.es)}`;
     else if (ex.ok) msg = `<b>${pick(PRAISE)}</b>${esc(it.es)} = ${esc(it.de)}`;
-    else msg = `<b>Nicht ganz.</b>Richtig ist: <span class="sol">${esc(ex.type === "mc_t2n" || ex.type === "listen" ? it.de : it.es)}</span>`;
+    else if (ex.type.startsWith("cloze") || ex.type.startsWith("pastgap")) msg = `<b>Nicht ganz.</b>Richtig ist: <span class="sol">${esc(ex.type.startsWith("pastgap") ? solLabel(it) : it.answers.join(" · "))}</span>`;
+    else msg = `<b>Nicht ganz.</b>Richtig ist: <span class="sol">${esc(ex.type === "mc_t2n" || ex.type === "listen" ? it.de : it.kind === "v" ? solLabel(it) : it.es)}</span>`;
     if (it && it.alts && it.alts.length && (ex.type === "build_s" || ex.type === "type" || ex.type === "mc_n2t")) msg += `<span class="alt">Auch richtig: ${it.alts.map(esc).join(" · ")}</span>`;
     fb = `<div class="fb ${ex.ok ? "ok" : (ex.type === "pairs" ? "ok" : "bad")}"><div class="fb-msg">${msg}</div><div class="fb-btns">${it ? spk(it.say, "md") : ""}<button class="btn ${ex.ok || ex.type === "pairs" ? "ok" : "bad"}" data-act="next">Weiter ↵</button></div></div>`;
-  } else if (ex.type === "type"){
+  } else if (ex.type === "type" || ex.type === "cloze" || ex.type === "pastgap"){
     fb = `<div class="fb"><div class="fb-msg muted">Enter oder „Prüfen“ zum Abschicken.</div><div class="fb-btns"><button class="btn" data-act="typecheck">Prüfen ↵</button></div></div>`;
   } else if (ex.type === "build_s" || ex.type === "build_w"){
     fb = `<div class="fb"><div class="fb-msg muted">Tippe auf eine gelegte Kachel, um sie zurückzulegen.</div><div class="fb-btns"><button class="btn-ghost" data-act="clear">Leeren</button><button class="btn" data-act="check" ${ex.placed.length ? "" : "disabled"}>Prüfen ↵</button></div></div>`;
@@ -3585,7 +4169,7 @@ function vSession(){
     fb = `<div class="fb"><div class="fb-msg muted">Wähle eine Antwort – oder drücke 1 bis 4.</div><div class="fb-btns"><button class="btn" disabled>Weiter</button></div></div>`;
   }
   return `<div class="page wide">
-  <div class="ex-head"><button class="back" data-act="back">← Beenden</button><div class="bar pbar"><i style="width:${pct}%"></i></div><div class="ex-count"><button class="report" data-act="report" aria-label="Fehler melden">⚑<span class="rp-l"> Fehler melden</span></button>${Math.min(S.idx + 1, total)} / ${total}</div></div>
+  <div class="ex-head"><button class="back" data-act="back">← Beenden</button><div class="bar pbar"><i style="width:${pct}%"></i></div><div class="ex-count">${it ? `<button class="star ${isStar(it.id) ? "on" : ""}" data-act="star" aria-label="Merken" data-tip="Für später merken">${isStar(it.id) ? "★" : "☆"}</button>` : ""}<button class="report" data-act="report" aria-label="Fehler melden">⚑<span class="rp-l"> Fehler melden</span></button>${Math.min(S.idx + 1, total)} / ${total}</div></div>
   <div class="ex-grid"><div class="card q-card">${left}</div><div class="a-panel"><div class="a-body">${right}</div>${fb}</div></div></div>`;
 }
 function vSummary(){
@@ -4204,90 +4788,172 @@ function vRank(){
   </div></div>`;
 }
 
-/* ================= 🎙️ LIVE-QUIZ (wie Kahoot, seit 16.11.2026) =================
-   Sven (Admin) startet am Laptop und teilt den Bildschirm. Alle anderen antworten auf ihrem
-   eigenen Gerät. Die App prüft selbst (Antippen + Tippen), Punkte für richtig + schnell.
-   Firestore: live/game (nur Sven schreibt), liveplayers/{uid} (jede Person nur ihren Eintrag).
-   Kein Echtzeit-Kanal: die Geräte fragen etwa jede Sekunde nach. */
-const QZ_TOPICS = [["mix", "🎲 Gemischt"], ["w", "📚 Wörter"], ["v", "🧠 Verben"], ["s", "💬 Sätze"]];
-const QZ_N = 10, QZ_DUR = { mc: 20, type: 30 }, QZ_SHAPES = ["▲", "◆", "●", "■"];
-const QZ = { topic: "mix", game: null, players: [], me: null, seen: {}, poll: null, busy: false, answered: null, lastFetch: 0, homeAt: 0 };
+/* ================= 🎙️ LIVE-QUIZ (wie Kahoot, seit 16.11.2026, überarbeitet 19.11.2026) =================
+   Sven (Admin) startet am Laptop und teilt den Bildschirm. Alle anderen antworten auf ihrem eigenen Gerät.
+   Die App prüft selbst (Antippen + Tippen mit Toleranz), Punkte für richtig + schnell.
+   Firestore: live/game (nur Sven schreibt: Zustand, Fragen, Pause, Punkte) und liveplayers/{uid}
+   (jede Person nur ihren Eintrag: Name und letzte Antwort). Kein Echtzeit-Kanal: die Geräte fragen
+   etwa jede Sekunde nach. Neu gezeichnet wird nur, wenn sich wirklich etwas ändert. */
+const QZ_TOPICS = [["mix", "🎲 Gemischt"], ["w", "📚 Wörter"], ["v", "🧠 Verben"], ["s", "💬 Sätze"], ["past", "🕰️ Vergangenheit"]];
+const QZ_N = 10;
+/* Zeiten pro Fragetyp in Sekunden (Svens Vorgabe im Call 19.11. – hier anpassen) */
+const QZ_TIME = { mc: 20, word: 30, form: 30, sentence: 40, cloze: 40, long: 60 };
+const QZ_TIMEOUT = 4000;            // jede Abfrage gibt nach 4 s auf, damit nichts hängen bleibt
+const QZ_HEARTBEAT = 10000;         // Svens Lebenszeichen, auch wenn sein Tab im Hintergrund ist
+const QZ_ALIVE = 120000;            // ohne Lebenszeichen gilt das Quiz nach 2 Minuten als beendet
+const QZ_SHAPES = ["▲", "◆", "●", "■"];
+const QZ_RULE = "Richtig = 500 Punkte, schneller = bis zu 500 extra";
+const QZ = { topic: "mix", game: null, players: [], me: null, seen: {}, pz: {}, typed: {}, poll: null, busy: false, busyAt: 0, lastFetch: 0, homeAt: 0,
+             send: null, pd: null, paintKey: "", writing: false, hosting: false, checkAt: 0, rank: null };
+const TENSE_LONG = { pres: "Presente", past: "Pretérito indefinido", perf: "Pretérito perfecto", fut: "Futuro (ir a)", prog: "Verlaufsform" };
 function qzOn(){ return ONLINE && CL.user; }
-function qzRunning(g){ g = g || QZ.game; return !!(g && g.state && g.state !== "off" && g.state !== "end" ? Date.now() - (g.ts || 0) < 120e3 : g && g.state === "end" && Date.now() - (g.ts || 0) < 600e3); }
-function qzPick(pool, n){ return shuffle(pool).slice(0, n); }
+function qzRunning(g){
+  g = g || QZ.game; if (!g || !g.state || g.state === "off") return false;
+  const age = Date.now() - (g.ts || 0);
+  return g.state === "end" ? age < 600e3 : age < QZ_ALIVE;
+}
+function withTimeout(p, ms){ return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), ms || QZ_TIMEOUT))]); }
+const qzDoc = () => FBX.doc(fbDb, "live", "game");
+
+/* ---------- Fragen bauen ---------- */
+function qzWordTyped(i){ return i.single || i.es.length <= 16; }
+function qzMake(kind, typed){
+  const used = QZ._used;
+  const fresh = list => { const l = list.filter(i => !used.has(i.id)); return l.length ? pick(l) : null; };
+  let it, q;
+  if (kind === "w"){
+    it = fresh(WORD_ITEMS.filter(i => typed ? qzWordTyped(i) : true)); if (!it) return null;
+    if (typed) q = { t: "type", k: "w", lab: "✍️ Wie heißt das auf Spanisch?", p: it.de, d: QZ_TIME.word };
+    else { const toEs = Math.random() < .5; const o = mcOptions(it, toEs ? "es" : "de");
+      q = { t: "mc", k: "w", lab: toEs ? "📚 Wie heißt das auf Spanisch?" : "📚 Was heißt das auf Deutsch?", p: toEs ? it.de : it.es, o: o.opts.map(x => x.text), c: o.correct, d: QZ_TIME.mc }; }
+    q.ex = `${it.pron} · ${it.de}`; q.say = it.say; q.a = it.es;
+  } else if (kind === "v"){
+    it = fresh(VERB_ITEMS.filter(i => i.tense !== "prog")); if (!it) return null;
+    const v = VERBS.find(x => x.id === it.verb);
+    if (typed) q = { t: "type", k: "v", lab: "✍️ Verbform eintippen", p: it.de, h: v.inf + " · " + it.pronouns[0], d: QZ_TIME.form };
+    else { const o = mcOptions(it, "es"); q = { t: "mc", k: "v", lab: "🧠 Welche Form passt?", p: it.de, o: o.opts.map(x => { const oi = BY_ID[x.id]; return oi && oi.kind === "v" ? oi.pronouns[0] + " " + oi.form : x.text; }), c: o.correct, d: QZ_TIME.mc }; }
+    const other = (it.tense === "past" || it.tense === "perf") ? VERB_ITEMS.find(o => o.verb === it.verb && o.person === it.person && o.tense === (it.tense === "past" ? "perf" : "past")) : null;
+    q.ex = `${it.form} = ${it.pronouns.join("/")} · ${TENSE_LONG[it.tense]} von ${v.inf} (${v.de})` + (other ? ` · ${TENSE_LONG[other.tense].replace("Pretérito ", "")} wäre: ${other.form}` : "");
+    q.say = it.say; q.a = it.form;
+  } else if (kind === "s"){
+    it = fresh(SENT_ITEMS.filter(i => !isHard(i) && (typed ? i.toks.length <= 6 : true))); if (!it) return null;
+    if (typed) q = { t: "type", k: "s", lab: "✍️ Satz auf Spanisch eintippen", p: it.de, d: QZ_TIME.sentence };
+    else { const o = mcOptions(it, "es"); q = { t: "mc", k: "s", lab: "💬 Welcher Satz passt?", p: it.de, o: o.opts.map(x => x.text), c: o.correct, d: QZ_TIME.mc }; }
+    q.ex = `${it.pron} · ${it.de}`; q.say = it.say; q.a = it.es;
+  } else if (kind === "c" || kind === "cpast"){
+    const pool = CLOZE_ITEMS.filter(i => kind === "cpast" ? i.topic === "past" : i.topic !== "past" && (QZ._topic === "mix" || i.topic === QZ._topic || (QZ._topic === "s" && i.topic !== "w")));
+    it = fresh(typed ? pool : pool.filter(i => i.opts)); if (!it) return null;
+    const long = it.gap.length > 90 || (it.gap.match(/[.?!]\s/g) || []).length >= 2;
+    const lab = it.topic === "past" ? "🕰️ Welche Vergangenheit?" : "🧩 Lücke füllen";
+    if (typed) q = { t: "type", k: "c", lab, p: it.gap, h: it.hint || "", sub: it.level === 1 ? it.de : "", d: long ? QZ_TIME.long : QZ_TIME.cloze };
+    else { const o = shuffle(it.opts.map((t, i) => ({ t, i }))); q = { t: "mc", k: "c", lab, p: it.gap, h: it.hint || "", o: o.map(x => x.t), c: o.findIndex(x => x.i === 0), d: QZ_TIME.mc }; }
+    q.ex = it.explain; q.say = it.es; q.a = it.answers[0];
+  } else if (kind === "pgap"){
+    it = fresh(VERB_ITEMS.filter(canPastGap)); if (!it) return null;
+    const ex = makeExercise({ item: it, forceType: typed ? "pastgap" : "pastgap_mc" });
+    if (typed) q = { t: "type", k: "past", lab: "🕰️ Welche Vergangenheit?", p: ex.gap, h: ex.hint, d: QZ_TIME.form };
+    else q = { t: "mc", k: "past", lab: "🕰️ Welche Vergangenheit?", p: ex.gap, h: ex.hint, o: ex.opts.map(x => x.text), c: ex.correct, d: QZ_TIME.mc };
+    q.ex = ex.explain; q.say = ex.full; q.a = it.form;
+  }
+  if (!q) return null;
+  used.add(it.id); q.id = it.id;
+  return q;
+}
+/* Ablauf: erste Frage Antippen, dann 6 Tipp-Fragen und 3 weitere (davon möglichst 1 Lückentext zum Antippen),
+   nie drei Tipp-Fragen hintereinander. Das sind ⅔ zum Eintippen oder als Lückentext (Svens Entscheidung E). */
+function qzPattern(){
+  for (let g = 0; g < 200; g++){
+    const rest = shuffle(["T", "T", "T", "T", "T", "T", "M", "M", "M"]); const p = ["M"].concat(rest);
+    if (!/TTT/.test(p.join(""))) return p;
+  }
+  return ["M", "T", "T", "M", "T", "T", "M", "T", "T", "M"];
+}
 function qzBuild(topic){
-  const W = WORD_ITEMS.filter(i => distractorPool(i).length >= 3);
-  const V = VERB_ITEMS.filter(i => distractorPool(i).length >= 3);
-  const S = SENT_ITEMS.filter(i => !isHard(i) && distractorPool(i).length >= 3);
-  const plan = [];
-  const add = (kind, t) => plan.push({ kind, t });
-  const kinds = topic === "mix" ? ["w", "v", "s"] : [topic];
-  for (let k = 0; k < QZ_N; k++){
-    const kind = kinds[k % kinds.length];
-    const t = (k % 10 === 3 || k % 10 === 6 || k % 10 === 9) && kind !== "s" ? "type" : "mc";
-    add(kind, t);
+  QZ._used = new Set(); QZ._topic = topic;
+  const pat = qzPattern();
+  const typedKinds = { mix: ["w", "v", "c", "s", "v", "c"], w: ["w", "w", "c", "w", "w", "c"], v: ["v", "v", "c", "v", "v", "v"], s: ["s", "c", "s", "c", "s", "c"], past: ["cpast", "pgap", "cpast", "pgap", "cpast", "pgap"] }[topic] || ["w", "v", "c"];
+  const mcKinds = { mix: ["w", "s", "c", "v"], w: ["w", "w", "c", "w"], v: ["v", "v", "c", "v"], s: ["s", "s", "c", "s"], past: ["cpast", "pgap", "cpast", "pgap"] }[topic] || ["w", "v"];
+  const tk = shuffle(typedKinds), mk = [mcKinds[0]].concat(shuffle(mcKinds.slice(1)));
+  let ti = 0, mi = 0; const qs = [];
+  for (const slot of pat){
+    const typed = slot === "T"; const kinds = typed ? tk : mk; let q = null;
+    for (let g = 0; g < kinds.length && !q; g++){ q = qzMake(kinds[(typed ? ti : mi) % kinds.length], typed); if (typed) ti++; else mi++; }
+    if (!q) q = qzMake(typed ? "w" : "w", typed);
+    if (q) qs.push(q);
   }
-  const used = new Set(), qs = [];
-  for (const p of shuffle(plan)){
-    const pool = (p.kind === "w" ? W : p.kind === "v" ? V : S).filter(i => !used.has(i.id) && (p.t !== "type" || p.kind !== "w" || i.es.length <= 22));
-    const it = pool[Math.floor(Math.random() * pool.length)]; if (!it) continue; used.add(it.id);
-    if (p.t === "type"){
-      qs.push({ t: "type", id: it.id, k: p.kind, p: it.de, h: p.kind === "v" ? VERBS.find(v => v.id === it.verb).inf : "", a: typeAnswers(it)[0] });
-    } else {
-      const toEs = p.kind !== "w" || Math.random() < .5;
-      const o = mcOptions(it, toEs ? "es" : "de");
-      qs.push({ t: "mc", id: it.id, k: p.kind, p: toEs ? it.de : it.es, o: o.opts.map(x => x.text), c: o.correct });
-    }
-  }
-  // Tippen nicht direkt hintereinander und nicht als erste Frage
-  for (let i = 1; i < qs.length; i++) if (qs[i].t === "type" && qs[i - 1].t === "type"){ const j = qs.findIndex((q, k) => k > i && q.t === "mc"); if (j > 0) [qs[i], qs[j]] = [qs[j], qs[i]]; }
-  if (qs[0] && qs[0].t === "type"){ const j = qs.findIndex(q => q.t === "mc"); if (j > 0) [qs[0], qs[j]] = [qs[j], qs[0]]; }
   return qs;
 }
-const qzDoc = () => FBX.doc(fbDb, "live", "game");
+/* ---------- Abfragen ---------- */
 async function qzFetch(){
-  if (QZ.busy || !qzOn()) return; QZ.busy = true;
+  if (!qzOn()) return;
+  if (QZ.busy && Date.now() - QZ.busyAt < QZ_TIMEOUT + 1000) return;
+  QZ.busy = true; QZ.busyAt = Date.now();
   try {
-    const d = await FBX.getDoc(qzDoc()); const g = d.exists() ? d.data() : null;
+    const d = await withTimeout(FBX.getDoc(qzDoc())); const g = d.exists() ? d.data() : null;
     QZ.game = g; QZ.lastFetch = Date.now();
     if (CL.admin && g && g.state !== "off"){
-      const snap = await FBX.getDocs(FBX.collection(fbDb, "liveplayers"));
+      if (g.host === CL.uid && g.state !== "end") QZ.hosting = true;
+      const snap = await withTimeout(FBX.getDocs(FBX.collection(fbDb, "liveplayers")));
       QZ.players = snap.docs.map(x => Object.assign({ uid: x.id }, x.data())).filter(p => p.gid === g.gid);
-      if (VIEW.name === "live"){ if (Date.now() - (g.ts || 0) > 30000) await qzWrite({}); qzHostTick(); }   // Lebenszeichen: Quiz gilt nur als laufend, solange Svens Seite offen ist
-    } else if (!CL.admin && g && VIEW.name === "live"){
-      await qzPlayerTick();
+      if (VIEW.name === "live") qzHostTick();
+    } else if (!CL.admin && g){
+      qzPauseTrack(g);
+      if (VIEW.name === "live") await qzPlayerTick();
     }
   } catch (e) {} finally { QZ.busy = false; }
   if (VIEW.name === "live") qzPaint();
   else if (VIEW.name === "home" && !CL.admin) qzHomeBadge();
 }
-function qzStartPoll(){ if (!QZ.poll) QZ.poll = setInterval(() => { if (VIEW.name === "live" && !document.hidden) qzFetch(); else qzStopPoll(); }, 1000); }
+function qzStartPoll(){ if (!QZ.poll) QZ.poll = setInterval(() => { if (VIEW.name === "live" && !document.hidden) qzFetch(); else if (VIEW.name !== "live") qzStopPoll(); }, 1000); }
 function qzStopPoll(){ clearInterval(QZ.poll); QZ.poll = null; }
 async function qzWrite(patch){
   QZ.game = Object.assign({}, QZ.game || {}, patch, { ts: Date.now(), host: CL.uid });
-  try { await FBX.setDoc(qzDoc(), QZ.game); } catch (e) { toast("Hat nicht geklappt. Verbindung prüfen."); }
+  try { await withTimeout(FBX.setDoc(qzDoc(), QZ.game)); return true; } catch (e) { toast("Hat nicht geklappt. Verbindung prüfen."); return false; }
 }
+/* Svens Lebenszeichen: eigenes Intervall, läuft auch im Hintergrund weiter */
+setInterval(() => { if (CL.admin && QZ.hosting && QZ.game && ["lobby", "question", "reveal"].includes(QZ.game.state) && !QZ.writing) qzWrite({}); }, QZ_HEARTBEAT);
+
 /* ---------- Sven ---------- */
 function qzQ(){ const g = QZ.game; return g && g.qs && g.qs[g.qi]; }
-function qzAnsweredNow(){ const g = QZ.game; return QZ.players.filter(p => p.last && p.last.qi === g.qi); }
+function qzAnsweredNow(){ const g = QZ.game; return QZ.players.filter(p => p.last && p.last.qi === g.qi && p.gid === g.gid); }
+function qzHostElapsed(g){ const now = Date.now(); return (now - (g.qStart || now) - (g.pausedMs || 0) - (g.paused ? now - (g.pausedAt || now) : 0)) / 1000; }
 function qzHostTick(){
-  const g = QZ.game; if (!g || g.state !== "question") return;
-  const q = qzQ(); const left = q ? QZ_DUR[q.t] - (Date.now() - g.qStart) / 1000 : 0;
-  if (left <= 0 || (QZ.players.length && qzAnsweredNow().length >= QZ.players.length)) qzWrite({ state: "reveal" });
+  const g = QZ.game; if (!g || g.state !== "question" || g.paused || QZ.writing) return;
+  const q = qzQ(); if (!q) return;
+  const left = q.d - qzHostElapsed(g);
+  if (left <= 0 || (QZ.players.length && qzAnsweredNow().length >= QZ.players.length)) qzReveal();
+}
+async function qzReveal(){
+  if (QZ.writing) return; QZ.writing = true;
+  try {
+    try { const snap = await withTimeout(FBX.getDocs(FBX.collection(fbDb, "liveplayers"))); QZ.players = snap.docs.map(x => Object.assign({ uid: x.id }, x.data())).filter(p => p.gid === QZ.game.gid); } catch (e) {}
+    const g = QZ.game; const got = qzAnsweredNow(); const scores = Object.assign({}, g.scores || {});
+    got.forEach(p => { scores[p.uid] = (scores[p.uid] || 0) + (p.last.ok ? Math.max(0, Math.min(1000, Math.round(p.last.pts || 0))) : 0); });
+    await qzWrite({ state: "reveal", got: got.map(p => p.uid), scores, paused: false });
+  } finally { QZ.writing = false; qzPaint(true); }
+}
+async function qzHostAct(el, fn){
+  if (QZ.writing) return; QZ.writing = true;
+  if (el){ el.disabled = true; el.dataset.label = el.textContent; el.textContent = "…"; }
+  try { await fn(); } finally { QZ.writing = false; qzPaint(true); }
 }
 const QZ_HOST = {
   qzTopic: el => { QZ.topic = el.dataset.v; render(); },
-  qzOpen: async () => { if (QZ.opening) return; QZ.opening = true; setTimeout(() => QZ.opening = false, 1500); await qzWrite({ gid: Math.random().toString(36).slice(2, 10), state: "lobby", qi: 0, qs: qzBuild(QZ.topic), topic: QZ.topic, qStart: 0 }); QZ.players = []; render(); },
-  qzGo: async () => { await qzWrite({ state: "question", qi: 0, qStart: Date.now() }); render(); },
-  qzNext: async () => {
-    const g = QZ.game; if (!g) return;
-    if (g.state === "question"){ await qzWrite({ state: "reveal" }); }
-    else if (g.qi + 1 >= g.qs.length){ await qzWrite({ state: "end" }); qzConfetti(); }
-    else await qzWrite({ state: "question", qi: g.qi + 1, qStart: Date.now() });
-    render();
-  },
-  qzOff: async () => { if (QZ.game) await qzWrite({ state: "off" }); QZ.players = []; render(); },
-  qzNew: async () => { await qzWrite({ state: "off" }); QZ.players = []; render(); }
+  qzOpen: el => qzHostAct(el, async () => { QZ.players = []; QZ.hosting = true; await qzWrite({ gid: Math.random().toString(36).slice(2, 10), state: "lobby", qi: 0, qs: qzBuild(QZ.topic), topic: QZ.topic, qStart: 0, paused: false, pausedAt: 0, pausedMs: 0, scores: {}, got: [] }); }),
+  qzGo: el => qzHostAct(el, () => qzWrite({ state: "question", qi: 0, qStart: Date.now(), paused: false, pausedAt: 0, pausedMs: 0, got: [] })),
+  qzNext: el => { const g = QZ.game; if (!g) return;
+    if (g.state === "question"){ if (QZ.writing) return; if (el){ el.disabled = true; el.textContent = "…"; } return qzReveal(); }
+    if (g.qi + 1 >= g.qs.length) return qzHostAct(el, async () => { await qzWrite({ state: "end", paused: false }); qzConfetti(); });
+    return qzHostAct(el, () => qzWrite({ state: "question", qi: g.qi + 1, qStart: Date.now(), paused: false, pausedAt: 0, pausedMs: 0, got: [] })); },
+  qzPause: el => qzHostAct(el, () => { const g = QZ.game; return g.paused ? qzWrite({ paused: false, pausedMs: (g.pausedMs || 0) + (Date.now() - (g.pausedAt || Date.now())), pausedAt: 0 }) : qzWrite({ paused: true, pausedAt: Date.now() }); }),
+  qzOff: el => qzHostAct(el, async () => { if (QZ.game) await qzWrite({ state: "off" }); QZ.players = []; QZ.hosting = false; }),
+  qzNew: el => qzHostAct(el, async () => { await qzWrite({ state: "off" }); QZ.players = []; }),
+  qzSay: () => { const q = qzQ(); if (q) speak(q.say); },
+  qzTileTap: async () => {
+    if (CL.admin || qzRunning()){ go("live"); return; }
+    QZ.homeAt = 0; await qzFetch();
+    if (qzRunning()) go("live"); else toast("Gerade läuft kein Quiz. Sven startet es im Call.");
+  }
 };
 /* ---------- alle anderen ---------- */
 function qzMe(){ const g = QZ.game; return QZ.me && g && QZ.me.gid === g.gid ? QZ.me : null; }
@@ -4295,115 +4961,224 @@ async function qzJoin(){
   const g = QZ.game; if (!qzRunning(g) || qzMe() || QZ.joining) return;
   QZ.joining = true;
   try {
-    const d = await FBX.getDoc(FBX.doc(fbDb, "liveplayers", CL.uid));   // nach Neuladen: Punkte behalten
+    const d = await withTimeout(FBX.getDoc(FBX.doc(fbDb, "liveplayers", CL.uid)));   // nach Neuladen: letzte Antwort behalten
     const old = d.exists() ? d.data() : null;
-    QZ.me = old && old.gid === g.gid ? old : { gid: g.gid, name: CL.name, score: 0, last: null, updated: Date.now() };
-    if (!(old && old.gid === g.gid)) await FBX.setDoc(FBX.doc(fbDb, "liveplayers", CL.uid), QZ.me);
+    const keep = old && old.gid === g.gid;
+    const me = keep ? old : { gid: g.gid, name: CL.name, score: 0, last: null, updated: Date.now() };
+    if (!keep) await withTimeout(FBX.setDoc(FBX.doc(fbDb, "liveplayers", CL.uid), me));
+    QZ.me = me; QZ.send = me.last && me.last.qi === g.qi ? { qi: g.qi, gid: g.gid, st: "sent" } : null;
   } catch (e) { QZ.me = null; } finally { QZ.joining = false; }
+}
+function qzKeyQ(g){ return g.gid + ":" + g.qi; }
+function qzPauseTrack(g){
+  if (g.state !== "question") return;
+  const k = qzKeyQ(g); const z = QZ.pz[k] = QZ.pz[k] || { total: 0, since: null };
+  if (g.paused && !z.since) z.since = Date.now();
+  if (!g.paused && z.since){ z.total += Date.now() - z.since; z.since = null; }
+}
+function qzPlayerElapsed(g){
+  const k = qzKeyQ(g); const s = QZ.seen[k] || Date.now(); const z = QZ.pz[k] || { total: 0, since: null };
+  return (Date.now() - s - z.total - (z.since ? Date.now() - z.since : 0)) / 1000;
 }
 async function qzPlayerTick(){
   const g = QZ.game; if (!qzRunning(g)) return;
   if (!qzMe()) await qzJoin();
-  if (g.state === "question" && !QZ.seen[g.gid + ":" + g.qi]) QZ.seen[g.gid + ":" + g.qi] = Date.now();
+  if (g.state === "question" && !QZ.seen[qzKeyQ(g)]) QZ.seen[qzKeyQ(g)] = Date.now();
+  // eigener Eintrag noch da? Sonst still neu beitreten (Punkte stehen bei Sven im Spiel)
+  if (qzMe() && Date.now() - QZ.checkAt > 5000){
+    QZ.checkAt = Date.now();
+    try { const d = await withTimeout(FBX.getDoc(FBX.doc(fbDb, "liveplayers", CL.uid))); if (!d.exists() || d.data().gid !== g.gid){ QZ.me = null; await qzJoin(); } } catch (e) {}
+  }
+  if ((g.state === "reveal" || g.state === "end") && qzMe()) qzRankNow();
 }
-async function qzAnswer(a){
-  const g = QZ.game, me = qzMe(), q = qzQ(); if (!g || !me || !q || g.state !== "question") return;
+async function qzSend(){
+  const me = qzMe(); const s = QZ.send; if (!me || !s) return;
+  const g0 = QZ.game;
+  for (const wait of [0, 500, 1000, 2000]){
+    if (wait) await new Promise(r => setTimeout(r, wait));
+    if (QZ.send !== s) return;
+    try {
+      me.score = (g0 && g0.scores && g0.scores[CL.uid]) || 0; me.updated = Date.now();
+      await withTimeout(FBX.setDoc(FBX.doc(fbDb, "liveplayers", CL.uid), { gid: me.gid, name: me.name, score: me.score, last: me.last, updated: me.updated }));
+      s.st = "sent"; qzPaint(); return;
+    } catch (e) {}
+  }
+  if (QZ.send === s){ s.st = "failed"; me.last = null; qzPaint(); }
+}
+function qzCheck(q, a){
+  if (q.t === "mc") return { ok: a === q.c, res: a === q.c ? "exact" : "wrong" };
+  const it = BY_ID[q.id]; const info = it ? typeCheckInfo(it, a) : checkText([q.a], a);
+  return { ok: info.res !== "wrong", res: info.res };
+}
+function qzAnswer(a){
+  const g = QZ.game, me = qzMe(), q = qzQ(); if (!g || !me || !q || g.state !== "question" || g.paused) return;
   if (me.last && me.last.qi === g.qi) return;
-  let ok;
-  if (q.t === "mc") ok = a === q.c;
-  else { const it = BY_ID[q.id]; ok = it ? typeCheck(it, a) !== "wrong" : stripAcc(normT(a)) === stripAcc(normT(q.a)); }
-  const secs = (Date.now() - (QZ.seen[g.gid + ":" + g.qi] || Date.now())) / 1000;
-  const pts = ok ? 500 + Math.round(500 * Math.max(0, 1 - secs / QZ_DUR[q.t])) : 0;
-  me.last = { qi: g.qi, a: q.t === "mc" ? a : String(a).slice(0, 80), ok, pts }; me.score += pts; me.updated = Date.now();
-  qzPaint();
-  try { await FBX.setDoc(FBX.doc(fbDb, "liveplayers", CL.uid), me); } catch (e) { toast("Senden hat nicht geklappt. Verbindung prüfen."); }
+  if (QZ.send && QZ.send.qi === g.qi && QZ.send.gid === g.gid && QZ.send.st === "sending") return;
+  const k = qzKeyQ(g);
+  const secs = QZ.send && QZ.send.st === "failed" && QZ.send.qi === g.qi ? QZ.send.secs : qzPlayerElapsed(g);   // nach Fehlversuch zählt die erste Antwortzeit
+  const { ok, res } = qzCheck(q, a);
+  const pts = ok ? 500 + Math.round(500 * Math.max(0, 1 - secs / q.d)) : 0;
+  me.last = { qi: g.qi, a: q.t === "mc" ? a : String(a).slice(0, 80), ok, pts, res };
+  QZ.send = { qi: g.qi, gid: g.gid, st: "sending", secs, a };
+  QZ.pd = null; qzPaint(); qzSend();
+  void k;
 }
 const QZ_PLAY = {
   qzPick: el => qzAnswer(+el.dataset.i),
   qzType: () => { const el = document.getElementById("qztype"); const v = el ? el.value.trim() : ""; if (!v){ if (el) el.focus(); return; } qzAnswer(v); }
 };
+/* Antippen: Antwort schon beim Drücken merken, beim Loslassen/Klick senden – so geht kein Tipp verloren */
+document.addEventListener("pointerdown", e => { const b = e.target.closest && e.target.closest("[data-act=qzPick]"); if (!b || b.disabled) return; QZ.pd = { i: +b.dataset.i, at: Date.now() }; b.classList.add("sel"); });
+document.addEventListener("pointerup", () => { const pd = QZ.pd; if (!pd) return; setTimeout(() => { if (QZ.pd === pd) qzAnswer(pd.i); }, 350); });
+document.addEventListener("input", e => { if (e.target && e.target.id === "qztype" && QZ.game) QZ.typed[qzKeyQ(QZ.game)] = e.target.value; });
+document.addEventListener("focusin", e => { if (e.target && e.target.id === "qztype" && isPhone()) setTimeout(() => e.target.scrollIntoView({ block: "center", behavior: "smooth" }), 250); });
+
 /* ---------- Ansicht ---------- */
-function qzTimer(q, start){ const left = Math.max(0, Math.ceil(QZ_DUR[q.t] - (Date.now() - start) / 1000)); return { left, pct: Math.max(0, Math.min(100, left / QZ_DUR[q.t] * 100)) }; }
-function qzBoard(list, max){ return list.slice().sort((a, b) => b.score - a.score).slice(0, max || 99); }
+function qzTimer(q, elapsed){ const left = Math.max(0, Math.ceil(q.d - elapsed)); return { left, pct: Math.max(0, Math.min(100, (q.d - elapsed) / q.d * 100)) }; }
+function qzScore(uid){ const g = QZ.game; return (g && g.scores && g.scores[uid]) || 0; }
+function qzBoardList(){ const g = QZ.game; const names = {}; QZ.players.forEach(p => names[p.uid] = p.name); Object.keys((g && g.scores) || {}).forEach(u => { if (!names[u]) names[u] = "?"; });
+  return Object.entries(names).map(([uid, name]) => ({ uid, name, score: qzScore(uid) })).sort((a, b) => b.score - a.score); }
 function qzMedal(i){ return ["🥇", "🥈", "🥉"][i] || `${i + 1}.`; }
-function qzPrompt(q){ return `<div class="qz-kind">${q.t === "type" ? "✍️ Auf Spanisch eintippen" : q.k === "w" ? "📚 Wort" : q.k === "v" ? "🧠 Verb" : "💬 Satz"}</div><div class="qz-p">${esc(q.p)}</div>${q.h ? `<div class="qz-h">${esc(q.h)}</div>` : ""}`; }
+function qzPrompt(q, big){
+  const p = esc(q.p).replace("___", `<span class="gap">___</span>`);
+  return `<div class="qz-kind">${esc(q.lab)}</div><div class="qz-p ${q.k === "c" || q.k === "past" || q.k === "s" ? "es" : ""} ${big ? "" : "sm"}">${p}</div>${q.h ? `<div class="qz-h">${esc(q.h)}</div>` : ""}${q.sub ? `<div class="qz-sub">${esc(q.sub)}</div>` : ""}`;
+}
 function vQuiz(){
   if (!qzOn()) return `<div class="page">${head("🎙️ Live Session")}<div class="card qz-empty">Die Live Session gibt es nur online.</div></div>`;
   qzStartPoll(); if (!QZ.lastFetch || Date.now() - QZ.lastFetch > 1500) setTimeout(qzFetch, 0);
+  QZ.paintKey = qzKey();
   return `<div class="page qz-page" id="qzroot">${CL.admin ? qzHostHtml() : qzPlayHtml()}</div>`;
 }
-function qzPaint(){ const r = document.getElementById("qzroot"); if (!r || VIEW.name !== "live") return; const keep = document.activeElement && document.activeElement.id === "qztype" ? document.activeElement.value : null; r.innerHTML = CL.admin ? qzHostHtml() : qzPlayHtml(); if (keep !== null){ const t = document.getElementById("qztype"); if (t){ t.value = keep; t.focus(); } } }
+function qzKey(){
+  const g = QZ.game; if (!g) return "none";
+  const base = [g.gid, g.state, g.qi, !!g.paused, qzRunning(g), QZ.writing].join("|");
+  if (CL.admin){
+    if (g.state === "reveal" || g.state === "end") return base + "|" + JSON.stringify(g.scores || {}) + "|" + QZ.players.map(p => p.uid + p.name).join(",");
+    return base;
+  }
+  const me = qzMe(); const s = QZ.send && QZ.send.gid === g.gid && QZ.send.qi === g.qi ? QZ.send.st : "";
+  const r = (g.state === "reveal" || g.state === "end") && QZ.rank ? QZ.rank.key + ":" + QZ.rank.r : "";
+  return base + "|" + (me ? "me" : "") + "|" + s + "|" + (me && me.last && me.last.qi === g.qi ? "a" : "") + "|" + r + "|" + JSON.stringify((g.got || []).includes(CL.uid));
+}
+function qzPaint(force){
+  const r = document.getElementById("qzroot"); if (!r || VIEW.name !== "live") return;
+  const key = qzKey();
+  if (!force && key === QZ.paintKey){ qzLive(); return; }
+  QZ.paintKey = key;
+  const act = document.activeElement; const hadFocus = act && act.id === "qztype";
+  r.innerHTML = CL.admin ? qzHostHtml() : qzPlayHtml();
+  const t = document.getElementById("qztype");
+  if (t){ const v = QZ.game && QZ.typed[qzKeyQ(QZ.game)]; if (v) t.value = v; if (hadFocus || (!isPhone() && !t.disabled)) t.focus(); }
+  qzLive();
+}
+/* nur die Teile aktualisieren, die sich laufend ändern (Namen, Zähler, Uhr) */
+function qzLive(){
+  const g = QZ.game; if (!g) return;
+  if (CL.admin){
+    const who = document.getElementById("qz-who"); if (who && g.state === "question"){ const ans = new Set(qzAnsweredNow().map(p => p.uid));
+      who.innerHTML = QZ.players.map(p => `<span class="qz-name sm ${ans.has(p.uid) ? "done" : ""}">${ans.has(p.uid) ? "✓ " : ""}${esc(p.name)}</span>`).join("") || `<span class="muted small">Noch niemand dabei</span>`; }
+    const cnt = document.getElementById("qz-cnt"); if (cnt) cnt.textContent = `${qzAnsweredNow().length} / ${QZ.players.length} geantwortet`;
+    const names = document.getElementById("qz-names"); if (names && g.state === "lobby") names.innerHTML = QZ.players.map(p => `<span class="qz-name">${esc(p.name)}</span>`).join("") || `<span class="muted">Warte auf die Ersten …</span>`;
+    const goB = document.querySelector("[data-act=qzGo]"); if (goB && !QZ.writing) goB.disabled = !QZ.players.length;
+    const pc = document.querySelector(".qz-count"); if (pc) pc.textContent = "👥 " + QZ.players.length;
+  }
+  qzClock();
+}
+function qzClock(){
+  const g = QZ.game; if (!g || g.state !== "question" || VIEW.name !== "live") return;
+  const q = qzQ(); if (!q) return;
+  const tm = qzTimer(q, CL.admin ? qzHostElapsed(g) : qzPlayerElapsed(g));
+  const b = document.querySelector(".qz-bar i"), t = document.querySelector(".qz-time");
+  if (b) b.style.width = tm.pct + "%"; if (t) t.textContent = (g.paused ? "⏸ " : "⏱ ") + tm.left;
+}
+setInterval(() => { if (VIEW.name === "live" && !document.hidden) qzClock(); }, 250);
 function qzHostHtml(){
   const g = QZ.game;
   if (!qzRunning(g)){
     const pills = QZ_TOPICS.map(([v, l]) => `<button class="pill ${QZ.topic === v ? "on" : ""}" data-act="qzTopic" data-v="${v}">${l}</button>`).join("");
-    return `${head("🎙️ Live Session")}<div class="card qz-setup"><div class="qz-pills">${pills}</div><button class="btn-hero" data-act="qzOpen">▶ Quiz öffnen</button><div class="small muted">${QZ_N} Fragen · Antippen und Eintippen</div></div>`;
+    return `${head("🎙️ Live Session")}<div class="card qz-setup"><div class="qz-pills">${pills}</div><button class="btn-hero" data-act="qzOpen">▶ Quiz öffnen</button><div class="small muted">${QZ_N} Fragen · Antippen und Eintippen</div></div>
+      ${hwOn() ? `<div class="qz-hwrow"><button class="btn-ghost" data-act="hwEval">📝 Hausaufgaben auswerten</button></div>` : ""}`;
   }
-  const names = QZ.players.map(p => `<span class="qz-name">${esc(p.name)}</span>`).join("");
-  const top = `<div class="head"><button class="back" data-act="qzOff">✕ Beenden</button><h1>🎙️ Live Session</h1><span class="qz-count">👥 ${QZ.players.length}</span></div>`;
+  const busy = QZ.writing ? "disabled" : "";
+  const top = `<div class="head"><button class="back" data-act="qzOff" ${busy}>✕ Beenden</button><h1>🎙️ Live Session</h1><span class="qz-count">👥 ${QZ.players.length}</span></div>`;
   if (g.state === "lobby"){
-    return `${top}<div class="card qz-lobby"><div class="qz-join">Mitmachen: Svenolingo öffnen › <b>🎙️ Mitmachen</b></div>
-      <div class="qz-names">${names || `<span class="muted">Warte auf die Ersten …</span>`}</div>
-      <button class="btn-hero" data-act="qzGo" ${QZ.players.length ? "" : "disabled"}>▶ Los geht's</button></div>`;
+    return `${top}<div class="card qz-lobby"><div class="qz-join">Mitmachen: Svenolingo öffnen › <b>🎙️ Live Session</b></div>
+      <div class="qz-names" id="qz-names"></div>
+      <button class="btn-hero" data-act="qzGo" ${QZ.players.length && !QZ.writing ? "" : "disabled"}>▶ Los geht's</button>
+      <div class="qz-rule">${QZ_RULE}</div></div>`;
   }
   const q = qzQ();
+  const pauseBtn = `<button class="btn-ghost qz-pause" data-act="qzPause" ${busy}>${g.paused ? "▶ Weiter" : "⏸ Pause"}</button>`;
   if (g.state === "question"){
-    const tm = qzTimer(q, g.qStart), n = qzAnsweredNow().length;
-    return `${top}<div class="qz-stage"><div class="qz-num">Frage ${g.qi + 1} / ${g.qs.length}</div>
-      <div class="card qz-q">${qzPrompt(q)}<div class="qz-bar"><i style="width:${tm.pct}%"></i></div></div>
+    return `${top}<div class="qz-stage"><div class="qz-num">Frage ${g.qi + 1} / ${g.qs.length}${g.paused ? ` · <b class="qz-paused">⏸ Pause</b>` : ""}</div>
+      <div class="card qz-q">${qzPrompt(q, true)}<div class="qz-bar ${g.paused ? "paused" : ""}"><i></i></div></div>
       ${q.t === "mc" ? `<div class="qz-opts">${q.o.map((o, i) => `<div class="qz-o c${i}"><span class="qz-s">${QZ_SHAPES[i]}</span>${esc(o)}</div>`).join("")}</div>` : `<div class="card qz-typehint">✍️ Alle tippen ihre Antwort ein</div>`}
-      <div class="qz-foot"><span class="qz-time">⏱ ${tm.left}</span><span>${n} / ${QZ.players.length} geantwortet</span><button class="btn-ghost" data-act="qzNext">Auflösen ›</button></div></div>`;
+      <div class="qz-who" id="qz-who"></div>
+      <div class="qz-foot"><span class="qz-time"></span><span id="qz-cnt"></span><span class="qz-fbtns">${pauseBtn}<button class="btn-ghost" data-act="qzNext" ${busy}>Auflösen ›</button></span></div></div>`;
   }
   if (g.state === "reveal"){
-    const ans = qzAnsweredNow();
-    const right = q.t === "mc" ? `<div class="qz-opts rev">${q.o.map((o, i) => `<div class="qz-o c${i} ${i === q.c ? "ok" : "no"}"><span class="qz-s">${QZ_SHAPES[i]}</span>${esc(o)}<b class="qz-cnt">${ans.filter(p => p.last.a === i).length}</b></div>`).join("")}</div>`
-      : `<div class="card qz-sol">✓ ${esc(q.a)}<div class="small muted">${ans.filter(p => p.last.ok).map(p => esc(p.name)).join(", ") || "Diesmal niemand"}</div></div>`;
-    const board = qzBoard(QZ.players, 5).map((p, i) => `<div class="qz-row"><span>${qzMedal(i)} ${esc(p.name)}</span><span>${p.last && p.last.qi === g.qi && p.last.pts ? `<em>+${p.last.pts}</em>` : ""}<b>${p.score}</b></span></div>`).join("");
+    const got = new Set(g.got || []); const ans = QZ.players.filter(p => got.has(p.uid) && p.last && p.last.qi === g.qi);
+    const none = QZ.players.filter(p => !got.has(p.uid));
+    const NOTE = { accent: "Akzent", typo: "Tippfehler", alt: "Variante" };
+    const right = q.t === "mc"
+      ? `<div class="qz-opts rev">${q.o.map((o, i) => { const who = ans.filter(p => p.last.a === i).map(p => esc(p.name));
+          return `<div class="qz-o c${i} ${i === q.c ? "ok" : who.length ? "no picked" : "no"}"><span class="qz-s">${QZ_SHAPES[i]}</span><span class="qz-ot">${esc(o)}${who.length ? `<span class="qz-whos">${who.join(", ")}</span>` : ""}</span></div>`; }).join("")}</div>`
+      : `<div class="card qz-answers">${ans.map(p => { const l = p.last; const mark = l.ok ? (l.res && l.res !== "exact" ? "≈" : "✓") : "✗";
+          return `<div class="qz-arow ${l.ok ? "ok" : "bad"}"><b>${mark} ${esc(p.name)}:</b> <span>${esc(l.a)}</span>${l.ok && NOTE[l.res] ? `<em>${NOTE[l.res]}</em>` : ""}</div>`; }).join("") || `<span class="muted">Diesmal keine Antworten</span>`}</div>`;
+    const sol = q.t === "mc" ? q.o[q.c] : q.a;
+    const board = qzBoardList().slice(0, 5).map((p, i) => { const pl = ans.find(x => x.uid === p.uid); return `<div class="qz-row"><span>${qzMedal(i)} ${esc(p.name)}</span><span>${pl && pl.last.ok ? `<em>+${pl.last.pts}</em>` : ""}<b>${p.score}</b></span></div>`; }).join("");
     return `${top}<div class="qz-stage"><div class="qz-num">Frage ${g.qi + 1} / ${g.qs.length}</div>
-      <div class="card qz-q small">${qzPrompt(q)}</div>${right}
+      <div class="card qz-q small">${qzPrompt(q, false).replace(`<span class="gap">___</span>`, `<span class="gap ok">${esc(sol)}</span>`)}</div>${right}
+      ${none.length ? `<div class="qz-none">⌛ keine Antwort: ${none.map(p => esc(p.name)).join(", ")}</div>` : ""}
+      <div class="card qz-explain"><span>✓ <b>${esc(sol)}</b></span><span class="qz-exl">${esc(q.ex || "")}</span><button class="spk spk-sm" data-act="qzSay" aria-label="Anhören">${SPK_SVG}</button></div>
       <div class="card qz-board">${board || `<span class="muted">Noch niemand dabei</span>`}</div>
-      <div class="qz-foot end"><button class="btn" data-act="qzNext">${g.qi + 1 >= g.qs.length ? "🏆 Ergebnis" : "Weiter ›"}</button></div></div>`;
+      <div class="qz-foot end">${pauseBtn}<button class="btn" data-act="qzNext" ${busy}>${g.qi + 1 >= g.qs.length ? "🏆 Ergebnis" : "Weiter ›"}</button></div></div>`;
   }
   if (g.state === "end"){
-    const b = qzBoard(QZ.players);
+    const b = qzBoardList();
     return `${top}<div class="qz-stage"><div class="qz-podium">${b.slice(0, 3).map((p, i) => `<div class="qz-pod p${i}"><div class="qz-m">${qzMedal(i)}</div><b>${esc(p.name)}</b><span>${p.score}</span></div>`).join("")}</div>
       ${b.length > 3 ? `<div class="card qz-board">${b.slice(3).map((p, i) => `<div class="qz-row"><span>${i + 4}. ${esc(p.name)}</span><b>${p.score}</b></div>`).join("")}</div>` : ""}
-      <div class="qz-foot end"><button class="btn" data-act="qzNew">↻ Neues Quiz</button><button class="btn-ghost" data-act="qzOff">Beenden</button></div></div>`;
+      <div class="qz-foot end"><button class="btn" data-act="qzNew" ${busy}>↻ Neues Quiz</button><button class="btn-ghost" data-act="qzOff" ${busy}>Beenden</button></div></div>`;
   }
   return "";
+}
+function qzRankNow(){
+  const g = QZ.game; if (!g) return; const mine = qzScore(CL.uid);
+  const r = Object.values(g.scores || {}).filter(s => s > mine).length + 1;
+  const key = g.gid + ":" + g.qi + ":" + g.state;
+  if (!QZ.rank || QZ.rank.key !== key || QZ.rank.r !== r){ const first = !QZ.rank || QZ.rank.key !== key; QZ.rank = { key, r }; if (g.state === "end" && r === 1 && first) qzConfetti(); }
 }
 function qzPlayHtml(){
   const g = QZ.game, me = qzMe();
   const top = head("🎙️ Live Session");
   if (!qzRunning(g)) return `${top}<div class="card qz-empty"><div class="qz-big">🎙️</div>Gerade läuft kein Quiz.<div class="small muted">Sven startet es im Call.</div></div>`;
   if (!me) return `${top}<div class="card qz-empty"><div class="qz-big">⏳</div>Verbinde …</div>`;
-  if (g.state === "lobby") return `${top}<div class="card qz-empty"><div class="qz-big">✓</div><b>Du bist dabei, ${esc(me.name)}!</b><div class="small muted">Gleich geht's los.</div></div>`;
+  if (g.state === "lobby") return `${top}<div class="card qz-empty"><div class="qz-big">✓</div><b>Du bist dabei, ${esc(me.name)}!</b><div class="small muted">Gleich geht's los.</div><div class="qz-rule">${QZ_RULE}</div></div>`;
   const q = qzQ();
   if (g.state === "question"){
-    if (me.last && me.last.qi === g.qi) return `${top}<div class="card qz-empty"><div class="qz-big">⏳</div>Antwort gesendet<div class="small muted">Warte auf die anderen …</div></div>`;
-    const tm = qzTimer(q, QZ.seen[g.gid + ":" + g.qi] || Date.now());
-    return `${top}<div class="qz-stage pl"><div class="qz-num">Frage ${g.qi + 1} / ${g.qs.length} · ⏱ ${tm.left}</div>
-      <div class="card qz-q">${qzPrompt(q)}<div class="qz-bar"><i style="width:${tm.pct}%"></i></div></div>
-      ${q.t === "mc" ? `<div class="qz-opts pl">${q.o.map((o, i) => `<button class="qz-o c${i}" data-act="qzPick" data-i="${i}"><span class="qz-s">${QZ_SHAPES[i]}</span>${esc(o)}</button>`).join("")}</div>`
-        : `<div class="qz-typebox"><input id="qztype" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Auf Spanisch …"><button class="btn" data-act="qzType">Senden</button></div>`}</div>`;
+    const s = QZ.send && QZ.send.gid === g.gid && QZ.send.qi === g.qi ? QZ.send : null;
+    if (me.last && me.last.qi === g.qi) return `${top}<div class="card qz-empty"><div class="qz-big">${s && s.st === "sending" ? "📤" : "⏳"}</div>${s && s.st === "sending" ? "Sende …" : "Antwort gesendet"}<div class="small muted">${s && s.st === "sending" ? "Einen Moment" : "Warte auf die anderen …"}</div></div>`;
+    const failed = s && s.st === "failed"; const dis = g.paused ? "disabled" : "";
+    return `${top}<div class="qz-stage pl">${failed ? `<div class="qz-fail">Nicht angekommen – nochmal tippen</div>` : ""}<div class="qz-num">Frage ${g.qi + 1} / ${g.qs.length} · <span class="qz-time"></span></div>
+      ${g.paused ? `<div class="qz-pausebar">⏸ Pause</div>` : ""}
+      <div class="card qz-q">${qzPrompt(q, true)}<div class="qz-bar ${g.paused ? "paused" : ""}"><i></i></div></div>
+      ${q.t === "mc" ? `<div class="qz-opts pl">${q.o.map((o, i) => `<button class="qz-o c${i}" data-act="qzPick" data-i="${i}" ${dis}><span class="qz-s">${QZ_SHAPES[i]}</span>${esc(o)}</button>`).join("")}</div>`
+        : `<div class="qz-typebox"><input id="qztype" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="${q.k === "c" || q.k === "past" ? "Lücke füllen …" : "Auf Spanisch …"}" ${dis}><button class="btn" data-act="qzType" ${dis}>Senden</button></div>`}</div>`;
   }
-  const rank = qzBoardRank(me);
+  const rank = QZ.rank && QZ.rank.key === g.gid + ":" + g.qi + ":" + g.state ? QZ.rank.r : 0;
   if (g.state === "reveal"){
-    const l = me.last && me.last.qi === g.qi ? me.last : null;
+    const l = me.last && me.last.qi === g.qi ? me.last : null; const counted = (g.got || []).includes(CL.uid);
     const sol = q.t === "mc" ? q.o[q.c] : q.a;
-    return `${top}<div class="card qz-res ${l && l.ok ? "ok" : "no"}"><div class="qz-big">${l ? (l.ok ? "✓" : "✗") : "⌛"}</div>
-      <b>${l ? (l.ok ? `Richtig! +${l.pts}` : "Leider falsch") : "Zu spät"}</b>${l && l.ok ? "" : `<div class="qz-solp">Richtig: <b>${esc(sol)}</b></div>`}
-      <div class="small muted">${me.score} Punkte${rank ? " · Platz " + rank : ""}</div></div>`;
+    const NOTE = { accent: " (Akzent beachten)", typo: " (kleiner Tippfehler)", alt: " (Variante)" };
+    const state = l && counted ? (l.ok ? "ok" : "no") : "late";
+    return `${top}<div class="card qz-res ${state === "ok" ? "ok" : "no"}"><div class="qz-big">${state === "ok" ? "✓" : state === "no" ? "✗" : "⌛"}</div>
+      <b>${state === "ok" ? `Richtig! +${l.pts}` : state === "no" ? "Leider falsch" : "Zu spät"}</b>${state === "ok" && NOTE[l.res] ? `<div class="small muted">${NOTE[l.res].trim()}</div>` : ""}
+      <div class="qz-solp">Richtig: <b>${esc(sol)}</b></div>
+      <div class="qz-exl">${esc(q.ex || "")}</div>
+      <div class="small muted">${qzScore(CL.uid)} Punkte${rank ? " · Platz " + rank : ""}</div></div>`;
   }
-  if (g.state === "end") return `${top}<div class="card qz-res end"><div class="qz-big">${rank ? qzMedal(rank - 1) : "🏁"}</div><b>${rank ? `Platz ${rank}` : "Fertig!"}</b><div class="small muted">${me.score} Punkte</div></div>`;
+  if (g.state === "end") return `${top}<div class="card qz-res end"><div class="qz-big">${rank ? qzMedal(rank - 1) : "🏁"}</div><b>${rank ? `Platz ${rank}` : "Fertig!"}</b><div class="small muted">${qzScore(CL.uid)} Punkte</div><div class="small muted">Startet Sven ein neues Quiz, bist du automatisch dabei.</div></div>`;
   return top;
-}
-function qzBoardRank(me){ return QZ.rank && QZ.rank.gid === me.gid ? QZ.rank.r : 0; }
-async function qzLoadRank(){
-  const g = QZ.game, me = qzMe(); if (!g || !me || (g.state !== "reveal" && g.state !== "end")) return;
-  const key = g.gid + ":" + g.qi + ":" + g.state; if (QZ.rankKey === key) return; QZ.rankKey = key;
-  try { const snap = await FBX.getDocs(FBX.collection(fbDb, "liveplayers")); const all = snap.docs.map(x => x.data()).filter(p => p.gid === g.gid);
-    const r = all.filter(p => p.score > me.score).length + 1; QZ.rank = { gid: g.gid, r }; qzPaint(); if (g.state === "end" && r === 1) qzConfetti(); } catch (e) {}
 }
 function qzConfetti(){
   const o = document.createElement("div"); o.className = "qz-conf";
@@ -4411,22 +5186,170 @@ function qzConfetti(){
   o.innerHTML = Array.from({ length: 80 }, () => `<i style="left:${Math.random() * 100}%;background:${colors[Math.floor(Math.random() * colors.length)]};animation-delay:${(Math.random() * .8).toFixed(2)}s;animation-duration:${(2 + Math.random() * 1.5).toFixed(2)}s;width:${6 + Math.random() * 6}px;height:${8 + Math.random() * 8}px"></i>`).join("");
   document.body.appendChild(o); setTimeout(() => o.remove(), 4200);
 }
-/* Startseite: läuft ein Quiz? (für alle außer Sven, höchstens alle 15 Sekunden) */
+/* Startseite: läuft ein Quiz? (für alle außer Sven, alle 3 Sekunden, solange die Startseite sichtbar ist) */
 function qzHomeCheck(){
-  if (!qzOn() || CL.admin || VIEW.name !== "home" || Date.now() - QZ.homeAt < 15000) return;
+  if (!qzOn() || CL.admin || VIEW.name !== "home" || document.hidden || Date.now() - QZ.homeAt < 3000) return;
   QZ.homeAt = Date.now(); qzFetch();
 }
+setInterval(qzHomeCheck, 1000);
 function qzHomeBadge(){ const t = document.querySelector(".livetile"); const run = qzRunning(); if (!t){ if (run) render(); return; } if (t.classList.contains("run") !== run) render(); }
 function qzTile(){
   if (!qzOn()) return "";   // Datei-Version: Live-Quiz braucht Internet
   if (CL.admin) return isPhone() ? "" : mt({ cls: "lg teal livetile", attrs: `data-act="nav" data-to="live"`, em: "🎙️", tt: "Live Session", tip: "Quiz für den Call starten" });
   const run = qzRunning();
   if (isPhone() && !run) return "";
-  return mt({ cls: "lg teal livetile" + (run ? " run" : ""), attrs: `data-act="nav" data-to="live"`, em: "🎙️", tt: run ? "Mitmachen" : "Live Session", right: run ? `<span class="qz-dot"></span>` : undefined, tip: run ? "Das Quiz läuft gerade" : "Startet im Call", disabled: !run });
+  return mt({ cls: "lg teal livetile" + (run ? " run" : " idle"), attrs: `data-act="qzTileTap"`, em: "🎙️", tt: "Live Session", right: run ? `<span class="qz-dot"></span>` : undefined, tip: run ? "Das Quiz läuft gerade – antippen zum Mitmachen" : "Startet im Call" });
 }
-setInterval(() => { if (VIEW.name === "live" && QZ.game && QZ.game.state === "question" && !document.hidden){ const b = document.querySelector(".qz-bar i"), t = document.querySelector(".qz-time"); const g = QZ.game, q = qzQ(); if (q){ const tm = qzTimer(q, CL.admin ? g.qStart : (QZ.seen[g.gid + ":" + g.qi] || Date.now())); if (b) b.style.width = tm.pct + "%"; if (t) t.textContent = "⏱ " + tm.left; } } }, 250);
-setInterval(() => { if (!CL.admin && VIEW.name === "live") qzLoadRank(); qzHomeCheck(); }, 1000);
 
+/* ================= 📝 HAUSAUFGABEN (gebaut 19.11.2026) =================
+   Aus jedem Session-Transkript baut Claude eine Hausaufgabe (HOMEWORK in content_…py), für alle gleich.
+   Keine XP. Abgeben = fest (Firestore homework/{id}/answers/{uid}, nur einmal anlegen, kein Ändern).
+   Lösungen stehen nur im Code und erscheinen erst in Svens Auswertung (Live Session, Bildschirm teilen). */
+const HW = { mine: undefined, subs: null, at: 0, draft: null, confirm: false, sending: false, ev: { i: 0, show: false } };
+function hwCur(){ return HOMEWORK.length ? HOMEWORK[HOMEWORK.length - 1] : null; }
+function hwOn(){ return ONLINE && CL.user && !!hwCur(); }
+function hwKeys(h){ const out = []; h.parts.forEach(p => p.items.forEach((it, i) => out.push({ key: p.id + (i + 1), p, it, i }))); return out; }
+function hwDraftKey(){ return "esv_hw_" + hwCur().id + "_" + CL.uid; }
+function hwDraft(){
+  if (HW.draft && HW.draft._id === hwCur().id + CL.uid) return HW.draft;
+  let d = {}; try { d = JSON.parse(localStorage.getItem(hwDraftKey()) || "{}"); } catch (e) {}
+  d._id = hwCur().id + CL.uid; HW.draft = d; return d;
+}
+let HW_T = null;
+function hwSaveDraft(){ clearTimeout(HW_T); HW_T = setTimeout(() => { try { const d = Object.assign({}, HW.draft); delete d._id; localStorage.setItem(hwDraftKey(), JSON.stringify(d)); } catch (e) {} }, 300); }
+function hwPath(uid){ return FBX.doc(fbDb, "homework", hwCur().id, "answers", uid); }
+async function hwLoad(force){
+  if (!hwOn()) return;
+  if (!force && HW.at && Date.now() - HW.at < 60000) return;
+  HW.at = Date.now();
+  try {
+    if (CL.admin){ const snap = await FBX.getDocs(FBX.collection(fbDb, "homework", hwCur().id, "answers")); HW.subs = snap.docs.map(d => Object.assign({ uid: d.id }, d.data())); }
+    else { const d = await FBX.getDoc(hwPath(CL.uid)); HW.mine = d.exists() ? d.data() : null; }
+    if (["home", "hw", "hweval"].includes(VIEW.name)) render();
+  } catch (e) { HW.at = 0; }
+}
+function hwNames(){
+  const names = Object.assign({}, CLOUD.names);
+  Object.entries(CL.board || {}).forEach(([uid, d]) => { if (uid !== CLOUD.admin && d && d.name && !names[uid]) names[uid] = String(d.name); });
+  (HW.subs || []).forEach(s => { if (!names[s.uid]) names[s.uid] = s.name; });
+  return names;
+}
+function hwTile(){
+  if (!hwOn()) return "";
+  hwLoad(false);
+  if (CL.admin){
+    const n = (HW.subs || []).length, all = Object.keys(hwNames()).length;
+    return `<div class="mgrid c1 hwrow">${mt({ cls: "lg hwtile", attrs: `data-act="nav" data-to="hw"`, em: "📝", tt: "Hausaufgaben", sub: hwCur().title, right: HW.subs ? `<span class="hw-cnt">${n}/${all} ✅</span>` : undefined, tip: "Wer hat abgegeben? · Auswertung im Call" })}</div>`;
+  }
+  const done = !!HW.mine;
+  return `<div class="mgrid c1 hwrow">${mt({ cls: "lg hwtile", attrs: `data-act="nav" data-to="hw"`, em: "📝", tt: "Hausaufgaben", sub: hwCur().title, right: HW.mine === undefined ? undefined : done ? `<span class="hw-cnt">✅</span>` : `<span class="qz-dot red"></span>`, tip: done ? "Abgegeben" : `Neu · ${hwCur().minutes} · bis zur nächsten Session` })}</div>`;
+}
+/* ---------- Ausfüllen ---------- */
+function hwSeed(str){ let h = 2166136261; for (const c of str) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return h >>> 0; }
+function hwOrderBank(key, sol){
+  const toks = sol.replace(/[¿?¡!.,;:]/g, " ").split(/\s+/).filter(Boolean);
+  const rng = mulberry32(hwSeed(key + CL.uid)); let sh = rshuffle(toks, rng), g = 0;
+  while (sh.join(" ") === toks.join(" ") && g++ < 10) sh = rshuffle(toks, rng);
+  return sh;
+}
+function hwItemHtml(k, ro){
+  const d = ro ? (HW.mine.answers || {}) : hwDraft(); const v = d[k.key]; const { p, it } = k; const dis = ro ? "disabled" : "";
+  const val = v == null ? "" : esc(String(v));
+  const inp = (ph) => `<input class="hw-in" data-hw="${k.key}" value="${val}" placeholder="${ph}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ${dis}>`;
+  let body = "";
+  if (p.type === "cloze") body = `<div class="hw-p es">${esc(it.p).replace("___", `<span class="gap">___</span>`)}</div>${it.hint ? `<div class="q-hint">${esc(it.hint)}</div>` : ""}${inp("Lücke …")}`;
+  else if (p.type === "translate") body = `<div class="hw-p">${esc(it.p)}</div>${inp("Auf Spanisch …")}`;
+  else if (p.type === "fix") body = `<div class="hw-p es">${esc(it.p)}</div>${inp("Richtig geschrieben …")}`;
+  else if (p.type === "dictation") body = `<div class="hw-p"><span class="hw-say">${spk(it.say, "md")}<button class="slow" data-act="say" data-text="${esc(it.say)}" data-slow="1">🐢 langsam</button></span></div>${inp("Was hörst du?")}`;
+  else if (p.type === "free") body = `<div class="hw-p">${esc(it.p)}</div><textarea class="hw-in hw-ta" data-hw="${k.key}" rows="6" placeholder="Auf Spanisch …" ${dis}>${val}</textarea>`;
+  else if (p.type === "mc") body = `<div class="hw-p ${/___/.test(it.p) ? "es" : ""}">${esc(it.p).replace("___", `<span class="gap">___</span>`)}</div><div class="hw-opts">${it.o.map((o, i) => `<button class="pill ${v === i ? "on" : ""}" data-act="hwPick" data-k="${k.key}" data-i="${i}" ${dis}>${esc(o)}</button>`).join("")}</div>`;
+  else if (p.type === "order"){
+    const bank = hwOrderBank(k.key, it.a[0]); const placed = Array.isArray(v) ? v : [];
+    body = `<div class="hw-p">${esc(it.p)}</div><div class="slots hw-slots">${placed.map((bi, j) => `<button class="chip" data-act="hwUnplace" data-k="${k.key}" data-j="${j}" ${dis}>${esc(bank[bi])}</button>`).join("")}</div>
+      ${ro ? "" : `<div class="bank">${bank.map((t, bi) => `<button class="chip ${placed.includes(bi) ? "used" : ""}" data-act="hwPlace" data-k="${k.key}" data-b="${bi}">${esc(t)}</button>`).join("")}</div>`}`;
+  }
+  return `<div class="hw-item" id="hw-${k.key}"><span class="hw-n">${k.i + 1}</span><div class="hw-b">${body}</div></div>`;
+}
+function hwAnswered(d, k){ const v = d[k.key]; return Array.isArray(v) ? v.length > 0 : v !== undefined && v !== null && String(v).trim() !== ""; }
+function vHw(){
+  const h = hwCur(); if (!hwOn()) return `<div class="page">${head("📝 Hausaufgaben")}<div class="card qz-empty">Gibt es nur online.</div></div>`;
+  hwLoad(false);
+  if (CL.admin && !VIEW.params.preview) return vHwAdmin();
+  const keys = hwKeys(h);
+  if (!CL.admin && HW.mine === undefined) return `<div class="page">${head("📝 Hausaufgaben")}<div class="card qz-empty">Lädt …</div></div>`;
+  const ro = !CL.admin && !!HW.mine;
+  const d = ro ? (HW.mine.answers || {}) : hwDraft();
+  const n = keys.filter(k => hwAnswered(d, k)).length;
+  const top = ro ? `<div class="card hw-done">✅ <b>Abgegeben${HW.mine.submitted ? " am " + esc(fbDate(HW.mine.submitted)) : ""}</b><div class="small muted">Die Lösungen besprecht ihr in der nächsten Session.</div></div>`
+    : `<div class="card hw-intro"><b>${esc(h.title)}</b><span class="muted small">${esc(h.minutes)} · ohne XP · Abgeben = fest</span><span class="hw-prog" id="hwprog">${n} / ${keys.length}</span></div>`;
+  const parts = h.parts.map(p => `<div class="grp">${esc(p.id)} · ${esc(p.title)}</div><div class="card hw-part">${p.help ? `<div class="hw-help">${esc(p.help)}</div>` : ""}${keys.filter(k => k.p === p).map(k => hwItemHtml(k, ro)).join("")}</div>`).join("");
+  const foot = ro || CL.admin ? "" : HW.confirm
+    ? `<div class="card hw-confirm"><b>Wirklich abgeben?</b><span class="small muted">${keys.length - n ? `${keys.length - n} Aufgaben sind noch leer. ` : ""}Danach kannst du nichts mehr ändern.</span><div class="btns"><button class="btn" data-act="hwSubmit" ${HW.sending ? "disabled" : ""}>${HW.sending ? "Sendet …" : "Ja, abgeben"}</button><button class="btn-ghost" data-act="hwNo">Noch nicht</button></div></div>`
+    : `<div class="hw-foot"><button class="btn-hero" data-act="hwAsk">✅ Abgeben</button></div>`;
+  return `<div class="page hw-page">${head("📝 Hausaufgaben", CL.admin ? "Vorschau – so sehen es alle" : null)}${top}${parts}${foot}</div>`;
+}
+function hwNameRow(uid, name){ const s = (HW.subs || []).find(x => x.uid === uid); return `<div class="qz-row"><span>${s ? "✅" : "⏳"} ${esc(name)}</span><span class="muted small">${s ? esc(fbDate(s.submitted)) : "offen"}</span></div>`; }
+function vHwAdmin(){
+  const h = hwCur(); const names = hwNames();
+  return `<div class="page hw-page">${head("📝 Hausaufgaben", h.title)}
+    <div class="card qz-board">${HW.subs ? Object.entries(names).map(([u, n]) => hwNameRow(u, n)).join("") : `<span class="muted">Lädt …</span>`}</div>
+    <div class="btns hw-adm"><button class="btn" data-act="hwEval">📊 Auswerten</button><button class="btn-ghost" data-act="hwPreview">👀 Aufgaben ansehen</button><button class="btn-ghost" data-act="hwReload">↻</button></div></div>`;
+}
+/* ---------- Auswertung (nur Sven, Bildschirm teilen) ---------- */
+function vHwEval(){
+  if (!CL.admin) return vHome();
+  hwLoad(false);
+  const h = hwCur(); const keys = hwKeys(h); const i = Math.max(0, Math.min(HW.ev.i, keys.length - 1)); const k = keys[i];
+  const subs = (HW.subs || []).slice().sort((a, b) => String(a.name).localeCompare(String(b.name)));
+  const { p, it } = k; const show = HW.ev.show;
+  const sol = p.type === "mc" ? it.o[it.c] : it.a[0];
+  const ansTxt = (s) => { const v = (s.answers || {})[k.key]; if (v === undefined || v === null || v === "" || (Array.isArray(v) && !v.length)) return null;
+    if (p.type === "mc") return it.o[v]; if (p.type === "order"){ const bank = hwOrderBankFor(k.key, it.a[0], s.uid); return v.map(bi => bank[bi]).join(" "); } return String(v); };
+  const mark = (s, t) => { if (!show || t === null || p.type === "free") return ""; let ok;
+    if (p.type === "mc") ok = (s.answers || {})[k.key] === it.c; else ok = checkText(it.a, t).res !== "wrong";
+    return ok ? `<b class="ok">✓</b>` : `<b class="bad">✗</b>`; };
+  const rows = subs.map(s => { const t = ansTxt(s); return `<div class="ev-row ${show && t !== null && p.type !== "free" ? (mark(s, t).includes("ok") ? "ok" : "bad") : ""}"><span class="ev-n">${esc(s.name)}</span><span class="ev-a ${p.type === "free" ? "free" : ""}">${t === null ? `<span class="muted">– keine Antwort –</span>` : esc(t)}</span>${mark(s, t)}</div>`; }).join("");
+  const prompt = p.type === "dictation" ? `🔊 ${esc(show ? it.say : "Diktat")}` : esc(it.p).replace("___", `<span class="gap">${show ? esc(sol) : "___"}</span>`);
+  return `<div class="page hw-page wide">${head("📊 Auswertung", `${k.key} · ${p.title} · ${i + 1} / ${keys.length}`)}
+    <div class="card ev-q"><div class="qz-kind">${esc(p.title)}</div><div class="ev-p">${prompt}</div>${it.hint ? `<div class="q-hint">${esc(it.hint)}</div>` : ""}${p.type === "mc" ? `<div class="hw-opts">${it.o.map((o, j) => `<span class="pill ${show && j === it.c ? "on" : ""}">${esc(o)}</span>`).join("")}</div>` : ""}${p.type === "dictation" ? `<div>${spk(it.say, "md")}</div>` : ""}</div>
+    <div class="card ev-list">${rows || `<span class="muted">Noch keine Abgaben</span>`}</div>
+    ${show ? `<div class="card ev-sol">✓ ${esc(sol)}${it.a && it.a.length > 1 ? `<div class="small muted">Auch richtig: ${it.a.slice(1).map(esc).join(" · ")}</div>` : ""}</div>` : ""}
+    <div class="qz-foot"><button class="btn-ghost" data-act="evPrev" ${i ? "" : "disabled"}>‹ Zurück</button><button class="btn" data-act="evShow">${show ? "Lösung ausblenden" : "Lösung zeigen"}</button><button class="btn-ghost" data-act="evNext" ${i + 1 < keys.length ? "" : "disabled"}>Weiter ›</button></div></div>`;
+}
+function hwOrderBankFor(key, sol, uid){
+  const toks = sol.replace(/[¿?¡!.,;:]/g, " ").split(/\s+/).filter(Boolean);
+  const rng = mulberry32(hwSeed(key + uid)); let sh = rshuffle(toks, rng), g = 0;
+  while (sh.join(" ") === toks.join(" ") && g++ < 10) sh = rshuffle(toks, rng);
+  return sh;
+}
+const HW_ACTIONS = {
+  hwPick: el => { const d = hwDraft(); d[el.dataset.k] = +el.dataset.i; hwSaveDraft(); render(); },
+  hwPlace: el => { const d = hwDraft(); const a = Array.isArray(d[el.dataset.k]) ? d[el.dataset.k] : []; const b = +el.dataset.b; if (!a.includes(b)) a.push(b); d[el.dataset.k] = a; hwSaveDraft(); render(); },
+  hwUnplace: el => { const d = hwDraft(); const a = d[el.dataset.k] || []; a.splice(+el.dataset.j, 1); hwSaveDraft(); render(); },
+  hwAsk: () => { HW.confirm = true; render(); const c = document.querySelector(".hw-confirm"); if (c) c.scrollIntoView({ block: "center", behavior: "smooth" }); },
+  hwNo: () => { HW.confirm = false; render(); },
+  hwSubmit: async () => {
+    if (HW.sending || HW.mine) return; HW.sending = true; render();
+    const d = Object.assign({}, hwDraft()); delete d._id;
+    try {
+      await FBX.setDoc(hwPath(CL.uid), { name: CL.name, answers: d, submitted: FBX.serverTimestamp() });
+      HW.mine = { name: CL.name, answers: d, submitted: Date.now() }; HW.confirm = false; toast("✅ Abgegeben – danke!");
+      try { localStorage.removeItem(hwDraftKey()); } catch (e) {}
+    } catch (e) { toast("Abgeben hat nicht geklappt. Verbindung prüfen."); }
+    HW.sending = false; render(); window.scrollTo(0, 0);
+  },
+  hwEval: () => { HW.ev = { i: 0, show: false }; hwLoad(true); go("hweval"); },
+  hwPreview: () => go("hw", { preview: true }),
+  hwReload: () => hwLoad(true),
+  evPrev: () => { HW.ev.i--; HW.ev.show = false; render(); },
+  evNext: () => { HW.ev.i++; HW.ev.show = false; render(); },
+  evShow: () => { HW.ev.show = !HW.ev.show; render(); }
+};
+document.addEventListener("input", e => {
+  const el = e.target; if (!el || !el.dataset || !el.dataset.hw || !hwOn()) return;
+  const d = hwDraft(); d[el.dataset.hw] = el.value; hwSaveDraft();
+  const pr = document.getElementById("hwprog"); if (pr){ const keys = hwKeys(hwCur()); pr.textContent = keys.filter(k => hwAnswered(d, k)).length + " / " + keys.length; }
+});
 
 /* ================= ✉️ FEEDBACK ================= */
 const VIEW_NAMES = { home: "Startseite", rank: "Rangliste", words: "Wörter", verbs: "Verben", sentences: "Sätze", grammar: "Grammatik", hardmode: "Hard Mode", live: "Live Session", cat: "Thema", list: "Liste", verb: "Verb", gram: "Grammatik-Thema", flash: "Karteikarten", summary: "Ergebnis", session: "Übung" };
@@ -4525,7 +5448,7 @@ const FB_ACTIONS = {
 /* ================= 📱 HANDY ================= */
 const PHONE_MQ = window.matchMedia ? window.matchMedia("(max-width: 640px)") : { matches: false };
 function isPhone(){ return !!PHONE_MQ.matches; }
-const TAB_VIEWS = ["fbadmin", "home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram", "summary"];
+const TAB_VIEWS = ["hw", "fbadmin", "home", "rank", "words", "verbs", "sentences", "grammar", "hardmode", "cat", "list", "verb", "gram", "summary"];
 function renderTabbar(){
   const t = document.getElementById("tabbar"); if (!t) return;
   const show = isPhone() && (!ONLINE || CL.user) && TAB_VIEWS.includes(VIEW.name);
@@ -4590,7 +5513,7 @@ if (ONLINE){
 document.addEventListener("focusin", e => { if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) document.body.classList.add("kb"); });
 document.addEventListener("focusout", () => setTimeout(() => { const a = document.activeElement; if (!a || !/INPUT|TEXTAREA/.test(a.tagName)) document.body.classList.remove("kb"); }, 60));
 
-const VIEWS = { fbadmin: vFbAdmin, rank: vRank, live: vQuiz, liverun: vLiveRun, livesum: vLiveSum, home: vHome, words: vWords, sentences: vSentences, grammar: vGrammar, hardmode: vHardmode, gram: vGram, verbs: vVerbs, cat: vCat, list: vList, verb: vVerb, flash: vFlash, session: vSession, summary: vSummary };
+const VIEWS = { hw: vHw, hweval: vHwEval, fbadmin: vFbAdmin, rank: vRank, live: vQuiz, liverun: vLiveRun, livesum: vLiveSum, home: vHome, words: vWords, sentences: vSentences, grammar: vGrammar, hardmode: vHardmode, gram: vGram, verbs: vVerbs, cat: vCat, list: vList, verb: vVerb, flash: vFlash, session: vSession, summary: vSummary };
 /* Kachel-Titel: ein Wort, das nicht in die Zeile passt, wird schrittweise kleiner statt getrennt */
 function fitTitles(){
   document.querySelectorAll(".mt-tt").forEach(el => {
@@ -4624,7 +5547,7 @@ const ACTIONS = {
   noReset: () => { VIEW.params.confirmReset = false; render(); },
   reset: () => { PROG = {}; STATS = defaultStats(); saveAll(); VIEW.params.confirmReset = false; render(); },
   daily: () => { if (VIEW.name === "summary"){ VIEW = { name: "home", params: {} }; STACK.length = 0; } startSession("daily", buildDailyQueue(), "Heute üben"); },
-  quiz: el => { const k = el.dataset.kind, id = el.dataset.id; const title = k === "all" ? "Alle Wörter – Test" : k === "big" ? "Großer Vokabeltest" : k === "hard" ? "Fehler ausbügeln" : k === "hardall" ? "💎 Hard-Mode-Test" : k === "verb" ? verbQuizTitle(id) : "Quiz: " + catById(k, id).name; SESSION_LAST = { k, id, title }; startSession("quiz", buildQuizQueue(k, id), title); },
+  quiz: el => { const k = el.dataset.kind, id = el.dataset.id; const title = k === "all" ? "Alle Wörter – Test" : k === "big" ? "Großer Vokabeltest" : k === "hard" ? "Fehler ausbügeln" : k === "hardall" ? "💎 Hard-Mode-Test" : k === "stars" ? "⭐ Gemerkt" : k === "pastverb" ? "🕰️ Vergangenheit: " + VERBS.find(v => v.id === id).inf : k === "verb" ? verbQuizTitle(id) : "Quiz: " + catById(k, id).name; SESSION_LAST = { k, id, title }; startSession("quiz", buildQuizQueue(k, id), title); },
   requiz: () => { const L = SESSION_LAST; VIEW = STACK.pop() || { name: "home", params: {} }; startSession("quiz", buildQuizQueue(L.k, L.id), L.title); },
   neg: el => { VIEW.params.neg = el.dataset.v === "1"; render(); },
   tense: el => { VIEW.params.tense = el.dataset.t; render(); },
@@ -4649,15 +5572,16 @@ const ACTIONS = {
   next: () => nextExercise(false),
   typecheck: () => typeSubmit(),
   report: () => reportError(),
+  star: el => { const it = SESSION && SESSION.ex && SESSION.ex.item; if (!it) return; const on = toggleStar(it.id); el.classList.toggle("on", on); el.textContent = on ? "★" : "☆"; toast(on ? "⭐ Gemerkt" : "Nicht mehr gemerkt"); },
   backup: () => backupDownload(),
   restore: () => { const f = document.getElementById("restorefile"); if (f) f.click(); }
 };
 function typeSubmit(){
-  const ex = SESSION && SESSION.ex; if (!ex || ex.type !== "type" || ex.answered) return;
+  const ex = SESSION && SESSION.ex; if (!ex || !["type", "cloze", "pastgap"].includes(ex.type) || ex.answered) return;
   const inp = document.getElementById("typein"); ex.typed = inp ? inp.value : "";
   if (!normT(ex.typed)){ if (inp) inp.focus(); return; }
-  ex.result = typeCheck(ex.item, ex.typed);
-  finishAnswer(ex.result !== "wrong");
+  ex.result = typeCheckInfo(ex.item, ex.typed);
+  finishAnswer(ex.result.res !== "wrong");
 }
 function toast(msg){
   let t = document.getElementById("toast"); if (!t){ t = document.createElement("div"); t.id = "toast"; document.body.appendChild(t); }
@@ -4669,7 +5593,7 @@ function copyText(text){
   try { if (navigator.clipboard && window.isSecureContext){ return navigator.clipboard.writeText(text).then(() => true, () => fallback()); } } catch (e) {}
   return Promise.resolve(fallback());
 }
-const TYPE_NAMES = { mc_t2n: "Spanisch → Bedeutung", mc_n2t: "Bedeutung → Spanisch", listen: "Hören", build_s: "Satz bauen", build_w: "Wort bauen", type: "Eintippen", pairs: "Paare zuordnen" };
+const TYPE_NAMES = { mc_t2n: "Spanisch → Bedeutung", mc_n2t: "Bedeutung → Spanisch", listen: "Hören", build_s: "Satz bauen", build_w: "Wort bauen", type: "Eintippen", pairs: "Paare zuordnen", cloze: "Lückentext", cloze_mc: "Lückentext antippen", pastgap: "Welche Vergangenheit?", pastgap_mc: "Welche Vergangenheit? (antippen)" };
 function reportError(){
   const ex = SESSION && SESSION.ex; if (!ex) return;
   if (ONLINE && CL.user){
@@ -4724,7 +5648,7 @@ document.addEventListener("keydown", e => {
   if (liveKey(e)) return;
   if (VIEW.name === "session" && SESSION && SESSION.ex){
     const ex = SESSION.ex;
-    if (e.key === "Enter"){ e.preventDefault(); if (ex.answered) nextExercise(false); else if (ex.type === "type") typeSubmit(); else if ((ex.type === "build_s" || ex.type === "build_w") && ex.placed.length) finishAnswer(buildCheck(ex)); return; }
+    if (e.key === "Enter"){ e.preventDefault(); if (ex.answered) nextExercise(false); else if (["type", "cloze", "pastgap"].includes(ex.type)) typeSubmit(); else if ((ex.type === "build_s" || ex.type === "build_w") && ex.placed.length) finishAnswer(buildCheck(ex)); return; }
     if (/^[1-4]$/.test(e.key) && ex.opts && !ex.answered){ const i = +e.key - 1; if (i < ex.opts.length){ ex.chosen = i; finishAnswer(i === ex.correct); } return; }
     if (e.key === "Backspace" && ex.placed && ex.placed.length && !ex.answered){ e.preventDefault(); const k = ex.placed.length - 1; ex.bank[ex.placed[k]].used = false; ex.placed.splice(k, 1); render(); }
   } else if (VIEW.name === "flash" && FC){
@@ -4733,7 +5657,7 @@ document.addEventListener("keydown", e => {
     else if (e.key === "ArrowLeft") ACTIONS.fcprev();
   }
 });
-Object.assign(ACTIONS, LIVE_ACTIONS, CLOUD_ACTIONS, PHONE_ACTIONS, FB_ACTIONS, QZ_HOST, QZ_PLAY);
+Object.assign(ACTIONS, LIVE_ACTIONS, CLOUD_ACTIONS, PHONE_ACTIONS, FB_ACTIONS, QZ_HOST, QZ_PLAY, HW_ACTIONS);
 document.addEventListener("visibilitychange", () => { if (!document.hidden && VIEW.name === "home") render(); });
 
 /* Test-Schnittstelle (nur lesend genutzt) */
